@@ -28,7 +28,7 @@ public class Esfera : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
-        if (other.CompareTag("Player1") && other.CompareTag("Player2") && !hitByPlayers)
+        if (other.CompareTag("Player1") && !hitByPlayers)
         {
             Destroy(other.gameObject); 
             HitByPlayers(); 
