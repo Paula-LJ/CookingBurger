@@ -9,7 +9,7 @@ public class GiveObject : MonoBehaviour
 	private float secondsGiveObject = 5.0f; 
 	public GameObject pickedObject = null;
 	public float timeStop = 0.0f;
-
+	private bool isDestroy = false;
 
 
 	void Update()
@@ -26,19 +26,21 @@ public class GiveObject : MonoBehaviour
 			timeStop += Time.deltaTime; 
 		}
 
-		if (pickedObject !=null) 
-		{
-			// si el tiempo de sin movimeinto es maypr 5 y menor 5.5 y es mayor el tiempo de el tiempo de estar parado para cogerlo y si no hay movimiento 
-			if (handPoint.transform.hasChanged == false && timeStop > secondsGiveObject && timeStop< secondsGiveObject +0.5f && times > secondsGiveObject +2.0f) 
-			{
-				pickedObject.GetComponent<Rigidbody>().useGravity = false;
-				pickedObject.GetComponent<Rigidbody>().isKinematic = false;
-				pickedObject.gameObject.transform.SetParent(null);
-				pickedObject = null; 
-			}
-		}
+        if (pickedObject != null && isDestroy==false) // dejar un objeto
+        {
+            // si el tiempo de sin movimeinto es mayor a 5 y menor a 5.5 y es mayor el tiempo real del tiempo de estar parado para cogerlo y si no hay movimiento 
+            if (handPoint.transform.hasChanged == false && timeStop > secondsGiveObject && timeStop < secondsGiveObject + 0.5f && times > secondsGiveObject + 2.0f)
+            {
+                pickedObject.GetComponent<Rigidbody>().useGravity = false;
+                pickedObject.GetComponent<Rigidbody>().isKinematic = false;
+                pickedObject.gameObject.transform.SetParent(null);
 
-	}
+                pickedObject = null;
+
+            }
+        }
+
+    }
 
 	
 	//Si el jugador esta 5 segundos encima del objeto con el tag Objects, se lo puede llevar
@@ -56,7 +58,16 @@ public class GiveObject : MonoBehaviour
 				pickedObject = other.gameObject;
 			}
 		}
-	}
+        if (other.gameObject.CompareTag("DestroyFood"))
+        {
+			isDestroy = true;
+            times += Time.deltaTime;
+            if (handPoint.transform.hasChanged == false && timeStop > secondsGiveObject && timeStop < secondsGiveObject + 0.5f && times > secondsGiveObject + 2.0f)
+            {
+				Destroy(pickedObject);
+			}
+		}
+    }
 	//si no esta activado el trigger que la variable tiempo se inicialice a 0. 
 	private void OnTriggerExit(Collider other)
 	{

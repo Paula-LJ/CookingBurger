@@ -24,6 +24,9 @@ TagManager:
   - Esfera
   - PlayerInteractionZone
   - Object
+  - CanMove
+  - CantMove
+  - DestroyFood
   layers:
   - Default
   - TransparentFX

@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 75518749}
   m_Layer: 0
   m_Name: centerTable_01 (3)
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,7 +262,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 217220054}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -800,7 +800,7 @@ GameObject:
   - component: {fileID: 948659397}
   m_Layer: 0
   m_Name: centerTable_01 (1)
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -910,7 +910,7 @@ GameObject:
   - component: {fileID: 1080259601}
   m_Layer: 0
   m_Name: cuttingBoard_01 (1)
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -991,7 +991,7 @@ GameObject:
   - component: {fileID: 1220628008}
   m_Layer: 0
   m_Name: centerTable_01 (2)
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1202,7 +1202,7 @@ GameObject:
   - component: {fileID: 1416140252}
   m_Layer: 0
   m_Name: hotPlates_01 (1)
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1633,6 +1633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Steak_Cooked
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012081886716, guid: 0b2c2c6617d3fb54ab69e7ff4da40867, type: 3}
+      propertyPath: m_TagString
+      value: CanMove
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012043725196, guid: 0b2c2c6617d3fb54ab69e7ff4da40867, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2058,7 +2062,7 @@ GameObject:
   - component: {fileID: 5781239831163841338}
   m_Layer: 0
   m_Name: centerTable_01
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2076,7 +2080,7 @@ GameObject:
   - component: {fileID: 8699762708474429942}
   m_Layer: 0
   m_Name: basket_01
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2137,7 +2141,7 @@ GameObject:
   - component: {fileID: 1291665919317934097}
   m_Layer: 0
   m_Name: faucet_01
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2169,7 +2173,7 @@ GameObject:
   - component: {fileID: 551853691564800274}
   m_Layer: 0
   m_Name: oven_01
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2560,7 +2564,7 @@ GameObject:
   - component: {fileID: 4877338434788948389}
   m_Layer: 0
   m_Name: knife_01
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2633,7 +2637,7 @@ GameObject:
   - component: {fileID: 4082118359254411240}
   m_Layer: 0
   m_Name: wok_01
-  m_TagString: Untagged
+  m_TagString: CanMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2659,7 +2663,7 @@ GameObject:
   - component: {fileID: 8550972259356447171}
   m_Layer: 0
   m_Name: fryingPan_01
-  m_TagString: Untagged
+  m_TagString: CanMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2905,7 +2909,7 @@ GameObject:
   - component: {fileID: 4297702938461020951}
   m_Layer: 0
   m_Name: hotPlates_01
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2956,7 +2960,7 @@ GameObject:
   - component: {fileID: 175687000479637076}
   m_Layer: 0
   m_Name: dish_01
-  m_TagString: Untagged
+  m_TagString: CanMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2986,13 +2990,27 @@ GameObject:
   - component: {fileID: 8448335748406052744}
   - component: {fileID: 3674779076592375506}
   - component: {fileID: 2322835550955474500}
+  - component: {fileID: 5749164250683938686}
   m_Layer: 0
   m_Name: bean_01
-  m_TagString: Untagged
+  m_TagString: DestroyFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5749164250683938686
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749164250683938685}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010383566, y: 0.01136775, z: 0.017398074}
+  m_Center: {x: -0.00000008591451, y: -0.00000010430813, z: -0.000000052619725}
 --- !u!4 &5780469153919912576
 Transform:
   m_ObjectHideFlags: 0
@@ -3134,7 +3152,7 @@ GameObject:
   - component: {fileID: 2862520412944942681}
   m_Layer: 0
   m_Name: cuttingBoard_01
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3247,7 +3265,7 @@ PrefabInstance:
     - target: {fileID: 6769992084103514402, guid: 351674f5e385dab489810361428275cc,
         type: 3}
       propertyPath: m_Name
-      value: Cameras
+      value: Camera
       objectReference: {fileID: 0}
     - target: {fileID: 6769992084103514405, guid: 351674f5e385dab489810361428275cc,
         type: 3}
@@ -3262,7 +3280,7 @@ PrefabInstance:
     - target: {fileID: 6769992084103514405, guid: 351674f5e385dab489810361428275cc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 54
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6769992084103514405, guid: 351674f5e385dab489810361428275cc,
         type: 3}
@@ -3543,7 +3561,7 @@ GameObject:
   - component: {fileID: 6725326199942445915}
   m_Layer: 0
   m_Name: kitchen_03
-  m_TagString: Untagged
+  m_TagString: CantMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
