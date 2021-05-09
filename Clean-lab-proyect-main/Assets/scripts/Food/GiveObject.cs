@@ -5,10 +5,13 @@ using UnityEngine;
 public class GiveObject : MonoBehaviour
 {
 	public GameObject handPoint;
-	private float times = 0.0f;
+	public float times = 0.0f;
 	private float secondsGiveObject = 5.0f; 
-	private GameObject pickedObject = null;
-	private float timeStop = 0.0f; 
+	public GameObject pickedObject = null;
+	public float timeStop = 0.0f;
+
+
+
 	void Update()
 	{
 		//Debug.Log(timeStop.ToString());
@@ -34,9 +37,10 @@ public class GiveObject : MonoBehaviour
 				pickedObject = null; 
 			}
 		}
+
 	}
 
-
+	
 	//Si el jugador esta 5 segundos encima del objeto con el tag Objects, se lo puede llevar
 	private void OnTriggerStay(Collider other)
 	{
