@@ -17,10 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Controls.unity
     guid: 23b63cccada37664bb226ca95188d327
-  - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: c74e21eac94a0814c9b8609557bf5c6d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Title.unity
     guid: 15d825e216711c54292d4c1823809a2d
+  - enabled: 1
+    path: Assets/Scenes/Sample Scene.unity
+    guid: 5261bc85e83d8a143b7bd71f8490828d
   m_configObjects: {}
