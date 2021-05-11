@@ -27,6 +27,7 @@ TagManager:
   - CanMove
   - CantMove
   - DestroyFood
+  - Cam1
   layers:
   - Default
   - TransparentFX
