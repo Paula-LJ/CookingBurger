@@ -27,7 +27,7 @@ public class CountGiveLeaveObj : MonoBehaviour
     {
         if (giveObject.timeStop >= 1.0f && giveObject.timeStop <=5.1f && giveObject.pickedObject != null)
             mytext.text = ((int)giveObject.timeStop).ToString();
-        else if (giveObject.times >= 1.0f && giveObject.times <= 5.1f)
+        else if (giveObject.times >= 1.0f && giveObject.times <= 5.1f && giveObject.pickedObject == null)
             mytext.text = ((int)giveObject.times).ToString();
         else
             mytext.text = "0";
