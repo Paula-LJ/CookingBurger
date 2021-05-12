@@ -21,6 +21,13 @@ TagManager:
   - CoreStarElement
   - Reward
   - objectiveTriangle
+  - Esfera
+  - PlayerInteractionZone
+  - Object
+  - CanMove
+  - CantMove
+  - DestroyFood
+  - Cam1
   layers:
   - Default
   - TransparentFX
