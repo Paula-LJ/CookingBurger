@@ -13,14 +13,14 @@ public class CameraRotate : MonoBehaviour
     private Vector3 NewPosition; // = new Vector3(49, 30, 72); 
     private Vector3 NewRotation; //= new Vector3(0, 180, 0); 
     private bool moveCamera = false;
-    private Vector3 com_rot = new Vector3(0, -180, 0);
+    private Vector3 com_rot = new Vector3(0, 180, 0);
 
     // Start is called before the first frame update
     private Vector3 rota = new Vector3  (90,0,0);
     void Start()
     {
         NewPosition = cam1.transform.position;
-        NewRotation = cam1.transform.eulerAngles - rota;
+        NewRotation = cam1.transform.eulerAngles - rota ;
     }
 
     // Update is called once per frame
@@ -34,9 +34,10 @@ public class CameraRotate : MonoBehaviour
         {
             moveCamera = true;
             cam.transform.position = NewPosition;
-            if (cam.CompareTag("Cam1"))
-                cam.transform.Rotate(com_rot, Space.World);
-            cam.transform.Rotate( NewRotation, Space.World);
+			if (cam1.CompareTag("Cam1"))
+				cam.transform.Rotate(NewRotation + com_rot, Space.World);
+			else
+				cam.transform.Rotate( NewRotation, Space.World);
 
         }
     }
