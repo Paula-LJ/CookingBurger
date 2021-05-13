@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class CameraRotate : MonoBehaviour
 {
-    float time = 0.0f;
-    
-    public float timeChange = 5.0f;
+    public float time = 0.0f;
+    //Los segundos que rotatá el escenario
+    private float timeCangePrivate = 10.0f; 
+    public float timeChange;
     public Camera cam;
     public Camera cam1;
     
@@ -26,11 +27,12 @@ public class CameraRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeChange = timeCangePrivate; 
         time += Time.deltaTime;
         //Debug.Log(time);
         //Debug.Log(cam1.transform.eulerAngles);
 
-        if (time >= timeChange && time <= timeChange+0.5f && moveCamera == false)
+        if (time >= timeCangePrivate && time <= timeCangePrivate + 0.5f && moveCamera == false)
         {
             moveCamera = true;
             cam.transform.position = NewPosition;
