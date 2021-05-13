@@ -5,10 +5,10 @@ using UnityEngine;
 public class GiveObject : MonoBehaviour
 {
 	public GameObject handPoint;
-	public float times = 0.0f;
+	public float times = 0.0f; //tiempo coger
 	private float secondsGiveObject = 5.0f; 
 	public GameObject pickedObject = null;
-	public float timeStop = 0.0f;
+	public float timeStop = 0.0f; //tiempo parar
 	private bool isDestroy = false;
 
 

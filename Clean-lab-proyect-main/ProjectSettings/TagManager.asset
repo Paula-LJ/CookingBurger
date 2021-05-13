@@ -28,6 +28,7 @@ TagManager:
   - CantMove
   - DestroyFood
   - Cam1
+  - SpaceInstanceFood
   layers:
   - Default
   - TransparentFX
