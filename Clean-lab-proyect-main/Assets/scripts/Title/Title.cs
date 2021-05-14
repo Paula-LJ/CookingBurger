@@ -5,24 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Title : MonoBehaviour
 {
+    //Posar un o algu dintre per posar lu dels dos jugadors a l'hora.
 
-    //public GameObject titleObject;
+    public string sceneToChangeTo;
 
-    // Start is called before the first frame update
-    void Start()
+    private bool isCollidedWithObj1;
+    private bool isCollidedWithObj2;
+    
+    public void OnTriggerEnter(Collider collision)
     {
-        //titleObject.SetActive(true);
-    }
+        if (collision.CompareTag("Player1"))
+            isCollidedWithObj1 = true;
+        else if (collision.CompareTag("Player2"))
+            isCollidedWithObj2 = true;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void ChangeScene(string sceneToChangeTo) 
-    {
-        SceneManager.LoadScene(sceneToChangeTo);
+        if (isCollidedWithObj1 && isCollidedWithObj2)
+            SceneManager.LoadScene(sceneToChangeTo);
     }
 
 }
