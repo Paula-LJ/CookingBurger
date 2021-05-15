@@ -1,0 +1,1562 @@
+fileFormatVersion: 2
+guid: 2887f96edde85ee44a418f7168d9e9ac
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -1111506599155082335
+    second: p_Plate|g_Cup_Main|g_Cup_Main|g_Cup_Main|Take 001|BaseLayer|g_Cup_Main|
+  - first:
+      74: 4193747280851819961
+    second: p_Plate|g_Cup_Main|g_Cup_Main|g_Cup_Top|Take 001|BaseLayer|g_Cup_Main|g
+  - first:
+      74: 8812146752783567464
+    second: p_Plate|g_Cup_Main|g_Cup_Main|g_Fries_Main|Take 001|BaseLayer|g_Cup_Mai
+  - first:
+      74: -9009800280938676577
+    second: p_Plate|g_Cup_Main|g_Cup_Main|g_Fries|Take 001|BaseLayer|g_Cup_Main|g_F
+  - first:
+      74: -7610417089868196487
+    second: p_Plate|g_Cup_Main|g_Cup_Main|p_Plate|Take 001|BaseLayer|g_Cup_Main|p_P
+  - first:
+      74: -6814364269356769659
+    second: p_Plate|g_Cup_Main|g_Cup_Main|p_Sparkle1|Take 001|BaseLayer|g_Cup_Main|
+  - first:
+      74: -5373332354152227424
+    second: p_Plate|g_Cup_Main|g_Cup_Main|p_Sparkle2|Take 001|BaseLayer|g_Cup_Main|
+  - first:
+      74: 5825632623964319198
+    second: p_Plate|g_Cup_Main|g_Cup_Main|p_Sparkle3|Take 001|BaseLayer|g_Cup_Main|
+  - first:
+      74: -3659245818402775560
+    second: p_Plate|g_Cup_Main|g_Cup_Main|p_Sparkle|Take 001|BaseLayer|g_Cup_Main|p
+  - first:
+      74: -2659980148982266006
+    second: p_Plate|g_Cup_Main|g_Cup_Main|p_Spot|Take 001|BaseLayer|g_Cup_Main|p_Sp
+  - first:
+      74: -3876247337811434205
+    second: p_Plate|g_Cup_Main|g_Cup_Main|p_Swirl|Take 001|BaseLayer|g_Cup_Main|p_S
+  - first:
+      74: 4661526301216274776
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pBurger_Bun_Base|Take 001|BaseLayer|g_Cup
+  - first:
+      74: 755939353781028234
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pBurger_Bun_Top|Take 001|BaseLayer|g_Cup_
+  - first:
+      74: 2157248089373988452
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pBurger_Cheese|Take 001|BaseLayer|g_Cup_M
+  - first:
+      74: 3107689661405692522
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pBurger_Onion|Take 001|BaseLayer|g_Cup_Ma
+  - first:
+      74: 8249967326238322462
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pBurger_Patty|Take 001|BaseLayer|g_Cup_Ma
+  - first:
+      74: -2126807978289167782
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pBurger_Pickle1|Take 001|BaseLayer|g_Cup_
+  - first:
+      74: -3153356565435261163
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pBurger_Pickle2|Take 001|BaseLayer|g_Cup_
+  - first:
+      74: 2330244209746879906
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pBurger_Salad|Take 001|BaseLayer|g_Cup_Ma
+  - first:
+      74: -7298070185822122656
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pBurger_Tomato|Take 001|BaseLayer|g_Cup_M
+  - first:
+      74: -3418134452693783695
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pCup_Soda_Base|Take 001|BaseLayer|g_Cup_M
+  - first:
+      74: 6981858138901112173
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pCup_Soda_Drop1|Take 001|BaseLayer|g_Cup_
+  - first:
+      74: 1346979898764618748
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pCup_Soda_Drop|Take 001|BaseLayer|g_Cup_M
+  - first:
+      74: -8031603496037158011
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pCup_Soda_Swirl|Take 001|BaseLayer|g_Cup_
+  - first:
+      74: 1191068955328655496
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pCup_Straw|Take 001|BaseLayer|g_Cup_Main|
+  - first:
+      74: 1614016129930756946
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pFries_Single3|Take 001|BaseLayer|g_Cup_M
+  - first:
+      74: 813743951748806135
+    second: p_Plate|g_Cup_Main|g_Cup_Main|pFries_Single4|Take 001|BaseLayer|g_Cup_M
+  - first:
+      74: 4771676150431378436
+    second: p_Plate|g_Cup_Top|g_Cup_Top|g_Cup_Main|Take 001|BaseLayer|g_Cup_Top|g_C
+  - first:
+      74: -5864534213241314586
+    second: p_Plate|g_Cup_Top|g_Cup_Top|g_Cup_Top|Take 001|BaseLayer|g_Cup_Top|g_Cu
+  - first:
+      74: 2438400084770641906
+    second: p_Plate|g_Cup_Top|g_Cup_Top|g_Fries_Main|Take 001|BaseLayer|g_Cup_Top|g
+  - first:
+      74: 7605940232170765128
+    second: p_Plate|g_Cup_Top|g_Cup_Top|g_Fries|Take 001|BaseLayer|g_Cup_Top|g_Frie
+  - first:
+      74: 6750039716499119157
+    second: p_Plate|g_Cup_Top|g_Cup_Top|p_Plate|Take 001|BaseLayer|g_Cup_Top|p_Plat
+  - first:
+      74: 7542033336951755866
+    second: p_Plate|g_Cup_Top|g_Cup_Top|p_Sparkle1|Take 001|BaseLayer|g_Cup_Top|p_S
+  - first:
+      74: 5725327838337659514
+    second: p_Plate|g_Cup_Top|g_Cup_Top|p_Sparkle2|Take 001|BaseLayer|g_Cup_Top|p_S
+  - first:
+      74: -4370739434196771188
+    second: p_Plate|g_Cup_Top|g_Cup_Top|p_Sparkle3|Take 001|BaseLayer|g_Cup_Top|p_S
+  - first:
+      74: 585515906049344014
+    second: p_Plate|g_Cup_Top|g_Cup_Top|p_Sparkle|Take 001|BaseLayer|g_Cup_Top|p_Sp
+  - first:
+      74: 8325997500424204589
+    second: p_Plate|g_Cup_Top|g_Cup_Top|p_Spot|Take 001|BaseLayer|g_Cup_Top|p_Spot|
+  - first:
+      74: 4127114247754644016
+    second: p_Plate|g_Cup_Top|g_Cup_Top|p_Swirl|Take 001|BaseLayer|g_Cup_Top|p_Swir
+  - first:
+      74: 5874736217102641448
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pBurger_Bun_Base|Take 001|BaseLayer|g_Cup_T
+  - first:
+      74: -6411423144678744262
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pBurger_Bun_Top|Take 001|BaseLayer|g_Cup_To
+  - first:
+      74: 7368406176762462062
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pBurger_Cheese|Take 001|BaseLayer|g_Cup_Top
+  - first:
+      74: 993832395340820425
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pBurger_Onion|Take 001|BaseLayer|g_Cup_Top|
+  - first:
+      74: 6301291687468823540
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pBurger_Patty|Take 001|BaseLayer|g_Cup_Top|
+  - first:
+      74: 4823282242148100351
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pBurger_Pickle1|Take 001|BaseLayer|g_Cup_To
+  - first:
+      74: 693304204656509245
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pBurger_Pickle2|Take 001|BaseLayer|g_Cup_To
+  - first:
+      74: -260011416593663666
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pBurger_Salad|Take 001|BaseLayer|g_Cup_Top|
+  - first:
+      74: 671810072381307072
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pBurger_Tomato|Take 001|BaseLayer|g_Cup_Top
+  - first:
+      74: -2340368216533862661
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pCup_Soda_Base|Take 001|BaseLayer|g_Cup_Top
+  - first:
+      74: 937197588800949795
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pCup_Soda_Drop1|Take 001|BaseLayer|g_Cup_To
+  - first:
+      74: 35030143484055840
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pCup_Soda_Drop|Take 001|BaseLayer|g_Cup_Top
+  - first:
+      74: -63908872627131113
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pCup_Soda_Swirl|Take 001|BaseLayer|g_Cup_To
+  - first:
+      74: 240665370876216755
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pCup_Straw|Take 001|BaseLayer|g_Cup_Top|pCu
+  - first:
+      74: -6887895721942146461
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pFries_Single3|Take 001|BaseLayer|g_Cup_Top
+  - first:
+      74: -45357707207956455
+    second: p_Plate|g_Cup_Top|g_Cup_Top|pFries_Single4|Take 001|BaseLayer|g_Cup_Top
+  - first:
+      74: -649880426370122536
+    second: p_Plate|g_Fries_Main|g_Fries_Main|g_Cup_Main|Take 001|BaseLayer|g_Fries
+  - first:
+      74: 150070719004863888
+    second: p_Plate|g_Fries_Main|g_Fries_Main|g_Cup_Top|Take 001|BaseLayer|g_Fries_
+  - first:
+      74: -8338565006419714940
+    second: p_Plate|g_Fries_Main|g_Fries_Main|g_Fries_Main|Take 001|BaseLayer|g_Fri
+  - first:
+      74: 3951757660404131473
+    second: p_Plate|g_Fries_Main|g_Fries_Main|g_Fries|Take 001|BaseLayer|g_Fries_Ma
+  - first:
+      74: 1639552096267600872
+    second: p_Plate|g_Fries_Main|g_Fries_Main|p_Plate|Take 001|BaseLayer|g_Fries_Ma
+  - first:
+      74: 5673394291140786698
+    second: p_Plate|g_Fries_Main|g_Fries_Main|p_Sparkle1|Take 001|BaseLayer|g_Fries
+  - first:
+      74: 5485276691775691313
+    second: p_Plate|g_Fries_Main|g_Fries_Main|p_Sparkle2|Take 001|BaseLayer|g_Fries
+  - first:
+      74: 6835452725665783984
+    second: p_Plate|g_Fries_Main|g_Fries_Main|p_Sparkle3|Take 001|BaseLayer|g_Fries
+  - first:
+      74: 8650501573775053127
+    second: p_Plate|g_Fries_Main|g_Fries_Main|p_Sparkle|Take 001|BaseLayer|g_Fries_
+  - first:
+      74: -8213162359168616531
+    second: p_Plate|g_Fries_Main|g_Fries_Main|p_Spot|Take 001|BaseLayer|g_Fries_Mai
+  - first:
+      74: 1719047729379318803
+    second: p_Plate|g_Fries_Main|g_Fries_Main|p_Swirl|Take 001|BaseLayer|g_Fries_Ma
+  - first:
+      74: 8599460108717183959
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pBurger_Bun_Base|Take 001|BaseLayer|g
+  - first:
+      74: 7872110672637547104
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pBurger_Bun_Top|Take 001|BaseLayer|g_
+  - first:
+      74: 5599343377315798680
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pBurger_Cheese|Take 001|BaseLayer|g_F
+  - first:
+      74: 7031699699805438554
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pBurger_Onion|Take 001|BaseLayer|g_Fr
+  - first:
+      74: 7902503468936691139
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pBurger_Patty|Take 001|BaseLayer|g_Fr
+  - first:
+      74: 4828374640632003082
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pBurger_Pickle1|Take 001|BaseLayer|g_
+  - first:
+      74: 6522150997523836800
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pBurger_Pickle2|Take 001|BaseLayer|g_
+  - first:
+      74: -612774461961264312
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pBurger_Salad|Take 001|BaseLayer|g_Fr
+  - first:
+      74: -8345946990690547342
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pBurger_Tomato|Take 001|BaseLayer|g_F
+  - first:
+      74: -5111001374995802721
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pCup_Soda_Base|Take 001|BaseLayer|g_F
+  - first:
+      74: 3146209419465834513
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pCup_Soda_Drop1|Take 001|BaseLayer|g_
+  - first:
+      74: 9145320615135788866
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pCup_Soda_Drop|Take 001|BaseLayer|g_F
+  - first:
+      74: 8832218510562942323
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pCup_Soda_Swirl|Take 001|BaseLayer|g_
+  - first:
+      74: -787880051113604132
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pCup_Straw|Take 001|BaseLayer|g_Fries
+  - first:
+      74: 8011646756734164711
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pFries_Single3|Take 001|BaseLayer|g_F
+  - first:
+      74: -6206643369919355031
+    second: p_Plate|g_Fries_Main|g_Fries_Main|pFries_Single4|Take 001|BaseLayer|g_F
+  - first:
+      74: -2070393010926213368
+    second: p_Plate|g_Fries|g_Fries|g_Cup_Main|Take 001|BaseLayer|g_Fries|g_Cup_Mai
+  - first:
+      74: 2151001829498455763
+    second: p_Plate|g_Fries|g_Fries|g_Cup_Top|Take 001|BaseLayer|g_Fries|g_Cup_Top|
+  - first:
+      74: -2304042101182697968
+    second: p_Plate|g_Fries|g_Fries|g_Fries_Main|Take 001|BaseLayer|g_Fries|g_Fries
+  - first:
+      74: 2040874785004705325
+    second: p_Plate|g_Fries|g_Fries|g_Fries|Take 001|BaseLayer|g_Fries|g_Fries|Take
+  - first:
+      74: -4496369987651490264
+    second: p_Plate|g_Fries|g_Fries|p_Plate|Take 001|BaseLayer|g_Fries|p_Plate|Take
+  - first:
+      74: -6403225839917373978
+    second: p_Plate|g_Fries|g_Fries|p_Sparkle1|Take 001|BaseLayer|g_Fries|p_Sparkle
+  - first:
+      74: -8693325891041278209
+    second: p_Plate|g_Fries|g_Fries|p_Sparkle2|Take 001|BaseLayer|g_Fries|p_Sparkle
+  - first:
+      74: 1874437467187104561
+    second: p_Plate|g_Fries|g_Fries|p_Sparkle3|Take 001|BaseLayer|g_Fries|p_Sparkle
+  - first:
+      74: -1333806053027323110
+    second: p_Plate|g_Fries|g_Fries|p_Sparkle|Take 001|BaseLayer|g_Fries|p_Sparkle|
+  - first:
+      74: -2283981906257275443
+    second: p_Plate|g_Fries|g_Fries|p_Spot|Take 001|BaseLayer|g_Fries|p_Spot|Take
+      0
+  - first:
+      74: -6326416026971814662
+    second: p_Plate|g_Fries|g_Fries|p_Swirl|Take 001|BaseLayer|g_Fries|p_Swirl|Take
+  - first:
+      74: 3010210384916506299
+    second: p_Plate|g_Fries|g_Fries|pBurger_Bun_Base|Take 001|BaseLayer|g_Fries|pBu
+  - first:
+      74: 6890771014844596271
+    second: p_Plate|g_Fries|g_Fries|pBurger_Bun_Top|Take 001|BaseLayer|g_Fries|pBur
+  - first:
+      74: -2671730754385176042
+    second: p_Plate|g_Fries|g_Fries|pBurger_Cheese|Take 001|BaseLayer|g_Fries|pBurg
+  - first:
+      74: 1411145886515942662
+    second: p_Plate|g_Fries|g_Fries|pBurger_Onion|Take 001|BaseLayer|g_Fries|pBurge
+  - first:
+      74: -5149964843504936564
+    second: p_Plate|g_Fries|g_Fries|pBurger_Patty|Take 001|BaseLayer|g_Fries|pBurge
+  - first:
+      74: -1183382623675327359
+    second: p_Plate|g_Fries|g_Fries|pBurger_Pickle1|Take 001|BaseLayer|g_Fries|pBur
+  - first:
+      74: -3844486080939552646
+    second: p_Plate|g_Fries|g_Fries|pBurger_Pickle2|Take 001|BaseLayer|g_Fries|pBur
+  - first:
+      74: 4779282767046027433
+    second: p_Plate|g_Fries|g_Fries|pBurger_Salad|Take 001|BaseLayer|g_Fries|pBurge
+  - first:
+      74: -1901573665737393447
+    second: p_Plate|g_Fries|g_Fries|pBurger_Tomato|Take 001|BaseLayer|g_Fries|pBurg
+  - first:
+      74: -2759095019917674868
+    second: p_Plate|g_Fries|g_Fries|pCup_Soda_Base|Take 001|BaseLayer|g_Fries|pCup_
+  - first:
+      74: -6957834111210949930
+    second: p_Plate|g_Fries|g_Fries|pCup_Soda_Drop1|Take 001|BaseLayer|g_Fries|pCup
+  - first:
+      74: 4599665208014562760
+    second: p_Plate|g_Fries|g_Fries|pCup_Soda_Drop|Take 001|BaseLayer|g_Fries|pCup_
+  - first:
+      74: -4631171359181781138
+    second: p_Plate|g_Fries|g_Fries|pCup_Soda_Swirl|Take 001|BaseLayer|g_Fries|pCup
+  - first:
+      74: 7009557759190664339
+    second: p_Plate|g_Fries|g_Fries|pCup_Straw|Take 001|BaseLayer|g_Fries|pCup_Stra
+  - first:
+      74: -2927122233225305283
+    second: p_Plate|g_Fries|g_Fries|pFries_Single3|Take 001|BaseLayer|g_Fries|pFrie
+  - first:
+      74: -299813509053066928
+    second: p_Plate|g_Fries|g_Fries|pFries_Single4|Take 001|BaseLayer|g_Fries|pFrie
+  - first:
+      74: 2281361297314203586
+    second: p_Plate|p_Plate|p_Plate|g_Cup_Main|Take 001|BaseLayer|p_Plate|g_Cup_Mai
+  - first:
+      74: -6348242564151349397
+    second: p_Plate|p_Plate|p_Plate|g_Cup_Top|Take 001|BaseLayer|p_Plate|g_Cup_Top|
+  - first:
+      74: 2578114978253619141
+    second: p_Plate|p_Plate|p_Plate|g_Fries_Main|Take 001|BaseLayer|p_Plate|g_Fries
+  - first:
+      74: -2358274418626508172
+    second: p_Plate|p_Plate|p_Plate|g_Fries|Take 001|BaseLayer|p_Plate|g_Fries|Take
+  - first:
+      74: 2454752630847099655
+    second: p_Plate|p_Plate|p_Plate|p_Plate|Take 001|BaseLayer|p_Plate|p_Plate|Take
+  - first:
+      74: 2520352224195594007
+    second: p_Plate|p_Plate|p_Plate|p_Sparkle1|Take 001|BaseLayer|p_Plate|p_Sparkle
+  - first:
+      74: 3888513188554644375
+    second: p_Plate|p_Plate|p_Plate|p_Sparkle2|Take 001|BaseLayer|p_Plate|p_Sparkle
+  - first:
+      74: -5778308657305788005
+    second: p_Plate|p_Plate|p_Plate|p_Sparkle3|Take 001|BaseLayer|p_Plate|p_Sparkle
+  - first:
+      74: 2031046106654653582
+    second: p_Plate|p_Plate|p_Plate|p_Sparkle|Take 001|BaseLayer|p_Plate|p_Sparkle|
+  - first:
+      74: 7303124810831975560
+    second: p_Plate|p_Plate|p_Plate|p_Spot|Take 001|BaseLayer|p_Plate|p_Spot|Take
+      0
+  - first:
+      74: 14509795984231775
+    second: p_Plate|p_Plate|p_Plate|p_Swirl|Take 001|BaseLayer|p_Plate|p_Swirl|Take
+  - first:
+      74: -4108877916027582075
+    second: p_Plate|p_Plate|p_Plate|pBurger_Bun_Base|Take 001|BaseLayer|p_Plate|pBu
+  - first:
+      74: -2770083549807906002
+    second: p_Plate|p_Plate|p_Plate|pBurger_Bun_Top|Take 001|BaseLayer|p_Plate|pBur
+  - first:
+      74: 9073960969728361690
+    second: p_Plate|p_Plate|p_Plate|pBurger_Cheese|Take 001|BaseLayer|p_Plate|pBurg
+  - first:
+      74: -7100722420935748229
+    second: p_Plate|p_Plate|p_Plate|pBurger_Onion|Take 001|BaseLayer|p_Plate|pBurge
+  - first:
+      74: -6594306648273422253
+    second: p_Plate|p_Plate|p_Plate|pBurger_Patty|Take 001|BaseLayer|p_Plate|pBurge
+  - first:
+      74: -6510572405267814292
+    second: p_Plate|p_Plate|p_Plate|pBurger_Pickle1|Take 001|BaseLayer|p_Plate|pBur
+  - first:
+      74: -458057718845313412
+    second: p_Plate|p_Plate|p_Plate|pBurger_Pickle2|Take 001|BaseLayer|p_Plate|pBur
+  - first:
+      74: 3896716002051509964
+    second: p_Plate|p_Plate|p_Plate|pBurger_Salad|Take 001|BaseLayer|p_Plate|pBurge
+  - first:
+      74: -6564014022898510212
+    second: p_Plate|p_Plate|p_Plate|pBurger_Tomato|Take 001|BaseLayer|p_Plate|pBurg
+  - first:
+      74: -8948451946189924623
+    second: p_Plate|p_Plate|p_Plate|pCup_Soda_Base|Take 001|BaseLayer|p_Plate|pCup_
+  - first:
+      74: -8402771348221713620
+    second: p_Plate|p_Plate|p_Plate|pCup_Soda_Drop1|Take 001|BaseLayer|p_Plate|pCup
+  - first:
+      74: 8566484416870669451
+    second: p_Plate|p_Plate|p_Plate|pCup_Soda_Drop|Take 001|BaseLayer|p_Plate|pCup_
+  - first:
+      74: 5634351848648358263
+    second: p_Plate|p_Plate|p_Plate|pCup_Soda_Swirl|Take 001|BaseLayer|p_Plate|pCup
+  - first:
+      74: 8008618176179612289
+    second: p_Plate|p_Plate|p_Plate|pCup_Straw|Take 001|BaseLayer|p_Plate|pCup_Stra
+  - first:
+      74: -1545639129416105928
+    second: p_Plate|p_Plate|p_Plate|pFries_Single3|Take 001|BaseLayer|p_Plate|pFrie
+  - first:
+      74: -806171527852539081
+    second: p_Plate|p_Plate|p_Plate|pFries_Single4|Take 001|BaseLayer|p_Plate|pFrie
+  - first:
+      74: -5617088809955194425
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|g_Cup_Main|Take 001|BaseLayer
+  - first:
+      74: -8771561372074232124
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|g_Cup_Top|Take 001|BaseLayer|
+  - first:
+      74: -4100195442201516006
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|g_Fries_Main|Take 001|BaseLay
+  - first:
+      74: -3142858253806476956
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|g_Fries|Take 001|BaseLayer|pB
+  - first:
+      74: 7235897336383986800
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|p_Plate|Take 001|BaseLayer|pB
+  - first:
+      74: 7341220670086344358
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|p_Sparkle1|Take 001|BaseLayer
+  - first:
+      74: 5248795278777428580
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|p_Sparkle2|Take 001|BaseLayer
+  - first:
+      74: -9094605936955087143
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|p_Sparkle3|Take 001|BaseLayer
+  - first:
+      74: -5604158127722957024
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|p_Sparkle|Take 001|BaseLayer|
+  - first:
+      74: -5920589005460785787
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|p_Spot|Take 001|BaseLayer|pBu
+  - first:
+      74: -2801683561186343044
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|p_Swirl|Take 001|BaseLayer|pB
+  - first:
+      74: 6503092004556753368
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pBurger_Bun_Base|Take 001|Bas
+  - first:
+      74: 1598500337273087837
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pBurger_Bun_Top|Take 001|Base
+  - first:
+      74: -108228035206300520
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pBurger_Cheese|Take 001|BaseL
+  - first:
+      74: 6977890606620673755
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pBurger_Onion|Take 001|BaseLa
+  - first:
+      74: -2612270765654658553
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pBurger_Patty|Take 001|BaseLa
+  - first:
+      74: -642583185120908652
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pBurger_Pickle1|Take 001|Base
+  - first:
+      74: 5853460617759731328
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pBurger_Pickle2|Take 001|Base
+  - first:
+      74: 1056439426510761415
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pBurger_Salad|Take 001|BaseLa
+  - first:
+      74: -5785037430344238201
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pBurger_Tomato|Take 001|BaseL
+  - first:
+      74: -2221475161402903109
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pCup_Soda_Base|Take 001|BaseL
+  - first:
+      74: -6365343154717885824
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pCup_Soda_Drop1|Take 001|Base
+  - first:
+      74: 3730386287644454734
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pCup_Soda_Drop|Take 001|BaseL
+  - first:
+      74: 3809459560001278899
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pCup_Soda_Swirl|Take 001|Base
+  - first:
+      74: 9116862952225232611
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pCup_Straw|Take 001|BaseLayer
+  - first:
+      74: -723031563782273763
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pFries_Single3|Take 001|BaseL
+  - first:
+      74: -7147756183228234249
+    second: p_Plate|pBurger_Bun_Base|pBurger_Bun_Base|pFries_Single4|Take 001|BaseL
+  - first:
+      74: 975489195498514069
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|g_Cup_Main|Take 001|BaseLayer|p
+  - first:
+      74: 4845217930071624496
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|g_Cup_Top|Take 001|BaseLayer|pB
+  - first:
+      74: 5486565932906735773
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|g_Fries_Main|Take 001|BaseLayer
+  - first:
+      74: 5712281775496425767
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|g_Fries|Take 001|BaseLayer|pBur
+  - first:
+      74: -163422190138191601
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|p_Plate|Take 001|BaseLayer|pBur
+  - first:
+      74: 6223856020076231273
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|p_Sparkle1|Take 001|BaseLayer|p
+  - first:
+      74: 7080769510851271256
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|p_Sparkle2|Take 001|BaseLayer|p
+  - first:
+      74: -6916539963619206624
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|p_Sparkle3|Take 001|BaseLayer|p
+  - first:
+      74: -5473773674981857831
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|p_Sparkle|Take 001|BaseLayer|pB
+  - first:
+      74: -8813147076945429438
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|p_Spot|Take 001|BaseLayer|pBurg
+  - first:
+      74: -9053464330288459566
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|p_Swirl|Take 001|BaseLayer|pBur
+  - first:
+      74: -6115151052689832141
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pBurger_Bun_Base|Take 001|BaseL
+  - first:
+      74: -3131849218252928409
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pBurger_Bun_Top|Take 001|BaseLa
+  - first:
+      74: -513097032119113607
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pBurger_Cheese|Take 001|BaseLay
+  - first:
+      74: 2322192000437803930
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pBurger_Onion|Take 001|BaseLaye
+  - first:
+      74: 3336050654010613917
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pBurger_Patty|Take 001|BaseLaye
+  - first:
+      74: -2406881945341170932
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pBurger_Pickle1|Take 001|BaseLa
+  - first:
+      74: -4224005756273548631
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pBurger_Pickle2|Take 001|BaseLa
+  - first:
+      74: 9096671824128015681
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pBurger_Salad|Take 001|BaseLaye
+  - first:
+      74: -8856307501128627695
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pBurger_Tomato|Take 001|BaseLay
+  - first:
+      74: 421440943029648932
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pCup_Soda_Base|Take 001|BaseLay
+  - first:
+      74: 5845946798544010336
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pCup_Soda_Drop1|Take 001|BaseLa
+  - first:
+      74: -4548559825425623395
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pCup_Soda_Drop|Take 001|BaseLay
+  - first:
+      74: 4460342831320388781
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pCup_Soda_Swirl|Take 001|BaseLa
+  - first:
+      74: -211647105925615727
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pCup_Straw|Take 001|BaseLayer|p
+  - first:
+      74: -7030941946786160926
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pFries_Single3|Take 001|BaseLay
+  - first:
+      74: 620951647780664666
+    second: p_Plate|pBurger_Bun_Top|pBurger_Bun_Top|pFries_Single4|Take 001|BaseLay
+  - first:
+      74: 3193416169545894233
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|g_Cup_Main|Take 001|BaseLayer|pBu
+  - first:
+      74: -5126158779150495126
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|g_Cup_Top|Take 001|BaseLayer|pBur
+  - first:
+      74: -8250392516120204566
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|g_Fries_Main|Take 001|BaseLayer|p
+  - first:
+      74: -3193825839930840186
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|g_Fries|Take 001|BaseLayer|pBurge
+  - first:
+      74: 2621936995566517037
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|p_Plate|Take 001|BaseLayer|pBurge
+  - first:
+      74: -2344443138265040686
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|p_Sparkle1|Take 001|BaseLayer|pBu
+  - first:
+      74: 5110423828607523673
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|p_Sparkle2|Take 001|BaseLayer|pBu
+  - first:
+      74: -1130455895254940788
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|p_Sparkle3|Take 001|BaseLayer|pBu
+  - first:
+      74: 7337423619544110154
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|p_Sparkle|Take 001|BaseLayer|pBur
+  - first:
+      74: 3759150333375999060
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|p_Spot|Take 001|BaseLayer|pBurger
+  - first:
+      74: 5874697177807875881
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|p_Swirl|Take 001|BaseLayer|pBurge
+  - first:
+      74: -9188998012701608548
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pBurger_Bun_Base|Take 001|BaseLay
+  - first:
+      74: 1149847509480197499
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pBurger_Bun_Top|Take 001|BaseLaye
+  - first:
+      74: 5632260266690574181
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pBurger_Cheese|Take 001|BaseLayer
+  - first:
+      74: -9059866154458414027
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pBurger_Onion|Take 001|BaseLayer|
+  - first:
+      74: 6002864481326921166
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pBurger_Patty|Take 001|BaseLayer|
+  - first:
+      74: -1142071258239890793
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pBurger_Pickle1|Take 001|BaseLaye
+  - first:
+      74: -7390181282554978852
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pBurger_Pickle2|Take 001|BaseLaye
+  - first:
+      74: 7229910612291229414
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pBurger_Salad|Take 001|BaseLayer|
+  - first:
+      74: -5792814267208487798
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pBurger_Tomato|Take 001|BaseLayer
+  - first:
+      74: -4995781045577172928
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pCup_Soda_Base|Take 001|BaseLayer
+  - first:
+      74: 3228323551342608733
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pCup_Soda_Drop1|Take 001|BaseLaye
+  - first:
+      74: -3301000833757796459
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pCup_Soda_Drop|Take 001|BaseLayer
+  - first:
+      74: 995907811723901622
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pCup_Soda_Swirl|Take 001|BaseLaye
+  - first:
+      74: -7517542730665358121
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pCup_Straw|Take 001|BaseLayer|pBu
+  - first:
+      74: 8095324329906070259
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pFries_Single3|Take 001|BaseLayer
+  - first:
+      74: -8875232696548399650
+    second: p_Plate|pBurger_Cheese|pBurger_Cheese|pFries_Single4|Take 001|BaseLayer
+  - first:
+      74: -6941041442564885786
+    second: p_Plate|pBurger_Onion|pBurger_Onion|g_Cup_Main|Take 001|BaseLayer|pBurg
+  - first:
+      74: 4320030780147414315
+    second: p_Plate|pBurger_Onion|pBurger_Onion|g_Cup_Top|Take 001|BaseLayer|pBurge
+  - first:
+      74: -1632087005624389678
+    second: p_Plate|pBurger_Onion|pBurger_Onion|g_Fries_Main|Take 001|BaseLayer|pBu
+  - first:
+      74: 5917620686951157917
+    second: p_Plate|pBurger_Onion|pBurger_Onion|g_Fries|Take 001|BaseLayer|pBurger_
+  - first:
+      74: 480681375794673197
+    second: p_Plate|pBurger_Onion|pBurger_Onion|p_Plate|Take 001|BaseLayer|pBurger_
+  - first:
+      74: -4060351660249288115
+    second: p_Plate|pBurger_Onion|pBurger_Onion|p_Sparkle1|Take 001|BaseLayer|pBurg
+  - first:
+      74: 8928784986928228347
+    second: p_Plate|pBurger_Onion|pBurger_Onion|p_Sparkle2|Take 001|BaseLayer|pBurg
+  - first:
+      74: -5974650663891710976
+    second: p_Plate|pBurger_Onion|pBurger_Onion|p_Sparkle3|Take 001|BaseLayer|pBurg
+  - first:
+      74: -1008674420337769965
+    second: p_Plate|pBurger_Onion|pBurger_Onion|p_Sparkle|Take 001|BaseLayer|pBurge
+  - first:
+      74: -5015802475680833692
+    second: p_Plate|pBurger_Onion|pBurger_Onion|p_Spot|Take 001|BaseLayer|pBurger_O
+  - first:
+      74: 8591335947755204296
+    second: p_Plate|pBurger_Onion|pBurger_Onion|p_Swirl|Take 001|BaseLayer|pBurger_
+  - first:
+      74: 398695184324323386
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pBurger_Bun_Base|Take 001|BaseLayer
+  - first:
+      74: 1328012485644252863
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pBurger_Bun_Top|Take 001|BaseLayer|
+  - first:
+      74: 9121363304548486577
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pBurger_Cheese|Take 001|BaseLayer|p
+  - first:
+      74: 7553536120591663395
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pBurger_Onion|Take 001|BaseLayer|pB
+  - first:
+      74: 6576265369301705337
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pBurger_Patty|Take 001|BaseLayer|pB
+  - first:
+      74: -5226815749656520868
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pBurger_Pickle1|Take 001|BaseLayer|
+  - first:
+      74: -6899766476638407658
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pBurger_Pickle2|Take 001|BaseLayer|
+  - first:
+      74: 3621798515203426408
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pBurger_Salad|Take 001|BaseLayer|pB
+  - first:
+      74: -6625714659337417061
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pBurger_Tomato|Take 001|BaseLayer|p
+  - first:
+      74: -438658836130520016
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pCup_Soda_Base|Take 001|BaseLayer|p
+  - first:
+      74: -4877771528098066384
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pCup_Soda_Drop1|Take 001|BaseLayer|
+  - first:
+      74: 7057387705383927033
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pCup_Soda_Drop|Take 001|BaseLayer|p
+  - first:
+      74: 4966946423312882324
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pCup_Soda_Swirl|Take 001|BaseLayer|
+  - first:
+      74: 7025845386834512451
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pCup_Straw|Take 001|BaseLayer|pBurg
+  - first:
+      74: -7470540037352009134
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pFries_Single3|Take 001|BaseLayer|p
+  - first:
+      74: 6407974352341563593
+    second: p_Plate|pBurger_Onion|pBurger_Onion|pFries_Single4|Take 001|BaseLayer|p
+  - first:
+      74: 1520452798232414418
+    second: p_Plate|pBurger_Patty|pBurger_Patty|g_Cup_Main|Take 001|BaseLayer|pBurg
+  - first:
+      74: -550665586654008867
+    second: p_Plate|pBurger_Patty|pBurger_Patty|g_Cup_Top|Take 001|BaseLayer|pBurge
+  - first:
+      74: 7689340445304742365
+    second: p_Plate|pBurger_Patty|pBurger_Patty|g_Fries_Main|Take 001|BaseLayer|pBu
+  - first:
+      74: 9109837124220541552
+    second: p_Plate|pBurger_Patty|pBurger_Patty|g_Fries|Take 001|BaseLayer|pBurger_
+  - first:
+      74: 3524799964387576957
+    second: p_Plate|pBurger_Patty|pBurger_Patty|p_Plate|Take 001|BaseLayer|pBurger_
+  - first:
+      74: -4473768839336901555
+    second: p_Plate|pBurger_Patty|pBurger_Patty|p_Sparkle1|Take 001|BaseLayer|pBurg
+  - first:
+      74: -5902514482516440344
+    second: p_Plate|pBurger_Patty|pBurger_Patty|p_Sparkle2|Take 001|BaseLayer|pBurg
+  - first:
+      74: 2118669027353768191
+    second: p_Plate|pBurger_Patty|pBurger_Patty|p_Sparkle3|Take 001|BaseLayer|pBurg
+  - first:
+      74: -1113553446407470422
+    second: p_Plate|pBurger_Patty|pBurger_Patty|p_Sparkle|Take 001|BaseLayer|pBurge
+  - first:
+      74: -2339458901676716872
+    second: p_Plate|pBurger_Patty|pBurger_Patty|p_Spot|Take 001|BaseLayer|pBurger_P
+  - first:
+      74: -5598100522249562099
+    second: p_Plate|pBurger_Patty|pBurger_Patty|p_Swirl|Take 001|BaseLayer|pBurger_
+  - first:
+      74: -88709068675997151
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pBurger_Bun_Base|Take 001|BaseLayer
+  - first:
+      74: -1475764111637187396
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pBurger_Bun_Top|Take 001|BaseLayer|
+  - first:
+      74: -8702696008333891803
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pBurger_Cheese|Take 001|BaseLayer|p
+  - first:
+      74: 8083146158982542744
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pBurger_Onion|Take 001|BaseLayer|pB
+  - first:
+      74: -1645013550821077033
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pBurger_Patty|Take 001|BaseLayer|pB
+  - first:
+      74: 6053885723190648944
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pBurger_Pickle1|Take 001|BaseLayer|
+  - first:
+      74: -4540056570713118635
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pBurger_Pickle2|Take 001|BaseLayer|
+  - first:
+      74: -6479519535141496682
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pBurger_Salad|Take 001|BaseLayer|pB
+  - first:
+      74: 5844813996998549117
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pBurger_Tomato|Take 001|BaseLayer|p
+  - first:
+      74: 4058088700667397445
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pCup_Soda_Base|Take 001|BaseLayer|p
+  - first:
+      74: 3243175858058927940
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pCup_Soda_Drop1|Take 001|BaseLayer|
+  - first:
+      74: 2372707858230083222
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pCup_Soda_Drop|Take 001|BaseLayer|p
+  - first:
+      74: 5586695449048684878
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pCup_Soda_Swirl|Take 001|BaseLayer|
+  - first:
+      74: -8415518895042357978
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pCup_Straw|Take 001|BaseLayer|pBurg
+  - first:
+      74: -5054725840956142393
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pFries_Single3|Take 001|BaseLayer|p
+  - first:
+      74: -7437200646204131052
+    second: p_Plate|pBurger_Patty|pBurger_Patty|pFries_Single4|Take 001|BaseLayer|p
+  - first:
+      74: -2267878591538175420
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|g_Cup_Main|Take 001|BaseLayer|p
+  - first:
+      74: 6868284578350052090
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|g_Cup_Top|Take 001|BaseLayer|pB
+  - first:
+      74: -4270843975797362738
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|g_Fries_Main|Take 001|BaseLayer
+  - first:
+      74: 637642630532133365
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|g_Fries|Take 001|BaseLayer|pBur
+  - first:
+      74: 1594194163257479623
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|p_Plate|Take 001|BaseLayer|pBur
+  - first:
+      74: -769112211955357639
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|p_Sparkle1|Take 001|BaseLayer|p
+  - first:
+      74: 9154854757245249828
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|p_Sparkle2|Take 001|BaseLayer|p
+  - first:
+      74: 8039233067821064482
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|p_Sparkle3|Take 001|BaseLayer|p
+  - first:
+      74: -3330372006913206594
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|p_Sparkle|Take 001|BaseLayer|pB
+  - first:
+      74: 3908112957140901522
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|p_Spot|Take 001|BaseLayer|pBurg
+  - first:
+      74: -5794469745100315908
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|p_Swirl|Take 001|BaseLayer|pBur
+  - first:
+      74: 1703663806182733801
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pBurger_Bun_Base|Take 001|BaseL
+  - first:
+      74: -6177173598101069464
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pBurger_Bun_Top|Take 001|BaseLa
+  - first:
+      74: 5462089542876282919
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pBurger_Cheese|Take 001|BaseLay
+  - first:
+      74: -8296762365932650663
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pBurger_Onion|Take 001|BaseLaye
+  - first:
+      74: 7945575483441352110
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pBurger_Patty|Take 001|BaseLaye
+  - first:
+      74: -4892493100887559450
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pBurger_Pickle1|Take 001|BaseLa
+  - first:
+      74: 3507206263648558488
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pBurger_Pickle2|Take 001|BaseLa
+  - first:
+      74: 8543528093699659599
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pBurger_Salad|Take 001|BaseLaye
+  - first:
+      74: 2462383377854952975
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pBurger_Tomato|Take 001|BaseLay
+  - first:
+      74: 4161529370971657578
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pCup_Soda_Base|Take 001|BaseLay
+  - first:
+      74: 2447147587473433680
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pCup_Soda_Drop1|Take 001|BaseLa
+  - first:
+      74: -2976640297467723305
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pCup_Soda_Drop|Take 001|BaseLay
+  - first:
+      74: -1704664603239451477
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pCup_Soda_Swirl|Take 001|BaseLa
+  - first:
+      74: 4515721218270002957
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pCup_Straw|Take 001|BaseLayer|p
+  - first:
+      74: 5852928743752500239
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pFries_Single3|Take 001|BaseLay
+  - first:
+      74: 1768924107169667857
+    second: p_Plate|pBurger_Pickle1|pBurger_Pickle1|pFries_Single4|Take 001|BaseLay
+  - first:
+      74: 4140762498489435221
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|g_Cup_Main|Take 001|BaseLayer|p
+  - first:
+      74: 8102723824938128850
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|g_Cup_Top|Take 001|BaseLayer|pB
+  - first:
+      74: -1878457385096582172
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|g_Fries_Main|Take 001|BaseLayer
+  - first:
+      74: 879415920446588104
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|g_Fries|Take 001|BaseLayer|pBur
+  - first:
+      74: -925449442027548246
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|p_Plate|Take 001|BaseLayer|pBur
+  - first:
+      74: 997600336192291535
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|p_Sparkle1|Take 001|BaseLayer|p
+  - first:
+      74: 3608545878841145323
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|p_Sparkle2|Take 001|BaseLayer|p
+  - first:
+      74: -730300486992907484
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|p_Sparkle3|Take 001|BaseLayer|p
+  - first:
+      74: -8032429663566799322
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|p_Sparkle|Take 001|BaseLayer|pB
+  - first:
+      74: 8172048921372745682
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|p_Spot|Take 001|BaseLayer|pBurg
+  - first:
+      74: 2087963892044342620
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|p_Swirl|Take 001|BaseLayer|pBur
+  - first:
+      74: -1375835341952529775
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pBurger_Bun_Base|Take 001|BaseL
+  - first:
+      74: -404952379932048333
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pBurger_Bun_Top|Take 001|BaseLa
+  - first:
+      74: 2138228521536098824
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pBurger_Cheese|Take 001|BaseLay
+  - first:
+      74: -275006581313792038
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pBurger_Onion|Take 001|BaseLaye
+  - first:
+      74: -6830057637522412107
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pBurger_Patty|Take 001|BaseLaye
+  - first:
+      74: -1994727921043287239
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pBurger_Pickle1|Take 001|BaseLa
+  - first:
+      74: 7059337932250145798
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pBurger_Pickle2|Take 001|BaseLa
+  - first:
+      74: 8243600171808462617
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pBurger_Salad|Take 001|BaseLaye
+  - first:
+      74: -3160645964919717722
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pBurger_Tomato|Take 001|BaseLay
+  - first:
+      74: 8701755123832275183
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pCup_Soda_Base|Take 001|BaseLay
+  - first:
+      74: 3140058294894308549
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pCup_Soda_Drop1|Take 001|BaseLa
+  - first:
+      74: 2001813154752819960
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pCup_Soda_Drop|Take 001|BaseLay
+  - first:
+      74: -5084830502451629145
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pCup_Soda_Swirl|Take 001|BaseLa
+  - first:
+      74: -3535143825447383470
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pCup_Straw|Take 001|BaseLayer|p
+  - first:
+      74: -7871497181740779807
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pFries_Single3|Take 001|BaseLay
+  - first:
+      74: -7800981340542354061
+    second: p_Plate|pBurger_Pickle2|pBurger_Pickle2|pFries_Single4|Take 001|BaseLay
+  - first:
+      74: -4240921211842811039
+    second: p_Plate|pBurger_Salad|pBurger_Salad|g_Cup_Main|Take 001|BaseLayer|pBurg
+  - first:
+      74: -6873109753605223972
+    second: p_Plate|pBurger_Salad|pBurger_Salad|g_Cup_Top|Take 001|BaseLayer|pBurge
+  - first:
+      74: -5998597559460936024
+    second: p_Plate|pBurger_Salad|pBurger_Salad|g_Fries_Main|Take 001|BaseLayer|pBu
+  - first:
+      74: 2810948573026587967
+    second: p_Plate|pBurger_Salad|pBurger_Salad|g_Fries|Take 001|BaseLayer|pBurger_
+  - first:
+      74: 7763221865176772941
+    second: p_Plate|pBurger_Salad|pBurger_Salad|p_Plate|Take 001|BaseLayer|pBurger_
+  - first:
+      74: -6003132430192266915
+    second: p_Plate|pBurger_Salad|pBurger_Salad|p_Sparkle1|Take 001|BaseLayer|pBurg
+  - first:
+      74: 6350232325678361205
+    second: p_Plate|pBurger_Salad|pBurger_Salad|p_Sparkle2|Take 001|BaseLayer|pBurg
+  - first:
+      74: 3106422340082976889
+    second: p_Plate|pBurger_Salad|pBurger_Salad|p_Sparkle3|Take 001|BaseLayer|pBurg
+  - first:
+      74: -9193771032300250014
+    second: p_Plate|pBurger_Salad|pBurger_Salad|p_Sparkle|Take 001|BaseLayer|pBurge
+  - first:
+      74: -7516167558109246129
+    second: p_Plate|pBurger_Salad|pBurger_Salad|p_Spot|Take 001|BaseLayer|pBurger_S
+  - first:
+      74: -6040729453134134507
+    second: p_Plate|pBurger_Salad|pBurger_Salad|p_Swirl|Take 001|BaseLayer|pBurger_
+  - first:
+      74: -403927395971497728
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pBurger_Bun_Base|Take 001|BaseLayer
+  - first:
+      74: 6541328335885245337
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pBurger_Bun_Top|Take 001|BaseLayer|
+  - first:
+      74: -5793952307007184714
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pBurger_Cheese|Take 001|BaseLayer|p
+  - first:
+      74: 2496540837720782152
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pBurger_Onion|Take 001|BaseLayer|pB
+  - first:
+      74: 681243550505194137
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pBurger_Patty|Take 001|BaseLayer|pB
+  - first:
+      74: 6901845729998351542
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pBurger_Pickle1|Take 001|BaseLayer|
+  - first:
+      74: 8375573573380859170
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pBurger_Pickle2|Take 001|BaseLayer|
+  - first:
+      74: 8076006240330330615
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pBurger_Salad|Take 001|BaseLayer|pB
+  - first:
+      74: -5253117945694959017
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pBurger_Tomato|Take 001|BaseLayer|p
+  - first:
+      74: -2993806800683419723
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pCup_Soda_Base|Take 001|BaseLayer|p
+  - first:
+      74: 4216000672790193486
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pCup_Soda_Drop1|Take 001|BaseLayer|
+  - first:
+      74: -5638347319515264318
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pCup_Soda_Drop|Take 001|BaseLayer|p
+  - first:
+      74: -7508346138932150065
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pCup_Soda_Swirl|Take 001|BaseLayer|
+  - first:
+      74: -6254650801654313806
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pCup_Straw|Take 001|BaseLayer|pBurg
+  - first:
+      74: 7477838718466557059
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pFries_Single3|Take 001|BaseLayer|p
+  - first:
+      74: 1301378466654718421
+    second: p_Plate|pBurger_Salad|pBurger_Salad|pFries_Single4|Take 001|BaseLayer|p
+  - first:
+      74: 1919711629892277397
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|g_Cup_Main|Take 001|BaseLayer|pBu
+  - first:
+      74: -359503403354099214
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|g_Cup_Top|Take 001|BaseLayer|pBur
+  - first:
+      74: 6297134722301449746
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|g_Fries_Main|Take 001|BaseLayer|p
+  - first:
+      74: 2777934316802608886
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|g_Fries|Take 001|BaseLayer|pBurge
+  - first:
+      74: 8698489472222373291
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|p_Plate|Take 001|BaseLayer|pBurge
+  - first:
+      74: 7966980120683027811
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|p_Sparkle1|Take 001|BaseLayer|pBu
+  - first:
+      74: -7802419957375235131
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|p_Sparkle2|Take 001|BaseLayer|pBu
+  - first:
+      74: -1334065141999018358
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|p_Sparkle3|Take 001|BaseLayer|pBu
+  - first:
+      74: -7426466505610830788
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|p_Sparkle|Take 001|BaseLayer|pBur
+  - first:
+      74: -1871653388130706617
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|p_Spot|Take 001|BaseLayer|pBurger
+  - first:
+      74: 169988900098947170
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|p_Swirl|Take 001|BaseLayer|pBurge
+  - first:
+      74: 6643805633001355330
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pBurger_Bun_Base|Take 001|BaseLay
+  - first:
+      74: -5542259355636555354
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pBurger_Bun_Top|Take 001|BaseLaye
+  - first:
+      74: 527312499030142812
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pBurger_Cheese|Take 001|BaseLayer
+  - first:
+      74: 4728288015664663434
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pBurger_Onion|Take 001|BaseLayer|
+  - first:
+      74: 8816839098204423344
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pBurger_Patty|Take 001|BaseLayer|
+  - first:
+      74: -6517224490609887909
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pBurger_Pickle1|Take 001|BaseLaye
+  - first:
+      74: 1308430800900029603
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pBurger_Pickle2|Take 001|BaseLaye
+  - first:
+      74: -6468320345540354766
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pBurger_Salad|Take 001|BaseLayer|
+  - first:
+      74: 9086828729616819793
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pBurger_Tomato|Take 001|BaseLayer
+  - first:
+      74: 8033648347702946760
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pCup_Soda_Base|Take 001|BaseLayer
+  - first:
+      74: -8480908677289214820
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pCup_Soda_Drop1|Take 001|BaseLaye
+  - first:
+      74: 479878188596904002
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pCup_Soda_Drop|Take 001|BaseLayer
+  - first:
+      74: 7553768128345719208
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pCup_Soda_Swirl|Take 001|BaseLaye
+  - first:
+      74: -6787584280100935519
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pCup_Straw|Take 001|BaseLayer|pBu
+  - first:
+      74: 3617877111015909751
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pFries_Single3|Take 001|BaseLayer
+  - first:
+      74: -2057880669538412488
+    second: p_Plate|pBurger_Tomato|pBurger_Tomato|pFries_Single4|Take 001|BaseLayer
+  - first:
+      74: 1559994737662444652
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|g_Cup_Main|Take 001|BaseLayer|pCu
+  - first:
+      74: -1757669354939781681
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|g_Cup_Top|Take 001|BaseLayer|pCup
+  - first:
+      74: -6499851729118873030
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|g_Fries_Main|Take 001|BaseLayer|p
+  - first:
+      74: -8374621949551778318
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|g_Fries|Take 001|BaseLayer|pCup_S
+  - first:
+      74: 1057203306969107970
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|p_Plate|Take 001|BaseLayer|pCup_S
+  - first:
+      74: -721548311793707288
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|p_Sparkle1|Take 001|BaseLayer|pCu
+  - first:
+      74: 5780065641837371144
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|p_Sparkle2|Take 001|BaseLayer|pCu
+  - first:
+      74: -6002425823752689676
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|p_Sparkle3|Take 001|BaseLayer|pCu
+  - first:
+      74: 4447267935443410443
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|p_Sparkle|Take 001|BaseLayer|pCup
+  - first:
+      74: 8192173385419284096
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|p_Spot|Take 001|BaseLayer|pCup_So
+  - first:
+      74: 5760438561507260048
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|p_Swirl|Take 001|BaseLayer|pCup_S
+  - first:
+      74: -4343232719066629506
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pBurger_Bun_Base|Take 001|BaseLay
+  - first:
+      74: -7559613272780940794
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pBurger_Bun_Top|Take 001|BaseLaye
+  - first:
+      74: 3917207978763485199
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pBurger_Cheese|Take 001|BaseLayer
+  - first:
+      74: 2277218534840804640
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pBurger_Onion|Take 001|BaseLayer|
+  - first:
+      74: 904082846441610748
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pBurger_Patty|Take 001|BaseLayer|
+  - first:
+      74: -3282015021472486709
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pBurger_Pickle1|Take 001|BaseLaye
+  - first:
+      74: -3045205254008065006
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pBurger_Pickle2|Take 001|BaseLaye
+  - first:
+      74: 412850657066115232
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pBurger_Salad|Take 001|BaseLayer|
+  - first:
+      74: 5097334577455344797
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pBurger_Tomato|Take 001|BaseLayer
+  - first:
+      74: -5409152048657634038
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pCup_Soda_Base|Take 001|BaseLayer
+  - first:
+      74: -4143443697939644720
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pCup_Soda_Drop1|Take 001|BaseLaye
+  - first:
+      74: -9158058254230892802
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pCup_Soda_Drop|Take 001|BaseLayer
+  - first:
+      74: 7731632455533773136
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pCup_Soda_Swirl|Take 001|BaseLaye
+  - first:
+      74: 3542922205466239493
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pCup_Straw|Take 001|BaseLayer|pCu
+  - first:
+      74: 4073985345854372542
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pFries_Single3|Take 001|BaseLayer
+  - first:
+      74: -4529827704778452961
+    second: p_Plate|pCup_Soda_Base|pCup_Soda_Base|pFries_Single4|Take 001|BaseLayer
+  - first:
+      74: 6288033679673323615
+    second: p_Plate|pCup_Straw|pCup_Straw|g_Cup_Main|Take 001|BaseLayer|pCup_Straw|
+  - first:
+      74: 7910779913396259305
+    second: p_Plate|pCup_Straw|pCup_Straw|g_Cup_Top|Take 001|BaseLayer|pCup_Straw|g
+  - first:
+      74: -1243043931662691597
+    second: p_Plate|pCup_Straw|pCup_Straw|g_Fries_Main|Take 001|BaseLayer|pCup_Stra
+  - first:
+      74: 8567731758110447417
+    second: p_Plate|pCup_Straw|pCup_Straw|g_Fries|Take 001|BaseLayer|pCup_Straw|g_F
+  - first:
+      74: -5322022669197374889
+    second: p_Plate|pCup_Straw|pCup_Straw|p_Plate|Take 001|BaseLayer|pCup_Straw|p_P
+  - first:
+      74: 6073417598410599484
+    second: p_Plate|pCup_Straw|pCup_Straw|p_Sparkle1|Take 001|BaseLayer|pCup_Straw|
+  - first:
+      74: 212593308807315242
+    second: p_Plate|pCup_Straw|pCup_Straw|p_Sparkle2|Take 001|BaseLayer|pCup_Straw|
+  - first:
+      74: -6051541945589868009
+    second: p_Plate|pCup_Straw|pCup_Straw|p_Sparkle3|Take 001|BaseLayer|pCup_Straw|
+  - first:
+      74: 6658432350266437991
+    second: p_Plate|pCup_Straw|pCup_Straw|p_Sparkle|Take 001|BaseLayer|pCup_Straw|p
+  - first:
+      74: 8581162978714417920
+    second: p_Plate|pCup_Straw|pCup_Straw|p_Spot|Take 001|BaseLayer|pCup_Straw|p_Sp
+  - first:
+      74: 7436072805778165739
+    second: p_Plate|pCup_Straw|pCup_Straw|p_Swirl|Take 001|BaseLayer|pCup_Straw|p_S
+  - first:
+      74: 4562857880181033911
+    second: p_Plate|pCup_Straw|pCup_Straw|pBurger_Bun_Base|Take 001|BaseLayer|pCup_
+  - first:
+      74: -1221841244774865630
+    second: p_Plate|pCup_Straw|pCup_Straw|pBurger_Bun_Top|Take 001|BaseLayer|pCup_S
+  - first:
+      74: -844622558938995140
+    second: p_Plate|pCup_Straw|pCup_Straw|pBurger_Cheese|Take 001|BaseLayer|pCup_St
+  - first:
+      74: 9197250781711518212
+    second: p_Plate|pCup_Straw|pCup_Straw|pBurger_Onion|Take 001|BaseLayer|pCup_Str
+  - first:
+      74: -8124397433511111116
+    second: p_Plate|pCup_Straw|pCup_Straw|pBurger_Patty|Take 001|BaseLayer|pCup_Str
+  - first:
+      74: -7715462599638030569
+    second: p_Plate|pCup_Straw|pCup_Straw|pBurger_Pickle1|Take 001|BaseLayer|pCup_S
+  - first:
+      74: -6479241266346416980
+    second: p_Plate|pCup_Straw|pCup_Straw|pBurger_Pickle2|Take 001|BaseLayer|pCup_S
+  - first:
+      74: -2202425686196572725
+    second: p_Plate|pCup_Straw|pCup_Straw|pBurger_Salad|Take 001|BaseLayer|pCup_Str
+  - first:
+      74: 6695722136885242266
+    second: p_Plate|pCup_Straw|pCup_Straw|pBurger_Tomato|Take 001|BaseLayer|pCup_St
+  - first:
+      74: -5000439250677698589
+    second: p_Plate|pCup_Straw|pCup_Straw|pCup_Soda_Base|Take 001|BaseLayer|pCup_St
+  - first:
+      74: -5668132500954429365
+    second: p_Plate|pCup_Straw|pCup_Straw|pCup_Soda_Drop1|Take 001|BaseLayer|pCup_S
+  - first:
+      74: 7550903674882252695
+    second: p_Plate|pCup_Straw|pCup_Straw|pCup_Soda_Drop|Take 001|BaseLayer|pCup_St
+  - first:
+      74: 7099697340714304829
+    second: p_Plate|pCup_Straw|pCup_Straw|pCup_Soda_Swirl|Take 001|BaseLayer|pCup_S
+  - first:
+      74: 7007378728877680523
+    second: p_Plate|pCup_Straw|pCup_Straw|pCup_Straw|Take 001|BaseLayer|pCup_Straw|
+  - first:
+      74: -4642580815612028380
+    second: p_Plate|pCup_Straw|pCup_Straw|pFries_Single3|Take 001|BaseLayer|pCup_St
+  - first:
+      74: -1655936362748267626
+    second: p_Plate|pCup_Straw|pCup_Straw|pFries_Single4|Take 001|BaseLayer|pCup_St
+  - first:
+      74: -6945398454655172443
+    second: p_Plate|pFries_Single3|pFries_Single3|g_Cup_Main|Take 001|BaseLayer|pFr
+  - first:
+      74: 4278091845496315550
+    second: p_Plate|pFries_Single3|pFries_Single3|g_Cup_Top|Take 001|BaseLayer|pFri
+  - first:
+      74: -7372453577388037752
+    second: p_Plate|pFries_Single3|pFries_Single3|g_Fries_Main|Take 001|BaseLayer|p
+  - first:
+      74: 4137480105226987452
+    second: p_Plate|pFries_Single3|pFries_Single3|g_Fries|Take 001|BaseLayer|pFries
+  - first:
+      74: 6943899985915626806
+    second: p_Plate|pFries_Single3|pFries_Single3|p_Plate|Take 001|BaseLayer|pFries
+  - first:
+      74: -8635034416839142384
+    second: p_Plate|pFries_Single3|pFries_Single3|p_Sparkle1|Take 001|BaseLayer|pFr
+  - first:
+      74: -739311993639019046
+    second: p_Plate|pFries_Single3|pFries_Single3|p_Sparkle2|Take 001|BaseLayer|pFr
+  - first:
+      74: 4945838160896616823
+    second: p_Plate|pFries_Single3|pFries_Single3|p_Sparkle3|Take 001|BaseLayer|pFr
+  - first:
+      74: 4196505843759954238
+    second: p_Plate|pFries_Single3|pFries_Single3|p_Sparkle|Take 001|BaseLayer|pFri
+  - first:
+      74: 1186356485852744496
+    second: p_Plate|pFries_Single3|pFries_Single3|p_Spot|Take 001|BaseLayer|pFries_
+  - first:
+      74: 1467119471093264903
+    second: p_Plate|pFries_Single3|pFries_Single3|p_Swirl|Take 001|BaseLayer|pFries
+  - first:
+      74: 4304533257264642564
+    second: p_Plate|pFries_Single3|pFries_Single3|pBurger_Bun_Base|Take 001|BaseLay
+  - first:
+      74: 3743558791052058482
+    second: p_Plate|pFries_Single3|pFries_Single3|pBurger_Bun_Top|Take 001|BaseLaye
+  - first:
+      74: 4163763604599753732
+    second: p_Plate|pFries_Single3|pFries_Single3|pBurger_Cheese|Take 001|BaseLayer
+  - first:
+      74: 2486068023449394220
+    second: p_Plate|pFries_Single3|pFries_Single3|pBurger_Onion|Take 001|BaseLayer|
+  - first:
+      74: -6545621354103005144
+    second: p_Plate|pFries_Single3|pFries_Single3|pBurger_Patty|Take 001|BaseLayer|
+  - first:
+      74: -1623913031329984591
+    second: p_Plate|pFries_Single3|pFries_Single3|pBurger_Pickle1|Take 001|BaseLaye
+  - first:
+      74: -5522812873410399520
+    second: p_Plate|pFries_Single3|pFries_Single3|pBurger_Pickle2|Take 001|BaseLaye
+  - first:
+      74: 1278069923975323877
+    second: p_Plate|pFries_Single3|pFries_Single3|pBurger_Salad|Take 001|BaseLayer|
+  - first:
+      74: -1816202813319633180
+    second: p_Plate|pFries_Single3|pFries_Single3|pBurger_Tomato|Take 001|BaseLayer
+  - first:
+      74: 161325194525149817
+    second: p_Plate|pFries_Single3|pFries_Single3|pCup_Soda_Base|Take 001|BaseLayer
+  - first:
+      74: 8447086218734156460
+    second: p_Plate|pFries_Single3|pFries_Single3|pCup_Soda_Drop1|Take 001|BaseLaye
+  - first:
+      74: -1974005146522996145
+    second: p_Plate|pFries_Single3|pFries_Single3|pCup_Soda_Drop|Take 001|BaseLayer
+  - first:
+      74: 5661620145023947852
+    second: p_Plate|pFries_Single3|pFries_Single3|pCup_Soda_Swirl|Take 001|BaseLaye
+  - first:
+      74: -1437104683309311915
+    second: p_Plate|pFries_Single3|pFries_Single3|pCup_Straw|Take 001|BaseLayer|pFr
+  - first:
+      74: -4717603352079314334
+    second: p_Plate|pFries_Single3|pFries_Single3|pFries_Single3|Take 001|BaseLayer
+  - first:
+      74: -2922820090700658239
+    second: p_Plate|pFries_Single3|pFries_Single3|pFries_Single4|Take 001|BaseLayer
+  - first:
+      74: -3962016797270366761
+    second: p_Plate|pFries_Single4|pFries_Single4|g_Cup_Main|Take 001|BaseLayer|pFr
+  - first:
+      74: -3626381844124647199
+    second: p_Plate|pFries_Single4|pFries_Single4|g_Cup_Top|Take 001|BaseLayer|pFri
+  - first:
+      74: -3553383648259305700
+    second: p_Plate|pFries_Single4|pFries_Single4|g_Fries_Main|Take 001|BaseLayer|p
+  - first:
+      74: 6443435858577325852
+    second: p_Plate|pFries_Single4|pFries_Single4|g_Fries|Take 001|BaseLayer|pFries
+  - first:
+      74: -6180927820660155836
+    second: p_Plate|pFries_Single4|pFries_Single4|p_Plate|Take 001|BaseLayer|pFries
+  - first:
+      74: -57034189456640248
+    second: p_Plate|pFries_Single4|pFries_Single4|p_Sparkle1|Take 001|BaseLayer|pFr
+  - first:
+      74: -8548474248014505149
+    second: p_Plate|pFries_Single4|pFries_Single4|p_Sparkle2|Take 001|BaseLayer|pFr
+  - first:
+      74: -5314116483582190707
+    second: p_Plate|pFries_Single4|pFries_Single4|p_Sparkle3|Take 001|BaseLayer|pFr
+  - first:
+      74: 975801667921086457
+    second: p_Plate|pFries_Single4|pFries_Single4|p_Sparkle|Take 001|BaseLayer|pFri
+  - first:
+      74: 6779461449227456275
+    second: p_Plate|pFries_Single4|pFries_Single4|p_Spot|Take 001|BaseLayer|pFries_
+  - first:
+      74: -8791837688493396565
+    second: p_Plate|pFries_Single4|pFries_Single4|p_Swirl|Take 001|BaseLayer|pFries
+  - first:
+      74: -4620880756341904351
+    second: p_Plate|pFries_Single4|pFries_Single4|pBurger_Bun_Base|Take 001|BaseLay
+  - first:
+      74: 4027549662107233093
+    second: p_Plate|pFries_Single4|pFries_Single4|pBurger_Bun_Top|Take 001|BaseLaye
+  - first:
+      74: -7927922684746705065
+    second: p_Plate|pFries_Single4|pFries_Single4|pBurger_Cheese|Take 001|BaseLayer
+  - first:
+      74: 7023158894683696325
+    second: p_Plate|pFries_Single4|pFries_Single4|pBurger_Onion|Take 001|BaseLayer|
+  - first:
+      74: -8603258604695156095
+    second: p_Plate|pFries_Single4|pFries_Single4|pBurger_Patty|Take 001|BaseLayer|
+  - first:
+      74: -2705672427097815419
+    second: p_Plate|pFries_Single4|pFries_Single4|pBurger_Pickle1|Take 001|BaseLaye
+  - first:
+      74: -1904993571616969308
+    second: p_Plate|pFries_Single4|pFries_Single4|pBurger_Pickle2|Take 001|BaseLaye
+  - first:
+      74: -2469818400088841264
+    second: p_Plate|pFries_Single4|pFries_Single4|pBurger_Salad|Take 001|BaseLayer|
+  - first:
+      74: -2870065176996283107
+    second: p_Plate|pFries_Single4|pFries_Single4|pBurger_Tomato|Take 001|BaseLayer
+  - first:
+      74: -9169802269453729935
+    second: p_Plate|pFries_Single4|pFries_Single4|pCup_Soda_Base|Take 001|BaseLayer
+  - first:
+      74: -4490168656834769540
+    second: p_Plate|pFries_Single4|pFries_Single4|pCup_Soda_Drop1|Take 001|BaseLaye
+  - first:
+      74: -4730613323753181781
+    second: p_Plate|pFries_Single4|pFries_Single4|pCup_Soda_Drop|Take 001|BaseLayer
+  - first:
+      74: 492317844418971864
+    second: p_Plate|pFries_Single4|pFries_Single4|pCup_Soda_Swirl|Take 001|BaseLaye
+  - first:
+      74: -1968720143689851613
+    second: p_Plate|pFries_Single4|pFries_Single4|pCup_Straw|Take 001|BaseLayer|pFr
+  - first:
+      74: 8708832551846044718
+    second: p_Plate|pFries_Single4|pFries_Single4|pFries_Single3|Take 001|BaseLayer
+  - first:
+      74: 3530128109008131700
+    second: p_Plate|pFries_Single4|pFries_Single4|pFries_Single4|Take 001|BaseLayer
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
