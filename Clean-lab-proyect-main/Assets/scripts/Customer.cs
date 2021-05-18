@@ -4,35 +4,31 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
-    private Collider myCollider;
-    private Rigidbody myRigidbody;
+    public AudioClip moneySound;
+
+    private AudioSource sound;
+    private bool burgerAux = false;
+    private float time = 0.0f;
+    private float timeStop = 5.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        myCollider = GetComponent<Collider>();
-        myRigidbody = GetComponent<Rigidbody>();
+        sound = GetComponent<AudioSource>();
     }
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        if (other.CompareTag("Burger"))
+        if (other.gameObject.CompareTag("Object"))
         {
-            Debug.Log("entra_if");
-            BugerDelivered();
+            time += Time.deltaTime;
+            burgerAux = BurgerFin.Instance.IsBurger();
+            Debug.Log(burgerAux);
+            if (burgerAux==true && time > timeStop && time < timeStop + 0.5f)
+            {
+                sound.PlayOneShot(moneySound, 0.2f);
+            }
+            
         }
-    }
-
-    private void BugerDelivered() 
-    {
-        Debug.Log("entra_musica");
-        SoundManager.Instance.PlayMoneyClip();
     }
 }
