@@ -17,8 +17,8 @@ public class CreateNewPrefab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (giveObject.pickedObject == null)
-            CreateOnePrefab = true;
+        
+
 
         //if (Input.GetKeyDown(KeyCode.Space))    
         //     Instantiate(Prefab, SapcePrefab.transform.position, Prefab.transform.rotation); 
@@ -28,12 +28,15 @@ public class CreateNewPrefab : MonoBehaviour
     {
         if (other.gameObject.CompareTag("SpaceInstanceFood"))
         {
+            giveObject.giveObjSpace = false;
             if (giveObject.pickedObject != null && giveObject.times >= 5.0f && CreateOnePrefab == true)
             {
                 Instantiate(giveObject.pickedObject, giveObject.pickedObject.transform.position, giveObject.pickedObject.transform.rotation);
                 CreateOnePrefab = false;
             }
-            
+            if (giveObject.pickedObject == null && giveObject.times >= giveObject.secondsGiveObject-1.0f && giveObject.times <= giveObject.secondsGiveObject)
+                CreateOnePrefab = true;
         }
+
     }
 }
