@@ -4,25 +4,9 @@ using UnityEngine;
 
 public class CreateNewPrefab : MonoBehaviour
 {
-    //public GameObject Prefab;
-    //public GameObject SapcePrefab;
     public GiveObject giveObject;
-    private bool CreateOnePrefab = true;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-
-
-        //if (Input.GetKeyDown(KeyCode.Space))    
-        //     Instantiate(Prefab, SapcePrefab.transform.position, Prefab.transform.rotation); 
-    }
+    private bool CreateOnePrefab = false;
 
     private void OnTriggerStay(Collider other)
     {
@@ -37,6 +21,5 @@ public class CreateNewPrefab : MonoBehaviour
             if (giveObject.pickedObject == null && giveObject.times >= giveObject.secondsGiveObject-1.0f && giveObject.times <= giveObject.secondsGiveObject)
                 CreateOnePrefab = true;
         }
-
     }
 }
