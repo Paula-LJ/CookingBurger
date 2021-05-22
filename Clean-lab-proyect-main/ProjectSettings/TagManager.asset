@@ -30,6 +30,7 @@ TagManager:
   - Cam1
   - SpaceInstanceFood
   - Burger
+  - Bubbles
   layers:
   - Default
   - TransparentFX
