@@ -5,11 +5,12 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     public AudioClip moneySound;
+    public GiveObject giveObject;
 
     private AudioSource sound;
-    private bool burgerAux = false;
-    private float time = 0.0f;
-    private float timeStop = 5.0f;
+    private GameObject childother;
+
+    //&& giveObject.pickedObject!=null
 
     // Start is called before the first frame update
     void Start()
@@ -17,18 +18,22 @@ public class Customer : MonoBehaviour
         sound = GetComponent<AudioSource>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) //other es la otra cosa con la que colisiona
     {
-        if (other.gameObject.CompareTag("Object"))
+        if (other.CompareTag("Object"))
         {
-            time += Time.deltaTime;
-            burgerAux = BurgerFin.Instance.IsBurger();
-            Debug.Log(burgerAux);
-            if (burgerAux==true && time > timeStop && time < timeStop + 0.5f)
+            childother = other.transform.GetChild(0).gameObject;
+            
+            if (childother.CompareTag("Burger"))
             {
                 sound.PlayOneShot(moneySound, 0.2f);
             }
-            
+
+            //Faltaria comparar si és o no l'hamburguesa demanada
+            giveObject.giveObj = false;
+            Destroy(other.gameObject);
+            giveObject.pickedObject = null;
+
         }
     }
 }
