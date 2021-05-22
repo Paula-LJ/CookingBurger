@@ -7,7 +7,7 @@ public class GiveObject : MonoBehaviour
 	public GameObject handPoint; //punto del player donde hacemos el trigger
 	public float times = 0.0f; //tiempo coger
 	public float secondsGiveObject = 5.0f; //segundos de coger y dejar un objeto
-	public GameObject pickedObject = null; // lista de objetos que tiene el player
+	public GameObject pickedObject = null; //objeto que tiene el player
 	public float timeStop = 0.0f; //tiempo parar
 	public bool isDestroy = false; // si tiene un objeto cogido y esta en la papelera
 	public bool giveObj = false; //si tiene un objeto el player
@@ -57,7 +57,16 @@ public class GiveObject : MonoBehaviour
 				other.transform.position = handPoint.transform.position;
 				other.gameObject.transform.SetParent(handPoint.gameObject.transform);
 				pickedObject = other.gameObject;
-				//giveObjectInstanceSpace = false;
+			}
+			if (times >= secondsGiveObject && times <= secondsGiveObject + 0.5f  && giveObj == true ) //si el player ya tiene un objeto le unimos los dos o mas 
+			{
+				other.GetComponent<Rigidbody>().useGravity = false;
+				other.GetComponent<Rigidbody>().isKinematic = true;
+				other.transform.position = handPoint.transform.position;
+				other.gameObject.transform.SetParent(handPoint.gameObject.transform);
+				other.gameObject.transform.SetParent(pickedObject.gameObject.transform);
+				//pickedObject.gameObject.transform..SetParent(other.gameObject.transform);
+
 			}
 		}
 		if (other.gameObject.CompareTag("DestroyFood"))
@@ -66,9 +75,19 @@ public class GiveObject : MonoBehaviour
 			times += Time.deltaTime;
 			if (handPoint.transform.hasChanged == false && timeStop > secondsGiveObject && timeStop < secondsGiveObject + 0.5f && giveObj == true)
 			{
-				giveObj = false;
+
+				for (int i = 0; i < pickedObject.gameObject.transform.childCount; i++)
+				{
+					if (pickedObject.gameObject.transform.GetChild(i).tag == "Object")
+						Destroy(pickedObject.gameObject.transform.GetChild(i).gameObject);
+				}
+
 				Destroy(pickedObject);
+				giveObj = false;
 				pickedObject = null;
+				giveObj = false;
+				
+
 			}
 		}
 	}
