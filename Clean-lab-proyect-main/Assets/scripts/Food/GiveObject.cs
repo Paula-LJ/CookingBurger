@@ -12,17 +12,18 @@ public class GiveObject : MonoBehaviour
 	public bool isDestroy = false; // si tiene un objeto cogido y esta en la papelera
 	public bool giveObj = false; //si tiene un objeto el player
 	public bool giveObjSpace = true;
-
+	public CreateNewPrefab createNewPrefab; 
 	public ParticleSystem bubbles;
 	//public bool giveObjectInstanceSpace = false; 
 	void Update()
 	{
-
+		//Debug.Log(times); 
 		//si hay movimeineto del player
 		if (handPoint.transform.hasChanged)
 		{
 			handPoint.transform.hasChanged = false;
 			timeStop = 0.0f;
+			//times = 0.0f; //si hay movimiento que el tiempo de coger sea 0
 
 		}
 		else
@@ -39,7 +40,7 @@ public class GiveObject : MonoBehaviour
 			pickedObject.GetComponent<Rigidbody>().useGravity = false;
             pickedObject.GetComponent<Rigidbody>().isKinematic = false;
             pickedObject.gameObject.transform.SetParent(null);
-            pickedObject.gameObject.transform.position += new Vector3(1, 0, 0); //para ver fisicamente que lo ha cogido /mueve el objeto una posicion en la derecha
+            //pickedObject.gameObject.transform.position += new Vector3(1, 0, 0); //para ver fisicamente que lo ha cogido /mueve el objeto una posicion en la derecha
             giveObj = false;
             pickedObject = null;
 
@@ -77,15 +78,17 @@ public class GiveObject : MonoBehaviour
 				other.transform.position = handPoint.transform.position;
 				other.gameObject.transform.SetParent(handPoint.gameObject.transform);
 				pickedObject = other.gameObject;
+				times = 0.0f; 
 			}
-			if (times >= secondsGiveObject && times <= secondsGiveObject + 0.5f  && giveObj == true ) //si el player ya tiene un objeto le unimos los dos o mas 
+			//si esta en la zona de coger objetos, solo pueda coger un objeto esto es: createNewPrefab.spaceInstance == false
+			if (times >= secondsGiveObject && times <= secondsGiveObject + 0.5f  && giveObj == true && createNewPrefab.spaceInstance == false) //si el player ya tiene un objeto le unimos los dos o mas 
 			{
 				other.GetComponent<Rigidbody>().useGravity = false;
 				other.GetComponent<Rigidbody>().isKinematic = true;
 				other.transform.position = handPoint.transform.position;
 				other.gameObject.transform.SetParent(handPoint.gameObject.transform);
 				other.gameObject.transform.SetParent(pickedObject.gameObject.transform);
-
+				times = 0.0f;
 			}
 		}
 		if (other.gameObject.CompareTag("DestroyFood"))
