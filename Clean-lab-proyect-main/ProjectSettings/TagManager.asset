@@ -31,6 +31,8 @@ TagManager:
   - SpaceInstanceFood
   - Burger
   - Bubbles
+  - Fluid
+  - Floor
   layers:
   - Default
   - TransparentFX

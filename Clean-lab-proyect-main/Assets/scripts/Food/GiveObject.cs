@@ -18,7 +18,7 @@ public class GiveObject : MonoBehaviour
 	void Update()
 	{
 		//Debug.Log(times); 
-		//si hay movimeineto del player
+		//si hay movimiento del player
 		if (handPoint.transform.hasChanged)
 		{
 			handPoint.transform.hasChanged = false;
@@ -27,22 +27,21 @@ public class GiveObject : MonoBehaviour
 
 		}
 		else
-		{ //si no hay movimeinto, el tiempo de stop augmente
+		{ //si no hay movimiento, el tiempo de stop augmente
 			if (giveObj == true)
 				timeStop += Time.deltaTime;
 		}
 		// dejar un objeto
 		if (pickedObject != null && isDestroy == false && handPoint.transform.hasChanged == false &&
-			timeStop > secondsGiveObject && timeStop < secondsGiveObject + 0.5f && giveObj == true && giveObjSpace==true)
+			timeStop > secondsGiveObject && timeStop < secondsGiveObject + 0.5f && giveObj == true && giveObjSpace == true)
 		{
-
-			// si el tiempo de sin movimeinto es mayor a 5 y menor a 5.5 y es mayor el tiempo real del tiempo de estar parado para cogerlo y si no hay movimiento 
+			// si el tiempo de sin movimiento es mayor a 5 y menor a 5.5 y es mayor el tiempo real del tiempo de estar parado para cogerlo y si no hay movimiento 
 			pickedObject.GetComponent<Rigidbody>().useGravity = false;
-            pickedObject.GetComponent<Rigidbody>().isKinematic = false;
-            pickedObject.gameObject.transform.SetParent(null);
-            //pickedObject.gameObject.transform.position += new Vector3(1, 0, 0); //para ver fisicamente que lo ha cogido /mueve el objeto una posicion en la derecha
-            giveObj = false;
-            pickedObject = null;
+			pickedObject.GetComponent<Rigidbody>().isKinematic = false;
+			pickedObject.gameObject.transform.SetParent(null);
+			//pickedObject.gameObject.transform.position += new Vector3(1, 0, 0); //para ver fisicamente que lo ha cogido /mueve el objeto una posicion en la derecha
+			giveObj = false;
+			pickedObject = null;
 
 
 		}
@@ -50,7 +49,7 @@ public class GiveObject : MonoBehaviour
 		//	timeStop > secondsGiveObject && timeStop < secondsGiveObject + 0.5f && giveObj == true && giveObjSpace == true)
 		//{
 		//	if (pickedObject.name == "Plate dirty") //Si tenemos el plato sucio lo destruimos
-  //          {
+		//          {
 		//		Destroy(pickedObject);
 		//		giveObj = false;
 		//		pickedObject = null;
@@ -67,6 +66,22 @@ public class GiveObject : MonoBehaviour
 	//Si el jugador esta 5 segundos encima del objeto con el tag Objects, se lo puede llevar
 	private void OnTriggerStay(Collider other)
 	{
+		//Dejar objeto en el suelo
+		if (other.gameObject.CompareTag("Floor"))
+		{
+			if (pickedObject != null && isDestroy == false && handPoint.transform.hasChanged == false &&
+			timeStop > secondsGiveObject && timeStop < secondsGiveObject + 0.5f && giveObj == true && giveObjSpace == true)
+			{
+				// si el tiempo de sin movimiento es mayor a 5 y menor a 5.5 y es mayor el tiempo real del tiempo de estar parado para cogerlo y si no hay movimiento 
+				pickedObject.GetComponent<Rigidbody>().useGravity = false;
+				pickedObject.GetComponent<Rigidbody>().isKinematic = false;
+				pickedObject.gameObject.transform.SetParent(null);
+				//pickedObject.gameObject.transform.position += new Vector3(1, 0, 0); //para ver fisicamente que lo ha cogido /mueve el objeto una posicion en la derecha
+				giveObj = false;
+				pickedObject = null;
+			}
+		}
+
 		if (other.gameObject.CompareTag("Object"))
 		{
 			times += Time.deltaTime;
