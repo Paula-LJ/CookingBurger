@@ -9,6 +9,7 @@ public class Customer : MonoBehaviour
 
     private AudioSource sound;
     private GameObject childother;
+    
 
     //&& giveObject.pickedObject!=null
 
@@ -27,13 +28,15 @@ public class Customer : MonoBehaviour
             if (childother.CompareTag("Burger"))
             {
                 sound.PlayOneShot(moneySound, 0.2f);
+                //Destroy(gameObject); //Desaparegui el client (llavors no sonen els diners)
             }
 
-            //Faltaria comparar si és o no l'hamburguesa demanada
+            //FALTARIA COMPARA SI ÉS O NO L'HAMBURGUESA DEMANADA
+
+            //Destrueix l'objecte entregat (sigui o no el que ha demanat)
             giveObject.giveObj = false;
             Destroy(other.gameObject);
             giveObject.pickedObject = null;
-
         }
     }
 }
