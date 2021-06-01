@@ -6,6 +6,7 @@ public class Customer : MonoBehaviour
 {
     public AudioClip moneySound;
     public GiveObject giveObject;
+    public float timeDestroy;
 
     private AudioSource sound;
     private GameObject childother;
@@ -28,7 +29,7 @@ public class Customer : MonoBehaviour
             if (childother.CompareTag("Burger"))
             {
                 sound.PlayOneShot(moneySound, 0.2f);
-                //Destroy(gameObject); //Desaparegui el client (llavors no sonen els diners)
+                Destroy(gameObject, timeDestroy); //Desaparegui el client amb cert retard per tal que sonin els diners
             }
 
             //FALTARIA COMPARA SI ÉS O NO L'HAMBURGUESA DEMANADA
