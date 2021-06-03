@@ -12,7 +12,6 @@ public class Arrow : MonoBehaviour
     void Start()
     {
         arrowObject.SetActive(false);
-
     }
 
     // Update is called once per frame
