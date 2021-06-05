@@ -5,6 +5,7 @@ using UnityEngine;
 public class CreateNewPrefab : MonoBehaviour
 {
     public GiveObject giveObject;
+    public GameObject gameObject; 
     public bool spaceInstance = false; 
 
         private void OnTriggerStay(Collider other)
@@ -25,7 +26,12 @@ public class CreateNewPrefab : MonoBehaviour
             //Crear la instancia del objeto que colisiona
             if (giveObject.pickedObject != null && giveObject.times==0.0f) // 
             {
-                Instantiate(other.gameObject, other.transform.position, other.transform.rotation);
+                GameObject go = Instantiate(other.gameObject, other.transform.position, other.transform.rotation);
+                if (gameObject.CompareTag("Player2") )
+                {
+                    go.transform.localScale = other.transform.localScale * 4;
+
+                }
             }
             
         }
