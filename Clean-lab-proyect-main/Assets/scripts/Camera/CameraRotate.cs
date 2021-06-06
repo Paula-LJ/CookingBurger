@@ -6,7 +6,7 @@ public class CameraRotate : MonoBehaviour
 {
     public float time = 0.0f;
     //Los segundos que rotatá el escenario
-    private float timeCangePrivate = 10.0f; 
+    private float timeCangePrivate = 30.0f; 
     public float timeChange;
     public Camera cam;
     public Camera cam1;
