@@ -102,7 +102,7 @@ public class GiveObject : MonoBehaviour
 				other.GetComponent<Rigidbody>().isKinematic = true;
 				other.transform.position = handPoint.transform.position;
 				other.gameObject.transform.SetParent(handPoint.gameObject.transform);
-				other.gameObject.transform.SetParent(pickedObject.gameObject.transform);
+				//other.gameObject.transform.SetParent(pickedObject.gameObject.transform);
 				times = 0.0f;
 			}
 		}

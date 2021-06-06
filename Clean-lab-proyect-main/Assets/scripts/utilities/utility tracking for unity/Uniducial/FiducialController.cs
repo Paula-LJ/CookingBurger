@@ -29,6 +29,8 @@ using UnityEngine.UI;
 public class FiducialController : MonoBehaviour
 {
     public int MarkerID = 0;
+    public float cameraRotateTime = 0.0f;
+    //public GameObject timeCh; 
 
     public enum RotationAxis { Forward, Back, Up, Down, Left, Right };
 
@@ -65,7 +67,7 @@ public class FiducialController : MonoBehaviour
     private float limit_blue_down = 3f;
     private float limit_blue_up = 58f;
     private float time = 0.0f;
-    private float timeChange = 10.0f;
+    //private float timeChange = 10.0f;
 
     public float RotationMultiplier = 1;
 
@@ -172,8 +174,8 @@ public class FiducialController : MonoBehaviour
                         transform.position += Vector3.right * -0.5f;
                     }
 
-                    //Debug.Log(cameraRotate.timeChange);
-                    if (time < timeChange)
+                    
+                    if (time < cameraRotateTime)
                     {
                         if (transform.position.z < limit_red_down)
                         {
@@ -184,7 +186,7 @@ public class FiducialController : MonoBehaviour
                             transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_up);
                         }
                     }
-                    if (time >= timeChange)
+                    if (time >= cameraRotateTime)
                     {
                         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                         if (transform.position.z < limit_blue_down)
@@ -237,7 +239,7 @@ public class FiducialController : MonoBehaviour
                         transform.position += Vector3.right * -0.5f;
                     }
                     
-                    if (time < timeChange)
+                    if (time < cameraRotateTime)
                     {
                         if (transform.position.z < limit_blue_down)
                         {
@@ -248,7 +250,7 @@ public class FiducialController : MonoBehaviour
                             transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_up);
                         }
                     }
-                    if (time >= timeChange)
+                    if (time >= cameraRotateTime)
                     {
                         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                         if (transform.position.z < limit_red_down)
