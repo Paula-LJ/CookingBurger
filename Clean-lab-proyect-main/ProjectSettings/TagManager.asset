@@ -33,6 +33,7 @@ TagManager:
   - Bubbles
   - Fluid
   - Floor
+  - cuttingboard
   layers:
   - Default
   - TransparentFX
