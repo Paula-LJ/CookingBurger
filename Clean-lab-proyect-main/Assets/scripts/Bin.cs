@@ -23,7 +23,8 @@ public class Bin : MonoBehaviour
             //Destrueix l'objecte
             giveObject.giveObj = false;
             Destroy(other.gameObject, timeDestroy);
-            giveObject.pickedObject = null;
+			giveObject.pickedObject = null;
+            giveObject.giveObj = false;
         }
     }
 }
