@@ -17,14 +17,11 @@ public class GiveObject : MonoBehaviour
 	//public bool giveObjectInstanceSpace = false; 
 	void Update()
 	{
-		//Debug.Log(times); 
 		//si hay movimiento del player
 		if (handPoint.transform.hasChanged)
 		{
 			handPoint.transform.hasChanged = false;
 			timeStop = 0.0f;
-			//times = 0.0f; //si hay movimiento que el tiempo de coger sea 0
-
 		}
 		else
 		{ //si no hay movimiento, el tiempo de stop augmente
@@ -39,26 +36,12 @@ public class GiveObject : MonoBehaviour
 			pickedObject.GetComponent<Rigidbody>().useGravity = false;
 			pickedObject.GetComponent<Rigidbody>().isKinematic = false;
 			pickedObject.gameObject.transform.SetParent(null);
-			//pickedObject.gameObject.transform.position += new Vector3(1, 0, 0); //para ver fisicamente que lo ha cogido /mueve el objeto una posicion en la derecha
 			giveObj = false;
 			pickedObject = null;
-
-
 		}
-		//if (pickedObject != null && isDestroy == false && handPoint.transform.hasChanged == false &&
-		//	timeStop > secondsGiveObject && timeStop < secondsGiveObject + 0.5f && giveObj == true && giveObjSpace == true)
-		//{
-		//	if (pickedObject.name == "Plate dirty") //Si tenemos el plato sucio lo destruimos
-		//          {
-		//		Destroy(pickedObject);
-		//		giveObj = false;
-		//		pickedObject = null;
-		//		giveObj = false;
+		if (pickedObject==null) // si no tiene nungun obj cogido que pueda coger un nuevo
+			giveObj = false;
 
-		//	}
-
-
-		//}
 
 	}
 
@@ -66,27 +49,13 @@ public class GiveObject : MonoBehaviour
 	//Si el jugador esta 5 segundos encima del objeto con el tag Objects, se lo puede llevar
 	private void OnTriggerStay(Collider other)
 	{
-		//Dejar objeto en el suelo
-		if (other.gameObject.CompareTag("Floor"))
-		{
-			if (pickedObject != null && isDestroy == false && handPoint.transform.hasChanged == false &&
-			timeStop > secondsGiveObject && timeStop < secondsGiveObject + 0.5f && giveObj == true && giveObjSpace == true)
-			{
-				// si el tiempo de sin movimiento es mayor a 5 y menor a 5.5 y es mayor el tiempo real del tiempo de estar parado para cogerlo y si no hay movimiento 
-				pickedObject.GetComponent<Rigidbody>().useGravity = false;
-				pickedObject.GetComponent<Rigidbody>().isKinematic = false;
-				pickedObject.gameObject.transform.SetParent(null);
-				//pickedObject.gameObject.transform.position += new Vector3(1, 0, 0); //para ver fisicamente que lo ha cogido /mueve el objeto una posicion en la derecha
-				giveObj = false;
-				pickedObject = null;
-			}
-		}
-
 		if (other.gameObject.CompareTag("Object"))
 		{
 			times += Time.deltaTime;
+
 			if (times >= secondsGiveObject && times <= secondsGiveObject + 0.5f && pickedObject == null && giveObj == false)
 			{
+
 				other.GetComponent<Rigidbody>().useGravity = false;
 				other.GetComponent<Rigidbody>().isKinematic = true;
 				giveObj = true;
@@ -102,38 +71,17 @@ public class GiveObject : MonoBehaviour
 				other.GetComponent<Rigidbody>().isKinematic = true;
 				other.transform.position = handPoint.transform.position;
 				other.gameObject.transform.SetParent(handPoint.gameObject.transform);
-				other.gameObject.transform.SetParent(pickedObject.gameObject.transform);
+				//other.gameObject.transform.SetParent(pickedObject.gameObject.transform);
 				times = 0.0f;
 			}
 		}
-		if (other.gameObject.CompareTag("DestroyFood"))
-		{
-			isDestroy = true;
-			times += Time.deltaTime;
-			if (handPoint.transform.hasChanged == false && timeStop > secondsGiveObject && timeStop < secondsGiveObject + 0.5f && giveObj == true)
-			{
 
-				for (int i = 0; i < pickedObject.gameObject.transform.childCount; i++)
-				{
-					if (pickedObject.gameObject.transform.GetChild(i).tag == "Object")
-						Destroy(pickedObject.gameObject.transform.GetChild(i).gameObject);
-				}
-
-				Destroy(pickedObject);
-				giveObj = false;
-				pickedObject = null;
-				giveObj = false;
-
-
-			}
-		}
 
 		if (other.gameObject.CompareTag("Bubbles")){ //si colisionamos con la pica i con el plato sucio creamos la animacion de burbujas y destruimos el plato
 			if (pickedObject != null)
             {
 				if (pickedObject.name == "Plate dirty") //Si tenemos el plato sucio lo destruimos
 				{
-
 					bubbles.Play();
 					Destroy(pickedObject);
 					giveObj = false;

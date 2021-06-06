@@ -51,6 +51,12 @@ public class UniducialInspector : UnityEditor.Editor
         EditorGUILayout.BeginHorizontal();
         controller.MarkerID = EditorGUILayout.IntField("Marker ID", controller.MarkerID);
         EditorGUILayout.EndHorizontal();
+
+        EditorGUILayout.BeginHorizontal();
+        controller.cameraRotateTime = EditorGUILayout.FloatField("cameraRotateTime", controller.cameraRotateTime);
+        EditorGUILayout.EndHorizontal();
+
+
         EditorGUILayout.BeginHorizontal();
         controller.AutoHideGO = EditorGUILayout.Toggle("Auto-hide GameObject", controller.AutoHideGO);
         EditorGUILayout.EndHorizontal();

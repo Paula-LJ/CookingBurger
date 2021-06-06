@@ -27,11 +27,6 @@ public class CreateNewPrefab : MonoBehaviour
             if (giveObject.pickedObject != null && giveObject.times==0.0f) // 
             {
                 GameObject go = Instantiate(other.gameObject, other.transform.position, other.transform.rotation);
-                if (gameObject.CompareTag("Player2") )
-                {
-                    go.transform.localScale = other.transform.localScale * 4;
-
-                }
             }
             
         }
