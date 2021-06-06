@@ -27,6 +27,7 @@ public class CreateNewPrefab : MonoBehaviour
             if (giveObject.pickedObject != null && giveObject.times==0.0f) // 
             {
                 GameObject go = Instantiate(other.gameObject, other.transform.position, other.transform.rotation);
+                go.transform.parent = gameObject.transform;
             }
             
         }
