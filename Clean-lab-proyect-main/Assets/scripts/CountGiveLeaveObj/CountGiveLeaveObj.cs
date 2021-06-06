@@ -8,7 +8,10 @@ public class CountGiveLeaveObj : MonoBehaviour
     [Tooltip("Tiempo init de la acción")]
     public int timePlotGiveLeaveObj;
     private Text mytext;
-    public GiveObject giveObject; 
+    public GiveObject giveObject;
+    public GameObject gameobjet;
+    public CameraRotate cameraRotate; 
+    private float timeText=0.0f; 
     // Start is called before the first frame update
     private void Start()
     {
@@ -19,7 +22,30 @@ public class CountGiveLeaveObj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		updateCountPlot(timePlotGiveLeaveObj);
+        updateCountPlot(timePlotGiveLeaveObj);
+
+        timeText += Time.deltaTime; 
+
+        //Rotar tambien contador del jugador rojo en su puesto
+        if (gameobjet.CompareTag("Player1") && cameraRotate.timeChange!= 0.0) 
+        {
+            if (timeText >= cameraRotate.timeChange && timeText <= cameraRotate.timeChange + 0.5f )
+            {
+                mytext.transform.position = new Vector3(8, 0, 42.0f);
+            }
+
+        }
+        //Rotar tambien contador del jugador azul en su puesto
+        if (gameobjet.CompareTag("Player2") && cameraRotate.timeChange != 0.0)
+        {
+
+            //Debug.Log(gameObject.transform.position);
+            if (timeText >= cameraRotate.timeChange && timeText <= cameraRotate.timeChange + 0.5f)
+            {
+                mytext.transform.position = new Vector3(7.3f, 8.0f, 80.0f);
+            }
+
+        }
 
     }
 

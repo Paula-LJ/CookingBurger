@@ -12,9 +12,9 @@ public class CameraRotate : MonoBehaviour
     public Camera cam1;
     
     private Vector3 NewPosition; // = new Vector3(49, 30, 72); 
-    private Vector3 NewRotation; //= new Vector3(0, 180, 0); 
+    public Vector3 NewRotation; //= new Vector3(0, 180, 0); 
     private bool moveCamera = false;
-    private Vector3 com_rot = new Vector3(0, 180, 0);
+    public Vector3 com_rot = new Vector3(0, 180, 0);
 
     // Start is called before the first frame update
     private Vector3 rota = new Vector3  (90,0,0);

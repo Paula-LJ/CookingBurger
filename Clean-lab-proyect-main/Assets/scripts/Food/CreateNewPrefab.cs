@@ -5,21 +5,44 @@ using UnityEngine;
 public class CreateNewPrefab : MonoBehaviour
 {
     public GiveObject giveObject;
+    public GameObject gameObject; 
+    public bool spaceInstance = false; 
 
-    private bool CreateOnePrefab = false;
-
-    private void OnTriggerStay(Collider other)
+        private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("SpaceInstanceFood"))
         {
-            giveObject.giveObjSpace = false;
-            if (giveObject.pickedObject != null && giveObject.times >= 5.0f && CreateOnePrefab == true)
-            {
-                Instantiate(giveObject.pickedObject, giveObject.pickedObject.transform.position, giveObject.pickedObject.transform.rotation);
-                CreateOnePrefab = false;
+            spaceInstance = true;
+            //No se pueda dejar ni coger un objeto si esta con un objeto cogido y esta en la zona de coger
+            if (giveObject.pickedObject != null) {
+                giveObject.timeStop = 0.0f; 
             }
-            if (giveObject.pickedObject == null && giveObject.times >= giveObject.secondsGiveObject-1.0f && giveObject.times <= giveObject.secondsGiveObject)
-                CreateOnePrefab = true;
+        }
+        //cada vez que se coge un objeto, la variable time se inicializa, pero seguidamente augmenta. 
+        //Solo entra una sola vez
+        if (other.gameObject.CompareTag("Object") && spaceInstance == true)
+        {
+            giveObject.giveObjSpace = false;
+            //Crear la instancia del objeto que colisiona
+            if (giveObject.pickedObject != null && giveObject.times==0.0f) // 
+            {
+                GameObject go = Instantiate(other.gameObject, other.transform.position, other.transform.rotation);
+                if (gameObject.CompareTag("Player2") )
+                {
+                    go.transform.localScale = other.transform.localScale * 4;
+
+                }
+            }
+            
+        }
+    }
+
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("SpaceInstanceFood"))
+        {
+            spaceInstance = false;
         }
     }
 }
