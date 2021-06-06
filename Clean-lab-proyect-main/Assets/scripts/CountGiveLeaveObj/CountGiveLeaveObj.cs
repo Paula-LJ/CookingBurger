@@ -49,6 +49,7 @@ public class CountGiveLeaveObj : MonoBehaviour
 
     }
 
+    
     public void updateCountPlot(int timePlotGiveLeaveObj)
     {
         if (giveObject.timeStop >= 1.0f && giveObject.timeStop <=5.1f && giveObject.pickedObject != null)
