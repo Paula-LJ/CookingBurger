@@ -15,23 +15,42 @@ public class GiveObject : MonoBehaviour
 	public CreateNewPrefab createNewPrefab; 
 	public GameObject[] prefabs;
 	public ParticleSystem[] patricles;
-	//public bool giveObjectInstanceSpace = false; 
+	//If is stop in area
+	private List <Vector3> positions = new List<Vector3>();
+	private int cont = 0;
+	private float velocity = 0; 
 	void Update()
 	{
-		//si hay movimiento del player
-		if (handPoint.transform.hasChanged)
+		if (giveObj == true) //si tiene obj el player
 		{
-			handPoint.transform.hasChanged = false;
-			timeStop = 0.0f;
+			cont += 1;
+			positions.Add(createNewPrefab.transform.position);
+
+			if (cont != 1) // calulate velocity
+			{
+				Vector3 vector1 = positions[cont - 1] - positions[cont - 2];
+				velocity = vector1.magnitude;
+				if (velocity < 0.5f) //no hay movimiento
+					timeStop += Time.deltaTime;
+				else //hay movimiento
+					timeStop = 0.0f;
+
+			}
+			if (cont == 2) //reste list
+			{
+				positions = new List<Vector3>();
+				cont = 0;
+			}
+
 		}
 		else
-		{ //si no hay movimiento, el tiempo de stop augmente
-			if (giveObj == true)
-				timeStop += Time.deltaTime;
+		{
+			cont = 0;
+			timeStop = 0.0f;
 		}
+		//Debug.Log(timeStop); 
 		// dejar un objeto
-		if (pickedObject != null && isDestroy == false && handPoint.transform.hasChanged == false &&
-			timeStop > secondsGiveObject && timeStop < secondsGiveObject + 0.5f && giveObj == true && giveObjSpace == true)
+		if (pickedObject != null && isDestroy == false && timeStop > secondsGiveObject && giveObj == true && giveObjSpace == true)
 		{
 			// si el tiempo de sin movimiento es mayor a 5 y menor a 5.5 y es mayor el tiempo real del tiempo de estar parado para cogerlo y si no hay movimiento 
 			pickedObject.GetComponent<Rigidbody>().useGravity = false;
