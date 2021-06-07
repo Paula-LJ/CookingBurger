@@ -8,6 +8,7 @@ public class Spawn : MonoBehaviour
     public GameObject prefab;
     public GameObject speakPrefab;
     public GameObject FolderClient;
+    public GiveObject giveObject; 
 
     private Vector3 prefabPosition;
     private Vector3 SepakPosition;
@@ -19,10 +20,15 @@ public class Spawn : MonoBehaviour
     //Order Burger
     public GameObject[] IngredientUncooked;
     public GameObject[] IngredientAlways;
-    GameObject NewSpeak;
-    GameObject NewI; 
-    private int ranNumOfPrefabs;
     private int ranPrefab;
+    [System.Serializable]
+    public class Client
+    {
+        public GameObject prefabClient;
+        public GameObject[] ingredients;
+        public GameObject prefabSpeak;
+    }
+    public Client[] clients; 
 
     // Start is called before the first frame update
     void Start()
@@ -36,33 +42,37 @@ public class Spawn : MonoBehaviour
         //Crea clients cada x temps
         if (cont > 1*i && cont < (1*i + valueSum) && cont < (cantidadClientes+1)) //El temps per crear un nou client sigui múltiple de 5 (timeNewCustomer)
         {
-            prefabPosition = new Vector3(prefab.transform.position.x+25 - i*25f, prefab.transform.position.y, prefab.transform.position.z);
+            prefabPosition = new Vector3(prefab.transform.position.x-15 - i*25f, prefab.transform.position.y, prefab.transform.position.z);
             SepakPosition = new Vector3(speakPrefab.transform.position.x+25 - i*25f, speakPrefab.transform.position.y, speakPrefab.transform.position.z);
-            GameObject NewClient = Instantiate(prefab, prefabPosition, prefab.transform.rotation);
-            NewSpeak= Instantiate(speakPrefab, SepakPosition, speakPrefab.transform.rotation);
-            NewClient.transform.parent = FolderClient.transform;
-            NewSpeak.transform.parent = FolderClient.transform;
-            OrderBurger(); 
+            clients[i - 1].prefabClient = Instantiate(prefab, prefabPosition, prefab.transform.rotation);
+            clients[i - 1].prefabSpeak = Instantiate(speakPrefab, SepakPosition, speakPrefab.transform.rotation);
+            clients[i - 1].prefabClient.transform.parent = FolderClient.transform;
+            clients[i - 1].prefabSpeak.transform.parent = FolderClient.transform;
+            OrderBurger(i); 
             i++;
         }
 
         
     }
 
-    public void OrderBurger()
+    public void OrderBurger(int i)
     {
 		for (int y = 0; y < IngredientAlways.Length; y++)
 		{
 			if (y == 1)
-				NewI = Instantiate(IngredientAlways[y], NewSpeak.transform.position + new Vector3(3.5f, 6, 0), IngredientAlways[y].transform.rotation); //hamburgesa
+                clients[i - 1].ingredients[y] = Instantiate(IngredientAlways[y], clients[i - 1].prefabSpeak.transform.position + new Vector3(3.5f, 6, 0), IngredientAlways[y].transform.rotation); //hamburgesa
 			else
-				NewI = Instantiate(IngredientAlways[y], NewSpeak.transform.position + new Vector3(5-(3f*y) , 6, 0), IngredientAlways[y].transform.rotation); //ingredientes que estan siempre
-			NewI.transform.parent = FolderClient.transform; 
+                clients[i - 1].ingredients[y] = Instantiate(IngredientAlways[y], clients[i - 1].prefabSpeak.transform.position + new Vector3(5-(3f*y) , 6, 0), IngredientAlways[y].transform.rotation); //ingredientes que estan siempre
+            clients[i - 1].ingredients[y].transform.parent = FolderClient.transform;
+            clients[i - 1].ingredients[y].name = IngredientAlways[y].name; 
 
-		}
+
+        }
 
 		ranPrefab = Random.Range(0, IngredientUncooked.Length);
-        NewI = Instantiate(IngredientUncooked[ranPrefab], NewSpeak.transform.position + new Vector3(-4, 6, 0) , IngredientUncooked[ranPrefab].transform.rotation); //ingredientes random
-        NewI.transform.parent = FolderClient.transform;
+        clients[i - 1].ingredients[3] = Instantiate(IngredientUncooked[ranPrefab], clients[i - 1].prefabSpeak.transform.position + new Vector3(-4, 6, 0) , IngredientUncooked[ranPrefab].transform.rotation); //ingredientes random
+        clients[i - 1].ingredients[3].transform.parent = FolderClient.transform;
+        clients[i - 1].ingredients[3].name = IngredientUncooked[ranPrefab].name;
+
     }
 }
