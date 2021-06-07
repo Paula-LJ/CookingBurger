@@ -28,6 +28,7 @@ public class CreateNewPrefab : MonoBehaviour
             {
                 GameObject go = Instantiate(other.gameObject, other.transform.position, other.transform.rotation);
                 go.transform.parent = gameObject.transform;
+                go.name = other.name; 
             }
             
         }
