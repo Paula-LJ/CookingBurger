@@ -8,7 +8,7 @@ public class Spawn : MonoBehaviour
     public GameObject prefab;
     public GameObject speakPrefab;
     public GameObject FolderClient;
-    public GiveObject giveObject; 
+    //public GiveObject giveObject; 
 
     private Vector3 prefabPosition;
     private Vector3 SepakPosition;
@@ -16,7 +16,8 @@ public class Spawn : MonoBehaviour
     private float cantidadClientes = 3.0f;
     private float valueSum = 0.0025f; 
     private int i = 1;
-
+    //
+    public rotateScene rotateS; 
     //Order Burger
     public GameObject[] IngredientUncooked;
     public GameObject[] IngredientAlways;
@@ -42,8 +43,16 @@ public class Spawn : MonoBehaviour
         //Crea clients cada x temps
         if (cont > 1*i && cont < (1*i + valueSum) && cont < (cantidadClientes+1)) //El temps per crear un nou client sigui múltiple de 5 (timeNewCustomer)
         {
-            prefabPosition = new Vector3(prefab.transform.position.x-15 - i*25f, prefab.transform.position.y, prefab.transform.position.z);
-            SepakPosition = new Vector3(speakPrefab.transform.position.x+25 - i*25f, speakPrefab.transform.position.y, speakPrefab.transform.position.z);
+            if (rotateS.time > rotateS.timeChange) //rotando
+            {
+                prefabPosition = new Vector3(prefab.transform.position.x + 25 + i * 25f, prefab.transform.position.y, prefab.transform.position.z);
+                SepakPosition = new Vector3(speakPrefab.transform.position.x + 25 + i * 25f, speakPrefab.transform.position.y, speakPrefab.transform.position.z);
+            }
+            else //sin rotar
+            {
+                prefabPosition = new Vector3(prefab.transform.position.x - 25 - i * 25f, prefab.transform.position.y, prefab.transform.position.z);
+                SepakPosition = new Vector3(speakPrefab.transform.position.x -25 - i * 25f, speakPrefab.transform.position.y, speakPrefab.transform.position.z);
+            }
             clients[i - 1].prefabClient = Instantiate(prefab, prefabPosition, prefab.transform.rotation);
             clients[i - 1].prefabSpeak = Instantiate(speakPrefab, SepakPosition, speakPrefab.transform.rotation);
             clients[i - 1].prefabClient.transform.parent = FolderClient.transform;

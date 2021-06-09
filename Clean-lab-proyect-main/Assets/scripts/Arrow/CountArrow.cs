@@ -8,7 +8,8 @@ public class CountArrow : MonoBehaviour
     [Tooltip("Tiempo inicial en segundos")]
     public int TimeInitial;
     private Text myText;
-    public CameraRotate cameraRotate;
+    //public CameraRotate cameraRotate;
+    public rotateScene rotateS; 
     public Arrow arrow;
     private float ContShow;  
     // Start is called before the first frame update
@@ -24,9 +25,9 @@ public class CountArrow : MonoBehaviour
         //Debug.Log(ContShow); 
         ContShow -= Time.deltaTime;
 
-        if (cameraRotate.timeChange - arrow.timeAppeareArrow <= cameraRotate.time && cameraRotate.timeChange >= cameraRotate.time)
+        if (rotateS.timeChange - arrow.timeAppeareArrow <= rotateS.time && rotateS.timeChange >= rotateS.time)
         {
-            myText.text = ((int)(cameraRotate.timeChange -arrow.timeAppeareArrow + ContShow)).ToString();
+            myText.text = ((int)(rotateS.timeChange -arrow.timeAppeareArrow + ContShow)).ToString();
         }
         else
             myText.text = "";

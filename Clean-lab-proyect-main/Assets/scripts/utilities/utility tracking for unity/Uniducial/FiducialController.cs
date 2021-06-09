@@ -175,29 +175,29 @@ public class FiducialController : MonoBehaviour
                     }
 
                     
-                    if (time < cameraRotateTime)
-                    {
-                        if (transform.position.z < limit_red_down)
-                        {
-                            transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_down);
-                        }
-                        if (transform.position.z > limit_red_up)
-                        {
-                            transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_up);
-                        }
-                    }
-                    if (time >= cameraRotateTime)
-                    {
-                        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-                        if (transform.position.z < limit_blue_down)
-                        {
-                            transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_down);
-                        }
-                        if (transform.position.z > limit_blue_up)
-                        {
-                            transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_up);
-                        }
-                    }
+                    //if (time < cameraRotateTime)
+                    //{
+                    //    if (transform.position.z < limit_red_down)
+                    //    {
+                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_down);
+                    //    }
+                    //    if (transform.position.z > limit_red_up)
+                    //    {
+                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_up);
+                    //    }
+                    //}
+                    //if (time >= cameraRotateTime)
+                    //{
+                    //    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                    //    if (transform.position.z < limit_blue_down)
+                    //    {
+                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_down);
+                    //    }
+                    //    if (transform.position.z > limit_blue_up)
+                    //    {
+                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_up);
+                    //    }
+                    //}
 
 
                 }
@@ -239,29 +239,29 @@ public class FiducialController : MonoBehaviour
                         transform.position += Vector3.right * -0.5f;
                     }
                     
-                    if (time < cameraRotateTime)
-                    {
-                        if (transform.position.z < limit_blue_down)
-                        {
-                            transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_down);
-                        }
-                        if (transform.position.z > limit_blue_up)
-                        {
-                            transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_up);
-                        }
-                    }
-                    if (time >= cameraRotateTime)
-                    {
-                        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-                        if (transform.position.z < limit_red_down)
-                        {
-                            transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_down);
-                        }
-                        if (transform.position.z > limit_red_up)
-                        {
-                            transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_up);
-                        }
-                    }
+                    //if (time < cameraRotateTime)
+                    //{
+                    //    if (transform.position.z < limit_blue_down)
+                    //    {
+                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_down);
+                    //    }
+                    //    if (transform.position.z > limit_blue_up)
+                    //    {
+                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_up);
+                    //    }
+                    //}
+                    //if (time >= cameraRotateTime)
+                    //{
+                    //    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                    //    if (transform.position.z < limit_red_down)
+                    //    {
+                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_down);
+                    //    }
+                    //    if (transform.position.z > limit_red_up)
+                    //    {
+                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_up);
+                    //    }
+                    //}
                 }
                 if (MarkerID == 3)
                 {
