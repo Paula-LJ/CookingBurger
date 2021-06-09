@@ -18,7 +18,7 @@ public class GiveObject : MonoBehaviour
 	//If is stop in area
 	private List <Vector3> positions = new List<Vector3>();
 	private int cont = 0;
-	private float velocity = 0; 
+	public float velocity = 0; 
 	void Update()
 	{
 		if (giveObj == true) //si tiene obj el player
@@ -30,7 +30,7 @@ public class GiveObject : MonoBehaviour
 			{
 				Vector3 vector1 = positions[cont - 1] - positions[cont - 2];
 				velocity = vector1.magnitude;
-				if (velocity < 0.5f) //no hay movimiento
+				if (velocity < 0.2f) //no hay movimiento
 					timeStop += Time.deltaTime;
 				else //hay movimiento
 					timeStop = 0.0f;
