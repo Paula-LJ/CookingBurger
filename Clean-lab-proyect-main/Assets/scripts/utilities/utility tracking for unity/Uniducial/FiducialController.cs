@@ -62,10 +62,10 @@ public class FiducialController : MonoBehaviour
     private float m_RotationAcceleration;
     private bool m_IsVisible;
 
-    private float limit_red_down = 55f;
-    private float limit_red_up = 96f;
-    private float limit_blue_down = 3f;
-    private float limit_blue_up = 58f;
+    private float limit_red_1 = 56.5f;
+    private float limit_red_2 = 44f;
+    private float limit_blue_1 = 58.7f;
+    private float limit_blue_2 = 47f;
     private float time = 0.0f;
     //private float timeChange = 10.0f;
 
@@ -174,33 +174,25 @@ public class FiducialController : MonoBehaviour
                         transform.position += Vector3.right * -0.5f;
                     }
 
-                    
-                    //if (time < cameraRotateTime)
-                    //{
-                    //    if (transform.position.z < limit_red_down)
-                    //    {
-                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_down);
-                    //    }
-                    //    if (transform.position.z > limit_red_up)
-                    //    {
-                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_up);
-                    //    }
-                    //}
-                    //if (time >= cameraRotateTime)
-                    //{
-                    //    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-                    //    if (transform.position.z < limit_blue_down)
-                    //    {
-                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_down);
-                    //    }
-                    //    if (transform.position.z > limit_blue_up)
-                    //    {
-                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_up);
-                    //    }
-                    //}
+
+					if (time < cameraRotateTime)
+					{
+						if (transform.position.z < limit_red_1)
+						{
+							transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_1);
+						}
+						
+					}
+					if (time >= cameraRotateTime)
+					{
+						if (transform.position.z < limit_red_2)
+						{
+							transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_2);
+						}
+					}
 
 
-                }
+				}
                 if (MarkerID == 1)
                 {
                     if (Input.GetKey(KeyCode.Keypad8))
@@ -238,31 +230,26 @@ public class FiducialController : MonoBehaviour
                     {
                         transform.position += Vector3.right * -0.5f;
                     }
-                    
-                    //if (time < cameraRotateTime)
-                    //{
-                    //    if (transform.position.z < limit_blue_down)
-                    //    {
-                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_down);
-                    //    }
-                    //    if (transform.position.z > limit_blue_up)
-                    //    {
-                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_up);
-                    //    }
-                    //}
-                    //if (time >= cameraRotateTime)
-                    //{
-                    //    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-                    //    if (transform.position.z < limit_red_down)
-                    //    {
-                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_down);
-                    //    }
-                    //    if (transform.position.z > limit_red_up)
-                    //    {
-                    //        transform.position = new Vector3(transform.position.x, transform.position.y, limit_red_up);
-                    //    }
-                    //}
-                }
+
+
+					if (time < cameraRotateTime)
+					{
+						
+						if (transform.position.z > limit_blue_1)
+						{
+							transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_1);
+						}
+					}
+					if (time >= cameraRotateTime)
+					{
+                        
+						if (transform.position.z > limit_blue_2)
+						{
+							transform.position = new Vector3(transform.position.x, transform.position.y, limit_blue_2);
+						}
+
+					}
+				}
                 if (MarkerID == 3)
                 {
                     if (Input.GetKey(KeyCode.I))
