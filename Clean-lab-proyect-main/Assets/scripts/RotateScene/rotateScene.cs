@@ -5,10 +5,11 @@ using UnityEngine;
 public class rotateScene : MonoBehaviour
 {
     public GameObject scene;
+
     //public GiveObject giveobject;
-    private float timeChange;
-    private float time;
-    private float timeCangePrivate = 5.0f;
+    public float timeChange;
+    public float time;
+    private float timeCangePrivate = 10.0f;
     private bool one = true;
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class rotateScene : MonoBehaviour
     {
         timeChange = timeCangePrivate;
         time += Time.deltaTime;
-
+        
         if (time >= timeCangePrivate && time <= timeCangePrivate + 0.5f && one == true)
         {
             one = false;

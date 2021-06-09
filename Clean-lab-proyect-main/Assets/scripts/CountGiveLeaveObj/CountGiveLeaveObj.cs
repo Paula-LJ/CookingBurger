@@ -10,7 +10,8 @@ public class CountGiveLeaveObj : MonoBehaviour
     private Text mytext;
     public GiveObject giveObject;
     public GameObject gameobjet;
-    public CameraRotate cameraRotate; 
+    // public CameraRotate cameraRotate; 
+    public rotateScene rotateS; 
     private float timeText=0.0f; 
     // Start is called before the first frame update
     private void Start()
@@ -24,30 +25,31 @@ public class CountGiveLeaveObj : MonoBehaviour
     {
         updateCountPlot(timePlotGiveLeaveObj);
 
-        timeText += Time.deltaTime; 
+        timeText += Time.deltaTime;
+        //Debug.Log(mytext.transform.position);
 
-        //Rotar tambien contador del jugador rojo en su puesto
-        if (gameobjet.CompareTag("Player1") && cameraRotate.timeChange!= 0.0) 
-        {
-            if (timeText >= cameraRotate.timeChange && timeText <= cameraRotate.timeChange + 0.5f )
-            {
-                mytext.transform.position = new Vector3(8, 0, 42.0f);
-            }
+		//Rotar tambien contador del jugador rojo en su puesto
+		if (gameobjet.CompareTag("Player1") && rotateS.timeChange != 0.0)
+		{
+			if (timeText >= rotateS.timeChange && timeText <= rotateS.timeChange + 0.5f)
+			{
+				mytext.transform.position = new Vector3(92.6f, -3, 58);
+			}
 
-        }
-        //Rotar tambien contador del jugador azul en su puesto
-        if (gameobjet.CompareTag("Player2") && cameraRotate.timeChange != 0.0)
-        {
+		}
+		//Rotar tambien contador del jugador azul en su puesto
+		if (gameobjet.CompareTag("Player2") && rotateS.timeChange != 0.0)
+		{
 
-            //Debug.Log(gameObject.transform.position);
-            if (timeText >= cameraRotate.timeChange && timeText <= cameraRotate.timeChange + 0.5f)
-            {
-                mytext.transform.position = new Vector3(7.3f, 8.0f, 80.0f);
-            }
+			//Debug.Log(gameObject.transform.position);
+			if (timeText >= rotateS.timeChange && timeText <= rotateS.timeChange + 0.5f)
+			{
+				mytext.transform.position = new Vector3(92.6f, -3, 12);
+			}
 
-        }
+		}
 
-    }
+	}
 
     public void updateCountPlot(int timePlotGiveLeaveObj)
     {

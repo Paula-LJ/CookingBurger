@@ -5,7 +5,8 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     public GameObject arrowObject;
-    public CameraRotate cameraRotate;
+    //public CameraRotate cameraRotate;
+    public rotateScene rotateS; 
     public float timeAppeareArrow = 5.0f; 
     float RotationSpeed = 20.0f;
     // Start is called before the first frame update
@@ -18,7 +19,7 @@ public class Arrow : MonoBehaviour
     void Update()
     {
         //Debug.Log(cameraRotate.time); 
-        if (cameraRotate.timeChange - timeAppeareArrow <= cameraRotate.time && cameraRotate.timeChange >= cameraRotate.time) 
+        if (rotateS.timeChange - timeAppeareArrow <= rotateS.time && rotateS.timeChange >= rotateS.time) 
         { 
             arrowObject.SetActive(true);
             arrowObject.transform.Rotate(Vector3.up * (RotationSpeed * Time.deltaTime)); 
