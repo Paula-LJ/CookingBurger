@@ -58,3 +58,53 @@ C# parse time         : 181ms
 candidates check time : 29ms
 console write time    : 0ms
 
+[api-updater (non-obsolete-error-filter)] 08/06/2021 15:57:58 : Starting C:/Program Files/Unity/Hub/Editor/2020.2.4f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 484,3559ms
+moved types parse time: 42ms
+candidates parse time : 1ms
+C# parse time         : 243ms
+candidates check time : 34ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 09/06/2021 11:36:28 : Starting C:/Users/sofia/Documents/docs/SI/Unity/2020.3.6f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 4638,1454ms
+moved types parse time: 108ms
+candidates parse time : 2ms
+C# parse time         : 469ms
+candidates check time : 58ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 09/06/2021 11:38:31 : Starting C:/Users/sofia/Documents/docs/SI/Unity/2020.3.6f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 147,4201ms
+moved types parse time: 85ms
+candidates parse time : 3ms
+C# parse time         : 295ms
+candidates check time : 50ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 09/06/2021 19:12:38 : Starting C:/Users/sofia/Documents/docs/SI/Unity/2020.3.6f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 13899,5414ms
+moved types parse time: 85ms
+candidates parse time : 1ms
+C# parse time         : 517ms
+candidates check time : 80ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 09/06/2021 19:26:26 : Starting C:/Users/sofia/Documents/docs/SI/Unity/2020.3.6f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 1177,4213ms
+moved types parse time: 82ms
+candidates parse time : 1ms
+C# parse time         : 583ms
+candidates check time : 114ms
+console write time    : 5ms
+
