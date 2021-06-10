@@ -290,20 +290,20 @@ public class GiveObject : MonoBehaviour
 					pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
 				}
-				//if (pickedObject.name == "Potato uncooked") //Si tenemos la patata NO FUNCIONA pq no tenemos asset de patata cortada
-				//{
-				//	patricles[4].Play();
-				//	Destroy(pickedObject);
-				//	pickedObject = null;
-				//	giveObj = true;
+                if (pickedObject.name == "Potato uncooked") //Si tenemos la patata NO FUNCIONA pq no tenemos asset de patata cortada
+                {
+                    patricles[4].Play();
+                    Destroy(pickedObject);
+                    pickedObject = null;
+                    giveObj = true;
 
-				//	pickedObject = Instantiate(prefabs[6], handPoint.transform.position, Quaternion.identity);
-				//	pickedObject.name = prefabs[6].name;
-				 
-				//	pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
+                    pickedObject = Instantiate(prefabs[6], handPoint.transform.position, Quaternion.identity);
+                    pickedObject.name = prefabs[6].name;
 
-				//}
-			}
+                    pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
+
+                }
+            }
 		}
 		if (other.gameObject.name == "PW_stove")
 		{
@@ -326,28 +326,30 @@ public class GiveObject : MonoBehaviour
 
 				}
 			}
-		}
-			//if (other.gameObject.name == "frites Machine") para cuando tengamos el asset de las patatas crudas
-			//{
-			//	if (pickedObject != null)
-			//	{
-			//		if (pickedObject.name == "Burger UnCooked") //Si tenemos las patatas cortadas
-			//		{
-			//			patricles[6].Play();
-			//			Destroy(pickedObject);
-			//			pickedObject = null;
-			//			Destroy(patricles[6].gameObject, 5); //despues de 5 segundos eliminamos las burbujas
-			//			giveObj = true;
+        }
+        if (other.gameObject.name == "frites Machine")
+        {
+			if (pickedObject != null)
+			{
+				Debug.Log("no entra");
 
-			//			pickedObject = Instantiate(prefabs[8], handPoint.transform.position, Quaternion.identity);
-			//			pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
+				if (pickedObject.name == "Fries Cut") //Si tenemos las patatas cortadas
+				{
+					Debug.Log("entra");
+					patricles[6].Play();
+					Destroy(pickedObject);
+					pickedObject = null;
+					giveObj = true;
 
-			//		}
-			//	}
-			//}
+					pickedObject = Instantiate(prefabs[8], handPoint.transform.position, Quaternion.identity);
+					pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
-		
-	}
+				}
+			}
+        }
+
+
+    }
 	//si no esta activado el trigger que la variable tiempo se inicialice a 0. Y la variable de tirar un objecto sea False para poder dejar un objeto nuevo que cogamos 
 	private void OnTriggerExit(Collider other)
 	{
