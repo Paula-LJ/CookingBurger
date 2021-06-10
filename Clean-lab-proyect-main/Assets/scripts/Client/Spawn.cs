@@ -43,12 +43,13 @@ public class Spawn : MonoBehaviour
     {
     }
 
-    // Update is called once per frame
+    // Crea los tres primeros clientes
     void Update()
     {
-        cont += valueSum;
+        if(i !=4) //1 a 4 
+            cont += valueSum;
         //Crea clients cada x temps
-        if (cont > 1*i && cont < (1*i + valueSum) && cont < (cantidadClientes+1)) //El temps per crear un nou client sigui múltiple de 5 (timeNewCustomer)
+        if (cont > 1*i && cont < (1*i + valueSum) && cont < (cantidadClientes+1)) //Si esta entre este rango, se cree cada cliente (los tres primeros)
         {
             if (rotateS.time > rotateS.timeChange) //rotando escenario
             {
@@ -72,7 +73,7 @@ public class Spawn : MonoBehaviour
         }
         
 
-        if (i == 4 )
+        if (i == 4 && (rotateS.time < rotateS.timeChange *2)) // se creen los nuevos clientes que se ha servido correctamente la comida / este en el tiempo de juego 
         {
             for (int j = 0; j < 3; j++)
             {
@@ -84,6 +85,7 @@ public class Spawn : MonoBehaviour
                         OneRandom = false; 
                     }
                     time += Time.deltaTime;
+                    //Debug.Log("RNADOM"+randomNum); 
 
 					if (time > randomNum && time < (randomNum+0.5))
 					{
@@ -103,7 +105,9 @@ public class Spawn : MonoBehaviour
                         clients[j].prefabSpeak.SetActive(true);
 
                         OneRandom = true;
+                        time = 0.0f; 
                         //Generar la nueva lista de alimentos 
+                        OrderBurger(j+1);
                     }
 
                 }
