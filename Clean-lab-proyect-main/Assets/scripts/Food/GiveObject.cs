@@ -8,6 +8,7 @@ public class GiveObject : MonoBehaviour
 	public float times = 0.0f; //tiempo coger
 	public float secondsGiveObject = 5.0f; //segundos de coger y dejar un objeto
 	public GameObject pickedObject = null; //objeto que tiene el player
+	public GameObject auxiliar = null; //objeto que tiene el player
 	public float timeStop = 0.0f; //tiempo parar
 	public bool isDestroy = false; // si tiene un objeto cogido y esta en la papelera
 	public bool giveObj = false; //si tiene un objeto el player
@@ -18,8 +19,9 @@ public class GiveObject : MonoBehaviour
 	//If is stop in area
 	private List <Vector3> positions = new List<Vector3>();
 	private int cont = 0;
-	public float velocity = 0; 
-	void Update()
+	public float velocity = 0;
+
+    void Update()
 	{
 		if (giveObj == true) //si tiene obj el player
 		{
@@ -48,7 +50,6 @@ public class GiveObject : MonoBehaviour
 			cont = 0;
 			timeStop = 0.0f;
 		}
-		//Debug.Log(timeStop); 
 		// dejar un objeto
 		if (pickedObject != null && isDestroy == false && timeStop > secondsGiveObject && giveObj == true && giveObjSpace == true)
 		{
@@ -58,6 +59,7 @@ public class GiveObject : MonoBehaviour
 			pickedObject.gameObject.transform.SetParent(null);
 			giveObj = false;
 			pickedObject = null;
+			
 		}
 		if (pickedObject==null) // si no tiene nungun obj cogido que pueda coger un nuevo
 			giveObj = false;
@@ -69,6 +71,124 @@ public class GiveObject : MonoBehaviour
 	//Si el jugador esta 5 segundos encima del objeto con el tag Objects, se lo puede llevar
 	private void OnTriggerStay(Collider other)
 	{
+		// , poner cada objeto diferente en una altura diferente.
+		if (other.gameObject.name.Contains("clean_dish")) //mirar si el objeto esta colisionando con el plato limpio
+		{
+			if (pickedObject)//miramos si tiene un objeto en la mano
+			{
+				if (pickedObject.gameObject.name.Contains("Bread_Top"))//si es asi, miramos si el objeto es algo cocinado
+				{
+					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					Destroy(pickedObject);// lo borramos
+					pickedObject.gameObject.transform.SetParent(null);
+					giveObj = false;
+					pickedObject = null;
+
+					auxiliar.gameObject.transform.SetParent(other.gameObject.transform); //y si  lo hacemos hijo del plato 
+					auxiliar.gameObject.transform.position = other.gameObject.transform.position; //cambiamos la posicion a la del plato 
+					Vector3 aux = auxiliar.gameObject.transform.position;
+					aux.y += 10.0f; //mover sobre el eje y
+					auxiliar.gameObject.transform.position = aux;
+				}
+				if (pickedObject.gameObject.name.Contains("Burger_down"))//si es asi, miramos si el objeto es algo cocinado
+				{
+					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					Destroy(pickedObject); //lo borramos
+					pickedObject.gameObject.transform.SetParent(null);
+					giveObj = false;
+					pickedObject = null;
+
+					auxiliar.gameObject.transform.SetParent(other.gameObject.transform); //y si  lo hacemos hijo del plato 
+					auxiliar.gameObject.transform.position = other.gameObject.transform.position; //cambiamos la posicion a la del plato 
+
+				}
+				if (pickedObject.gameObject.name.Contains("Tomato_cut"))//si es asi, miramos si el objeto es algo cocinado
+				{
+					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					Destroy(pickedObject);// lo borramos
+					pickedObject.gameObject.transform.SetParent(null);
+					giveObj = false;
+					pickedObject = null;
+
+					auxiliar.gameObject.transform.SetParent(other.gameObject.transform); //y si  lo hacemos hijo del plato 
+					auxiliar.gameObject.transform.position = other.gameObject.transform.position; //cambiamos la posicion a la del plato 
+					Vector3 aux = auxiliar.gameObject.transform.position;
+					aux.y += 1.0f; //mover sobre el eje y
+					auxiliar.gameObject.transform.position = aux;
+				}
+				if (pickedObject.gameObject.name.Contains("Salad_cut"))//si es asi, miramos si el objeto es algo cocinado
+				{
+					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					Destroy(pickedObject);// lo borramos
+					pickedObject.gameObject.transform.SetParent(null);
+					giveObj = false;
+					pickedObject = null;
+
+					auxiliar.gameObject.transform.SetParent(other.gameObject.transform); //y si  lo hacemos hijo del plato 
+					auxiliar.gameObject.transform.position = other.gameObject.transform.position; //cambiamos la posicion a la del plato 
+					Vector3 aux = auxiliar.gameObject.transform.position;
+					aux.y += 8; //mover sobre el eje y
+					auxiliar.gameObject.transform.position = aux;
+				}
+				if (pickedObject.gameObject.name.Contains("Pickle_cut"))//si es asi, miramos si el objeto es algo cocinado
+				{
+					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					Destroy(pickedObject);// lo borramos
+					pickedObject.gameObject.transform.SetParent(null);
+					giveObj = false;
+					pickedObject = null;
+
+					auxiliar.gameObject.transform.SetParent(other.gameObject.transform); //y si  lo hacemos hijo del plato 
+					auxiliar.gameObject.transform.position = other.gameObject.transform.position; //cambiamos la posicion a la del plato 
+					Vector3 aux = auxiliar.gameObject.transform.position;
+					aux.y += 3.0f; //mover sobre el eje y
+					auxiliar.gameObject.transform.position = aux;
+				}
+				if (pickedObject.gameObject.name.Contains("Onion_cut"))//si es asi, miramos si el objeto es algo cocinado
+				{
+					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					Destroy(pickedObject);// lo borramos
+					pickedObject.gameObject.transform.SetParent(null);
+					giveObj = false;
+					pickedObject = null;
+
+					auxiliar.gameObject.transform.SetParent(other.gameObject.transform); //y si  lo hacemos hijo del plato 
+					auxiliar.gameObject.transform.position = other.gameObject.transform.position; //cambiamos la posicion a la del plato 
+					Vector3 aux = auxiliar.gameObject.transform.position;
+					aux.y += 4.0f; //mover sobre el eje y
+					auxiliar.gameObject.transform.position = aux;
+				}
+				if (pickedObject.gameObject.name.Contains("Cheese_cut"))//si es asi, miramos si el objeto es algo cocinado
+				{
+					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					Destroy(pickedObject);// lo borramos
+					pickedObject.gameObject.transform.SetParent(null);
+					giveObj = false;
+					pickedObject = null;
+
+					auxiliar.gameObject.transform.SetParent(other.gameObject.transform); //y si  lo hacemos hijo del plato 
+					auxiliar.gameObject.transform.position = other.gameObject.transform.position; //cambiamos la posicion a la del plato 
+					Vector3 aux = auxiliar.gameObject.transform.position;
+					aux.y += 5.0f; //mover sobre el eje y
+					auxiliar.gameObject.transform.position = aux;
+				}
+				if (pickedObject.gameObject.name.Contains("Burger_Cooked"))//si es asi, miramos si el objeto es algo cocinado
+				{
+					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					Destroy(pickedObject);// lo borramos
+					pickedObject.gameObject.transform.SetParent(null);
+					giveObj = false;
+					pickedObject = null;
+
+					auxiliar.gameObject.transform.SetParent(other.gameObject.transform); //y si  lo hacemos hijo del plato 
+					auxiliar.gameObject.transform.position = other.gameObject.transform.position; //cambiamos la posicion a la del plato 
+					Vector3 aux = auxiliar.gameObject.transform.position;
+					aux.y += 6.0f; //mover sobre el eje y
+					aux.z -= 2.0f; //mover sobre el eje y
+					auxiliar.gameObject.transform.position = aux;
+				}
+			}
+		}
 		if (other.gameObject.CompareTag("Object"))
 		{
 			times += Time.deltaTime;
@@ -84,16 +204,6 @@ public class GiveObject : MonoBehaviour
 				pickedObject = other.gameObject;
 				times = 0.0f;
 			}
-			//si esta en la zona de coger objetos, solo pueda coger un objeto esto es: createNewPrefab.spaceInstance == false
-			if (times >= secondsGiveObject && times <= secondsGiveObject + 0.5f && giveObj == true && createNewPrefab.spaceInstance == false) //si el player ya tiene un objeto le unimos los dos o mas 
-			{
-				other.GetComponent<Rigidbody>().useGravity = false;
-				other.GetComponent<Rigidbody>().isKinematic = true;
-				other.transform.position = handPoint.transform.position;
-				other.gameObject.transform.SetParent(handPoint.gameObject.transform);
-				//other.gameObject.transform.SetParent(pickedObject.gameObject.transform);
-				times = 0.0f;
-			}
 		}
 
 		//cambio de assets
@@ -106,7 +216,6 @@ public class GiveObject : MonoBehaviour
 					patricles[0].Play();
 					Destroy(pickedObject);
 					pickedObject = null;
-					Destroy(patricles[0].gameObject, 5); //despues de 5 segundos eliminamos las burbujas
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[0], handPoint.transform.position, Quaternion.identity);
@@ -124,7 +233,6 @@ public class GiveObject : MonoBehaviour
 					patricles[1].Play();
 					Destroy(pickedObject);
 					pickedObject = null;
-					Destroy(patricles[1].gameObject, 5); //despues de 5 segundos eliminamos las particulas
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[1], handPoint.transform.position, Quaternion.identity);
@@ -136,7 +244,6 @@ public class GiveObject : MonoBehaviour
 					patricles[2].Play();
 					Destroy(pickedObject);
 					pickedObject = null;
-					Destroy(patricles[2].gameObject, 5); //despues de 5 segundos eliminamos las particulas
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[2], handPoint.transform.position, Quaternion.identity);
@@ -149,7 +256,6 @@ public class GiveObject : MonoBehaviour
 					patricles[3].Play();
 					Destroy(pickedObject);
 					pickedObject = null;
-					Destroy(patricles[3].gameObject, 5); //despues de 5 segundos eliminamos las particulas
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[3], handPoint.transform.position, Quaternion.identity);
@@ -161,7 +267,6 @@ public class GiveObject : MonoBehaviour
 					patricles[4].Play();
 					Destroy(pickedObject);
 					pickedObject = null;
-					Destroy(patricles[4].gameObject, 5); //despues de 5 segundos eliminamos las particulas
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[4], handPoint.transform.position, Quaternion.identity);
@@ -173,7 +278,6 @@ public class GiveObject : MonoBehaviour
 					patricles[2].Play();
 					Destroy(pickedObject);
 					pickedObject = null;
-					Destroy(patricles[2].gameObject, 5); //despues de 5 segundos eliminamos las particulas
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[5], handPoint.transform.position, Quaternion.identity);
@@ -185,7 +289,6 @@ public class GiveObject : MonoBehaviour
 				//	patricles[4].Play();
 				//	Destroy(pickedObject);
 				//	pickedObject = null;
-				//	Destroy(patricles[4].gameObject, 5); //despues de 5 segundos eliminamos las particulas
 				//	giveObj = true;
 
 				//	pickedObject = Instantiate(prefabs[6], handPoint.transform.position, Quaternion.identity);
@@ -200,39 +303,43 @@ public class GiveObject : MonoBehaviour
 			{
 				if (pickedObject.name == "Burger UnCooked") //Si tenemos la hamburgesa cruda
 				{
+					
 					patricles[5].Play();
 					Destroy(pickedObject);
 					pickedObject = null;
-					Destroy(patricles[5].gameObject, 5); //despues de 5 segundos eliminamos las burbujas
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[7], handPoint.transform.position, Quaternion.identity);
 					pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
+					Vector3 aux = pickedObject.gameObject.transform.position;
+					aux.y += 10.0f; //mover sobre el eje y
+					pickedObject.gameObject.transform.position = aux;
 
 				}
 			}
 		}
-			//if (other.gameObject.name == "frites Machine") para cuando tengamos el asset de las patatas crudas
-			//{
-			//	if (pickedObject != null)
-			//	{
-			//		if (pickedObject.name == "Burger UnCooked") //Si tenemos las patatas cortadas
-			//		{
-			//			patricles[6].Play();
-			//			Destroy(pickedObject);
-			//			pickedObject = null;
-			//			Destroy(patricles[6].gameObject, 5); //despues de 5 segundos eliminamos las burbujas
-			//			giveObj = true;
+   
+        //if (other.gameObject.name == "frites Machine") para cuando tengamos el asset de las patatas crudas
+        //{
+        //	if (pickedObject != null)
+        //	{
+        //		if (pickedObject.name == "Burger UnCooked") //Si tenemos las patatas cortadas
+        //		{
+        //			patricles[6].Play();
+        //			Destroy(pickedObject);
+        //			pickedObject = null;
+        //			giveObj = true;
 
-			//			pickedObject = Instantiate(prefabs[8], handPoint.transform.position, Quaternion.identity);
-			//			pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
+        //			pickedObject = Instantiate(prefabs[8], handPoint.transform.position, Quaternion.identity);
+        //			pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
-			//		}
-			//	}
-			//}
+        //		}
+        //	}
+        //}
 
-		
-	}
+
+
+    }
 	//si no esta activado el trigger que la variable tiempo se inicialice a 0. Y la variable de tirar un objecto sea False para poder dejar un objeto nuevo que cogamos 
 	private void OnTriggerExit(Collider other)
 	{
