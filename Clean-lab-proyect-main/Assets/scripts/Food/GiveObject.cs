@@ -8,7 +8,7 @@ public class GiveObject : MonoBehaviour
 	public float times = 0.0f; //tiempo coger
 	public float secondsGiveObject = 5.0f; //segundos de coger y dejar un objeto
 	public GameObject pickedObject = null; //objeto que tiene el player
-	public GameObject auxiliar = null; //objeto que tiene el player
+	private GameObject auxiliar = null; //objeto que tiene el player
 	public float timeStop = 0.0f; //tiempo parar
 	public bool isDestroy = false; // si tiene un objeto cogido y esta en la papelera
 	public bool giveObj = false; //si tiene un objeto el player
@@ -16,6 +16,7 @@ public class GiveObject : MonoBehaviour
 	public CreateNewPrefab createNewPrefab; 
 	public GameObject[] prefabs;
 	public ParticleSystem[] patricles;
+	public GameObject SpaceRotate; 
 	//If is stop in area
 	private List <Vector3> positions = new List<Vector3>();
 	private int cont = 0;
@@ -56,7 +57,9 @@ public class GiveObject : MonoBehaviour
 			// si el tiempo de sin movimiento es mayor a 5 y menor a 5.5 y es mayor el tiempo real del tiempo de estar parado para cogerlo y si no hay movimiento 
 			pickedObject.GetComponent<Rigidbody>().useGravity = false;
 			pickedObject.GetComponent<Rigidbody>().isKinematic = false;
-			pickedObject.gameObject.transform.SetParent(null);
+			pickedObject.transform.parent = SpaceRotate.transform;
+
+			//pickedObject.gameObject.transform.SetParent(null);
 			giveObj = false;
 			pickedObject = null;
 			
@@ -79,6 +82,7 @@ public class GiveObject : MonoBehaviour
 				if (pickedObject.gameObject.name.Contains("Bread_Top"))//si es asi, miramos si el objeto es algo cocinado
 				{
 					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					auxiliar.name = pickedObject.name;
 					Destroy(pickedObject);// lo borramos
 					pickedObject.gameObject.transform.SetParent(null);
 					giveObj = false;
@@ -90,9 +94,13 @@ public class GiveObject : MonoBehaviour
 					aux.y += 10.0f; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
 				}
+			}
+			if (pickedObject)//miramos si tiene un objeto en la mano
+			{
 				if (pickedObject.gameObject.name.Contains("Burger_down"))//si es asi, miramos si el objeto es algo cocinado
 				{
 					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					auxiliar.name = pickedObject.name;
 					Destroy(pickedObject); //lo borramos
 					pickedObject.gameObject.transform.SetParent(null);
 					giveObj = false;
@@ -102,9 +110,13 @@ public class GiveObject : MonoBehaviour
 					auxiliar.gameObject.transform.position = other.gameObject.transform.position; //cambiamos la posicion a la del plato 
 
 				}
+			}
+			if (pickedObject)//miramos si tiene un objeto en la mano
+			{
 				if (pickedObject.gameObject.name.Contains("Tomato_cut"))//si es asi, miramos si el objeto es algo cocinado
 				{
 					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					auxiliar.name = pickedObject.name;
 					Destroy(pickedObject);// lo borramos
 					pickedObject.gameObject.transform.SetParent(null);
 					giveObj = false;
@@ -116,9 +128,13 @@ public class GiveObject : MonoBehaviour
 					aux.y += 1.0f; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
 				}
+			}
+			if (pickedObject)//miramos si tiene un objeto en la mano
+			{
 				if (pickedObject.gameObject.name.Contains("Salad_cut"))//si es asi, miramos si el objeto es algo cocinado
 				{
 					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					auxiliar.name = pickedObject.name;
 					Destroy(pickedObject);// lo borramos
 					pickedObject.gameObject.transform.SetParent(null);
 					giveObj = false;
@@ -130,9 +146,13 @@ public class GiveObject : MonoBehaviour
 					aux.y += 8; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
 				}
+			}
+			if (pickedObject)//miramos si tiene un objeto en la mano
+			{
 				if (pickedObject.gameObject.name.Contains("Pickle_cut"))//si es asi, miramos si el objeto es algo cocinado
 				{
 					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					auxiliar.name = pickedObject.name;
 					Destroy(pickedObject);// lo borramos
 					pickedObject.gameObject.transform.SetParent(null);
 					giveObj = false;
@@ -144,9 +164,13 @@ public class GiveObject : MonoBehaviour
 					aux.y += 3.0f; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
 				}
+			}
+			if (pickedObject)//miramos si tiene un objeto en la mano
+			{
 				if (pickedObject.gameObject.name.Contains("Onion_cut"))//si es asi, miramos si el objeto es algo cocinado
 				{
 					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					auxiliar.name = pickedObject.name;
 					Destroy(pickedObject);// lo borramos
 					pickedObject.gameObject.transform.SetParent(null);
 					giveObj = false;
@@ -158,9 +182,13 @@ public class GiveObject : MonoBehaviour
 					aux.y += 4.0f; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
 				}
+			}
+			if (pickedObject)//miramos si tiene un objeto en la mano
+			{
 				if (pickedObject.gameObject.name.Contains("Cheese_cut"))//si es asi, miramos si el objeto es algo cocinado
 				{
 					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					auxiliar.name = pickedObject.name; 
 					Destroy(pickedObject);// lo borramos
 					pickedObject.gameObject.transform.SetParent(null);
 					giveObj = false;
@@ -172,9 +200,13 @@ public class GiveObject : MonoBehaviour
 					aux.y += 5.0f; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
 				}
+			}
+			if (pickedObject)//miramos si tiene un objeto en la mano
+			{
 				if (pickedObject.gameObject.name.Contains("Burger_Cooked"))//si es asi, miramos si el objeto es algo cocinado
 				{
 					auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
+					auxiliar.name = pickedObject.name;
 					Destroy(pickedObject);// lo borramos
 					pickedObject.gameObject.transform.SetParent(null);
 					giveObj = false;
@@ -184,11 +216,12 @@ public class GiveObject : MonoBehaviour
 					auxiliar.gameObject.transform.position = other.gameObject.transform.position; //cambiamos la posicion a la del plato 
 					Vector3 aux = auxiliar.gameObject.transform.position;
 					aux.y += 6.0f; //mover sobre el eje y
-					aux.z -= 2.0f; //mover sobre el eje y
+					//aux.z -= 2.0f; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
 				}
 			}
-		}
+		
+	}
 		if (other.gameObject.CompareTag("Object"))
 		{
 			times += Time.deltaTime;
@@ -331,17 +364,15 @@ public class GiveObject : MonoBehaviour
         {
 			if (pickedObject != null)
 			{
-				Debug.Log("no entra");
-
 				if (pickedObject.name == "Fries Cut") //Si tenemos las patatas cortadas
 				{
-					Debug.Log("entra");
 					patricles[6].Play();
 					Destroy(pickedObject);
 					pickedObject = null;
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[8], handPoint.transform.position, Quaternion.identity);
+					pickedObject.name = prefabs[8].name;
 					pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
 				}
