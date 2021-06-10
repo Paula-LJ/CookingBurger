@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3454457540050055847}
   m_Layer: 0
   m_Name: Salad_cut
-  m_TagString: Object
+  m_TagString: cut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,14 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3454457540050055833}
-  m_LocalRotation: {x: 0.07431879, y: 0.0063223536, z: 0.008575077, w: 0.99717766}
+  m_LocalRotation: {x: 0.078459114, y: 0, z: 0, w: 0.99691737}
   m_LocalPosition: {x: -0.1044, y: -0.012399997, z: 0.0066999993}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 4066449859678339736}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
 --- !u!65 &3454457540050055846
 BoxCollider:
   m_ObjectHideFlags: 0

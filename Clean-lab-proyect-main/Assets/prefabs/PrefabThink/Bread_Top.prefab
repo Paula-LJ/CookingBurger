@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4798346492250383104}
   m_Layer: 0
   m_Name: Bread_Top
-  m_TagString: Untagged
+  m_TagString: cut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
