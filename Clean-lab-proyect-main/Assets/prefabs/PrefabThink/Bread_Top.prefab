@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4798346492250383110}
   - component: {fileID: 4798346492250383104}
-  - component: {fileID: 4798346492250383111}
   m_Layer: 0
   m_Name: Bread_Top
   m_TagString: Untagged
@@ -49,19 +48,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4798346492250383111
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4798346492250383109}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.01935661, y: 0.55417216, z: 0.01935661}
-  m_Center: {x: -0.0000000071525563, y: -0.050905373, z: 0.0000000019351585}
 --- !u!1 &6669652033051494971
 GameObject:
   m_ObjectHideFlags: 0

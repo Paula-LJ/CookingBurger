@@ -110,6 +110,7 @@ public class GiveObject : MonoBehaviour
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[0], handPoint.transform.position, Quaternion.identity);
+					pickedObject.name = prefabs[0].name;
 					pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
 				}
@@ -128,6 +129,7 @@ public class GiveObject : MonoBehaviour
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[1], handPoint.transform.position, Quaternion.identity);
+					pickedObject.name = prefabs[1].name;
 					pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
 				}
@@ -140,6 +142,7 @@ public class GiveObject : MonoBehaviour
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[2], handPoint.transform.position, Quaternion.identity);
+					pickedObject.name = prefabs[2].name;
 					pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
 
@@ -153,6 +156,7 @@ public class GiveObject : MonoBehaviour
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[3], handPoint.transform.position, Quaternion.identity);
+					pickedObject.name = prefabs[3].name;
 					pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
 				}
@@ -165,6 +169,7 @@ public class GiveObject : MonoBehaviour
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[4], handPoint.transform.position, Quaternion.identity);
+					pickedObject.name = prefabs[4].name;
 					pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
 				}
@@ -177,6 +182,7 @@ public class GiveObject : MonoBehaviour
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[5], handPoint.transform.position, Quaternion.identity);
+					pickedObject.name = prefabs[5].name;
 					pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
 				}
@@ -189,6 +195,8 @@ public class GiveObject : MonoBehaviour
 				//	giveObj = true;
 
 				//	pickedObject = Instantiate(prefabs[6], handPoint.transform.position, Quaternion.identity);
+				//	pickedObject.name = prefabs[6].name;
+				 
 				//	pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
 				//}
@@ -207,31 +215,33 @@ public class GiveObject : MonoBehaviour
 					giveObj = true;
 
 					pickedObject = Instantiate(prefabs[7], handPoint.transform.position, Quaternion.identity);
+					pickedObject.name = prefabs[7].name;
 					pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
 				}
 			}
 		}
-			//if (other.gameObject.name == "frites Machine") para cuando tengamos el asset de las patatas crudas
-			//{
-			//	if (pickedObject != null)
-			//	{
-			//		if (pickedObject.name == "Burger UnCooked") //Si tenemos las patatas cortadas
-			//		{
-			//			patricles[6].Play();
-			//			Destroy(pickedObject);
-			//			pickedObject = null;
-			//			Destroy(patricles[6].gameObject, 5); //despues de 5 segundos eliminamos las burbujas
-			//			giveObj = true;
+		//if (other.gameObject.name == "frites Machine") para cuando tengamos el asset de las patatas crudas
+		//{
+		//	if (pickedObject != null)
+		//	{
+		//		if (pickedObject.name == "Burger UnCooked") //Si tenemos las patatas cortadas
+		//		{
+		//			patricles[6].Play();
+		//			Destroy(pickedObject);
+		//			pickedObject = null;
+		//			Destroy(patricles[6].gameObject, 5); //despues de 5 segundos eliminamos las burbujas
+		//			giveObj = true;
 
-			//			pickedObject = Instantiate(prefabs[8], handPoint.transform.position, Quaternion.identity);
-			//			pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
+		//			pickedObject = Instantiate(prefabs[8], handPoint.transform.position, Quaternion.identity);
+		//          pickedObject.name = prefabs[8].name;
+		//			pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
-			//		}
-			//	}
-			//}
+		//		}
+		//	}
+		//}
 
-		
+
 	}
 	//si no esta activado el trigger que la variable tiempo se inicialice a 0. Y la variable de tirar un objecto sea False para poder dejar un objeto nuevo que cogamos 
 	private void OnTriggerExit(Collider other)
