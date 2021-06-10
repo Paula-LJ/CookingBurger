@@ -38,13 +38,6 @@ public class Customer : MonoBehaviour
         {
             childother = other.transform.GetChild(0).gameObject;
 			
-
-            if (childother.CompareTag("Burger")) //borrar cuando se acabe el juego 
-            {
-                sound.PlayOneShot(moneySound, 0.2f);
-                OneRandom = true;
-            }
-
             //FALTARIA COMPARA SI ÉS O NO L'HAMBURGUESA DEMANADA 
             for (int j = 0; j < 3; j++)
             {
@@ -63,6 +56,7 @@ public class Customer : MonoBehaviour
                     {
                         OneRandom = true;
                         numClient = j; // id de cliente que se entrega
+                        sound.PlayOneShot(moneySound, 0.2f);
 
                     }
 
