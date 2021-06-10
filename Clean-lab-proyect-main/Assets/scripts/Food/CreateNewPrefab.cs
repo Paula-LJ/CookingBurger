@@ -6,7 +6,8 @@ public class CreateNewPrefab : MonoBehaviour
 {
     public GiveObject giveObject;
     public GameObject gameObject; 
-    public bool spaceInstance = false; 
+    public bool spaceInstance = false;
+    private Vector3 positionPrefab; 
 
         private void OnTriggerStay(Collider other)
     {
@@ -24,9 +25,13 @@ public class CreateNewPrefab : MonoBehaviour
         {
             giveObject.giveObjSpace = false;
             //Crear la instancia del objeto que colisiona
+            if (giveObject.pickedObject == null)
+            {
+                positionPrefab = other.transform.position; 
+            }
             if (giveObject.pickedObject != null && giveObject.times==0.0f) // 
             {
-                GameObject go = Instantiate(other.gameObject, other.transform.position, other.transform.rotation);
+                GameObject go = Instantiate(other.gameObject, positionPrefab, other.transform.rotation);
                 go.transform.parent = gameObject.transform;
                 go.name = other.name; 
             }

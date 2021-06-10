@@ -9,7 +9,7 @@ public class rotateScene : MonoBehaviour
     //public GiveObject giveobject;
     public float timeChange;
     public float time;
-    private float timeCangePrivate = 10.0f;
+    private float timeCangePrivate = 120.0f; //2 min
     private bool one = true;
     // Start is called before the first frame update
     void Start()
