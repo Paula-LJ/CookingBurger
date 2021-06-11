@@ -72,7 +72,8 @@ public class Customer : MonoBehaviour
                                 }
                                 //si se entrega correcto devolvemos un plato sucio
                                 dish_dirty = Instantiate(dish_dirty, new Vector3(92, 10, 83), Quaternion.identity);
-                           
+                                dish_dirty.name = dish_dirty.name;
+
                             }
 
                         }

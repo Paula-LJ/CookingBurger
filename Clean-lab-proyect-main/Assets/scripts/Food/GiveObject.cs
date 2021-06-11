@@ -244,7 +244,7 @@ public class GiveObject : MonoBehaviour
 		{ //si colisionamos con la pica i con el plato sucio creamos la animacion de burbujas y destruimos el plato
 			if (pickedObject != null)
 			{
-				if (pickedObject.name == "Plate dirty") //Si tenemos el plato sucio lo destruimos
+				if (pickedObject.name.Contains("Plate dirty")) //Si tenemos el plato sucio lo destruimos
 				{
 					patricles[0].Play();
 					Destroy(pickedObject);
