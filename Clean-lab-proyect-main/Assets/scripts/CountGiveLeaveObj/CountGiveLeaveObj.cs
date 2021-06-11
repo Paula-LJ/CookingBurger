@@ -53,9 +53,9 @@ public class CountGiveLeaveObj : MonoBehaviour
 
     public void updateCountPlot(int timePlotGiveLeaveObj)
     {
-        if (giveObject.timeStop >= 1.0f && giveObject.timeStop <=5.1f && giveObject.pickedObject != null)
+        if (giveObject.timeStop >= 1.0f && giveObject.timeStop <=(giveObject.secondsGiveObject + 0.1f) && giveObject.pickedObject != null)
             mytext.text = ((int)giveObject.timeStop).ToString();
-        else if (giveObject.times >= 1.0f && giveObject.times <= 5.1f && giveObject.pickedObject == null)
+        else if (giveObject.times >= 1.0f && giveObject.times <= (giveObject.secondsGiveObject + 0.1f) && giveObject.pickedObject == null)
             mytext.text = ((int)giveObject.times).ToString();
         else
             mytext.text = "0";

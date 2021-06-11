@@ -6,7 +6,7 @@ public class GiveObject : MonoBehaviour
 {
 	public GameObject handPoint; //punto del player donde hacemos el trigger
 	public float times = 0.0f; //tiempo coger
-	public float secondsGiveObject = 5.0f; //segundos de coger y dejar un objeto
+	public float secondsGiveObject;  //segundos de coger y dejar un objeto
 	public GameObject pickedObject = null; //objeto que tiene el player
 	private GameObject auxiliar = null; //objeto que tiene el player
 	public float timeStop = 0.0f; //tiempo parar
