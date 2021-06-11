@@ -339,7 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handPoint: {fileID: 1374690827}
   times: 0
-  secondsGiveObject: 5
+  secondsGiveObject: 2
   pickedObject: {fileID: 0}
   timeStop: 0
   isDestroy: 0
@@ -16520,7 +16520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handPoint: {fileID: 1871106673}
   times: 0
-  secondsGiveObject: 5
+  secondsGiveObject: 2
   pickedObject: {fileID: 0}
   timeStop: 0
   isDestroy: 0
