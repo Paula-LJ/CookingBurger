@@ -6,6 +6,7 @@ public class Customer : MonoBehaviour
 {
     public AudioClip moneySound;
     public GiveObject giveObject;
+    public GameObject dish_dirty;
 
     private AudioSource sound;
     private GameObject childother;
@@ -69,6 +70,9 @@ public class Customer : MonoBehaviour
                                         spawn.clients[j].IngredientList.Remove(spawn.clients[j].IngredientList[2]); //borrar prefab y de la lista que coincide con lo entregado}
                                     }
                                 }
+                                //si se entrega correcto devolvemos un plato sucio
+                                dish_dirty = Instantiate(dish_dirty, new Vector3(92, 10, 83), Quaternion.identity);
+                           
                             }
 
                         }
