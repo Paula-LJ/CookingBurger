@@ -14,9 +14,9 @@ public class Spawn : MonoBehaviour
     private Vector3 prefabPosition;
     private Vector3 SepakPosition;
     private float cont = 0.0f;
-    private float cantidadClientes = 3.0f;
+    public float cantidadClientes = 3.0f;
     private float valueSum = 0.0025f; 
-    private int i = 1;
+    public int i = 1;
     //
     public rotateScene rotateS;
     //
