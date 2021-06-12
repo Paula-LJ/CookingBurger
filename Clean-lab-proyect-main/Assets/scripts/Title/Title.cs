@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Title : MonoBehaviour
 {
-    //Posar un o algu dintre per posar lu dels dos jugadors a l'hora.
-
     public string sceneToChangeTo;
 
     private bool isCollidedWithObj1;
@@ -22,5 +20,4 @@ public class Title : MonoBehaviour
         if (isCollidedWithObj1 && isCollidedWithObj2)
             SceneManager.LoadScene(sceneToChangeTo);
     }
-
 }
