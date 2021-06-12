@@ -26514,6 +26514,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneySound: {fileID: 8300000, guid: 942db86bb1d4359458d9aee935d073e2, type: 3}
   giveObject: {fileID: 959009347}
+  spawn: {fileID: 1313397247}
+  dish_dirty: {fileID: 402122237929195545, guid: 46647c331c6f2824588c967acc4a8527,
+    type: 3}
+  rotateS: {fileID: 966854333}
   timeDestroy: 0.5
 --- !u!82 &1142967375
 AudioSource:
@@ -36685,6 +36689,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneySound: {fileID: 8300000, guid: 942db86bb1d4359458d9aee935d073e2, type: 3}
   giveObject: {fileID: 959009347}
+  spawn: {fileID: 1313397247}
+  dish_dirty: {fileID: 402122237929195545, guid: 46647c331c6f2824588c967acc4a8527,
+    type: 3}
+  rotateS: {fileID: 966854333}
   timeDestroy: 0.5
 --- !u!82 &1320128023
 AudioSource:
