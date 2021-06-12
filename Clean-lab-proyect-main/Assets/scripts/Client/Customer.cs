@@ -16,7 +16,9 @@ public class Customer : MonoBehaviour
     public bool OneRandom = false;
     public int numClient = 0;
     private int  contIngredients =0;
-    public rotateScene rotateS; 
+    public rotateScene rotateS;
+    private bool passOne = true; 
+    private bool passFunction = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class Customer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) //other es la otra cosa con la que colisiona
     {
+        passFunction = false; 
         if (other.CompareTag("Object"))
         {
             //childother = other.transform.GetChild(0).gameObject;
@@ -44,6 +47,7 @@ public class Customer : MonoBehaviour
             //FALTARIA COMPARA SI ÉS O NO L'HAMBURGUESA DEMANADA 
             for (int j = 0; j < 3; j++)
             {
+                passOne = true; 
                 contIngredients = 0;
                 if (gameObject.name == "Clients " + j.ToString())
                 {
@@ -72,17 +76,8 @@ public class Customer : MonoBehaviour
                                         spawn.clients[j].IngredientList.Remove(spawn.clients[j].IngredientList[2]); //borrar prefab y de la lista que coincide con lo entregado}
                                     }
                                 }
-                                Destroy(other.gameObject);
-                                giveObject.pickedObject = null;
-                                giveObject.giveObj = false;
-
-                                if (rotateS.time < rotateS.timeChange)
-                                    aux = Instantiate(dish_dirty, new Vector3(92, 10, 83), Quaternion.identity);
-                                else
-                                    aux = Instantiate(dish_dirty, new Vector3(13, 10, 17), Quaternion.identity);
-                                aux.transform.parent = spawn.FolderClient.transform;
-                                aux.name = dish_dirty.name;
-
+                                passOne = false; 
+                               
                             }
 
                         }
@@ -105,7 +100,23 @@ public class Customer : MonoBehaviour
                     }
 
                     }
+                if (passOne == false)
+                {
+
+                    Destroy(other.gameObject);
+                    giveObject.pickedObject = null;
+                    giveObject.giveObj = false;
+
+                    if (rotateS.time < rotateS.timeChange)
+                        aux = Instantiate(dish_dirty, new Vector3(95, 10, 83), Quaternion.identity);
+                    else
+                        aux = Instantiate(dish_dirty, new Vector3(8, 10, 17), Quaternion.identity);
+                    aux.transform.parent = spawn.FolderClient.transform;
+                    aux.name = dish_dirty.name;
+                    passFunction = true; 
+
                 }
+            }
             //Destrueix l'objecte entregat (sigui o no el que ha demanat)
             if (other.gameObject && other.gameObject.transform.childCount != 0)
             {
@@ -114,17 +125,18 @@ public class Customer : MonoBehaviour
                 giveObject.giveObj = false;
 
             }
-            if (other.gameObject.name == "clean_dish" && other.gameObject.transform.childCount != 0)
-            {
-                //si se entrega correcto devolvemos un plato sucio
-                if (rotateS.time < rotateS.timeChange)
-                    aux = Instantiate(dish_dirty, new Vector3(92, 10, 83), Quaternion.identity);
-                else
-                    aux = Instantiate(dish_dirty, new Vector3(13, 10, 17), Quaternion.identity);
-                aux.transform.parent = spawn.FolderClient.transform;
-                aux.name = dish_dirty.name;
-            }
-        }
+
+			if (other.gameObject.name == "clean_dish" && other.gameObject.transform.childCount != 0 && passFunction != true)
+			{
+				//si se entrega correcto devolvemos un plato sucio
+				if (rotateS.time < rotateS.timeChange)
+					aux = Instantiate(dish_dirty, new Vector3(95, 10, 83), Quaternion.identity);
+				else
+					aux = Instantiate(dish_dirty, new Vector3(8, 10, 17), Quaternion.identity);
+				aux.transform.parent = spawn.FolderClient.transform;
+				aux.name = dish_dirty.name;
+			}
+		}
         
     }
 }
