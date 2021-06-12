@@ -7,14 +7,16 @@ public class Customer : MonoBehaviour
     public AudioClip moneySound;
     public GiveObject giveObject;
     public GameObject dish_dirty;
+    private GameObject aux; 
 
     private AudioSource sound;
-    private GameObject childother;
+    //private GameObject childother;
 
     public Spawn spawn;
     public bool OneRandom = false;
     public int numClient = 0;
-    private int  contIngredients =0; 
+    private int  contIngredients =0;
+    public rotateScene rotateS; 
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +39,7 @@ public class Customer : MonoBehaviour
     {
         if (other.CompareTag("Object"))
         {
-            childother = other.transform.GetChild(0).gameObject;
+            //childother = other.transform.GetChild(0).gameObject;
 
             //FALTARIA COMPARA SI ÉS O NO L'HAMBURGUESA DEMANADA 
             for (int j = 0; j < 3; j++)
@@ -70,9 +72,16 @@ public class Customer : MonoBehaviour
                                         spawn.clients[j].IngredientList.Remove(spawn.clients[j].IngredientList[2]); //borrar prefab y de la lista que coincide con lo entregado}
                                     }
                                 }
-                                //si se entrega correcto devolvemos un plato sucio
-                                dish_dirty = Instantiate(dish_dirty, new Vector3(92, 10, 83), Quaternion.identity);
-                                dish_dirty.name = dish_dirty.name;
+                                Destroy(other.gameObject);
+                                giveObject.pickedObject = null;
+                                giveObject.giveObj = false;
+
+                                if (rotateS.time < rotateS.timeChange)
+                                    aux = Instantiate(dish_dirty, new Vector3(92, 10, 83), Quaternion.identity);
+                                else
+                                    aux = Instantiate(dish_dirty, new Vector3(13, 10, 17), Quaternion.identity);
+                                aux.transform.parent = spawn.FolderClient.transform;
+                                aux.name = dish_dirty.name;
 
                             }
 
@@ -98,9 +107,23 @@ public class Customer : MonoBehaviour
                     }
                 }
             //Destrueix l'objecte entregat (sigui o no el que ha demanat)
-            giveObject.giveObj = false;
-            Destroy(other.gameObject);
-            giveObject.pickedObject = null;
+            if (other.gameObject && other.gameObject.transform.childCount != 0)
+            {
+                Destroy(other.gameObject);
+                giveObject.pickedObject = null;
+                giveObject.giveObj = false;
+
+            }
+            if (other.gameObject.name == "clean_dish" && other.gameObject.transform.childCount != 0)
+            {
+                //si se entrega correcto devolvemos un plato sucio
+                if (rotateS.time < rotateS.timeChange)
+                    aux = Instantiate(dish_dirty, new Vector3(92, 10, 83), Quaternion.identity);
+                else
+                    aux = Instantiate(dish_dirty, new Vector3(13, 10, 17), Quaternion.identity);
+                aux.transform.parent = spawn.FolderClient.transform;
+                aux.name = dish_dirty.name;
+            }
         }
         
     }

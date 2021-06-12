@@ -93,6 +93,8 @@ public class GiveObject : MonoBehaviour
 					Vector3 aux = auxiliar.gameObject.transform.position;
 					aux.y += 10.0f; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
+					auxiliar.GetComponent<BoxCollider>().enabled = false;
+					auxiliar.GetComponent<BoxCollider>().isTrigger = false;
 				}
 			}
 			if (pickedObject)//miramos si tiene un objeto en la mano
@@ -108,6 +110,8 @@ public class GiveObject : MonoBehaviour
 
 					auxiliar.gameObject.transform.SetParent(other.gameObject.transform); //y si  lo hacemos hijo del plato 
 					auxiliar.gameObject.transform.position = other.gameObject.transform.position; //cambiamos la posicion a la del plato 
+					auxiliar.GetComponent<BoxCollider>().enabled = false;
+					auxiliar.GetComponent<BoxCollider>().isTrigger = false;
 
 				}
 			}
@@ -127,6 +131,9 @@ public class GiveObject : MonoBehaviour
 					Vector3 aux = auxiliar.gameObject.transform.position;
 					aux.y += 1.0f; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
+					auxiliar.GetComponent<BoxCollider>().enabled = false;
+					auxiliar.GetComponent<BoxCollider>().isTrigger = false;
+
 				}
 			}
 			if (pickedObject)//miramos si tiene un objeto en la mano
@@ -145,6 +152,9 @@ public class GiveObject : MonoBehaviour
 					Vector3 aux = auxiliar.gameObject.transform.position;
 					aux.y += 8; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
+					auxiliar.GetComponent<BoxCollider>().enabled = false;
+					auxiliar.GetComponent<BoxCollider>().isTrigger = false;
+
 				}
 			}
 			if (pickedObject)//miramos si tiene un objeto en la mano
@@ -163,6 +173,9 @@ public class GiveObject : MonoBehaviour
 					Vector3 aux = auxiliar.gameObject.transform.position;
 					aux.y += 3.0f; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
+					auxiliar.GetComponent<BoxCollider>().enabled = false;
+					auxiliar.GetComponent<BoxCollider>().isTrigger = false;
+
 				}
 			}
 			if (pickedObject)//miramos si tiene un objeto en la mano
@@ -181,6 +194,9 @@ public class GiveObject : MonoBehaviour
 					Vector3 aux = auxiliar.gameObject.transform.position;
 					aux.y += 4.0f; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
+					auxiliar.GetComponent<BoxCollider>().enabled = false;
+					auxiliar.GetComponent<BoxCollider>().isTrigger = false;
+
 				}
 			}
 			if (pickedObject)//miramos si tiene un objeto en la mano
@@ -199,6 +215,9 @@ public class GiveObject : MonoBehaviour
 					Vector3 aux = auxiliar.gameObject.transform.position;
 					aux.y += 5.0f; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
+					auxiliar.GetComponent<BoxCollider>().enabled = false;
+					auxiliar.GetComponent<BoxCollider>().isTrigger = false;
+
 				}
 			}
 			if (pickedObject)//miramos si tiene un objeto en la mano
@@ -218,13 +237,19 @@ public class GiveObject : MonoBehaviour
 					aux.y += 6.0f; //mover sobre el eje y
 					//aux.z -= 2.0f; //mover sobre el eje y
 					auxiliar.gameObject.transform.position = aux;
+					auxiliar.GetComponent<BoxCollider>().enabled = false;
+					auxiliar.GetComponent<BoxCollider>().isTrigger = false;
+
 				}
 			}
 		
 	}
 		if (other.gameObject.CompareTag("Object"))
 		{
-			times += Time.deltaTime;
+			if (other.gameObject.name == "clean_dish" && pickedObject != null)
+				times = 0; 
+			else
+				times += Time.deltaTime;
 
 			if (times >= secondsGiveObject && times <= secondsGiveObject + 0.5f && pickedObject == null && giveObj == false)
 			{
@@ -323,7 +348,7 @@ public class GiveObject : MonoBehaviour
 					pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 
 				}
-                if (pickedObject.name == "Potato uncooked") //Si tenemos la patata NO FUNCIONA pq no tenemos asset de patata cortada
+                if (pickedObject.name == "Potato uncooked") //Si tenemos la patata 
                 {
                     patricles[4].Play();
                     Destroy(pickedObject);
