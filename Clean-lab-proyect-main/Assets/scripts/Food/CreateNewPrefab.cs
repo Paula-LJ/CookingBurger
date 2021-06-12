@@ -21,7 +21,7 @@ public class CreateNewPrefab : MonoBehaviour
         }
         //cada vez que se coge un objeto, la variable time se inicializa, pero seguidamente augmenta. 
         //Solo entra una sola vez
-        if (other.gameObject.CompareTag("Object") && spaceInstance == true)
+        if (other.gameObject.CompareTag("Object") && spaceInstance == true && other.gameObject.name != "clean_dish")
         {
             giveObject.giveObjSpace = false;
             //Crear la instancia del objeto que colisiona
