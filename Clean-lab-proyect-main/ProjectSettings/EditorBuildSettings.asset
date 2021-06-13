@@ -29,10 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sample Scene.unity
     guid: 5261bc85e83d8a143b7bd71f8490828d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Win.unity
     guid: e14ced49ab52c134bac4e1b657716f18
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Loose.unity
     guid: b78c3fa523bdfd14d84475164d16f518
   - enabled: 0

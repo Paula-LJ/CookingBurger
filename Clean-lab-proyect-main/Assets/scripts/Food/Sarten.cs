@@ -20,7 +20,8 @@ public class Sarten : MonoBehaviour
         {
             if (other.name == "Burger UnCooked")
             {
-                sound.PlayOneShot(panSound, 0.2f); //Sonido sartén
+                //sound.PlayOneShot(panSound, 0.2f); //Sonido sartén
+                sound.Play();
             }
         }
     }
