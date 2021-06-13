@@ -9,7 +9,8 @@ public class ChangeScene : MonoBehaviour
     public string sceneToChangeTo_win;
     public string sceneToChangeTo_loose;
 
-    public Customer customer;
+    //public Customer customer;
+    public Spawn spawn; 
     public rotateScene rotatescene;
 
     private int customerOut = 0;
@@ -23,24 +24,12 @@ public class ChangeScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(customer.OneRandom);
+        // cambie de escena al final de la partida más 2
+        if (spawn.clients[0].IngredientList.Count ==0 && spawn.clients[1].IngredientList.Count == 0 && spawn.clients[2].IngredientList.Count == 0) //al clients no tenen comandes
+            SceneManager.LoadScene(sceneToChangeTo_win);
 
-        if (customer.OneRandom == true) //No funciona
-        {
-            customerOut += 1;
-
-            if (customerOut == 1)
-            {
-                //SceneManager.LoadScene(sceneToChangeTo_win);
-                //Debug.Log(customer.customerOut);
-                Debug.Log("HOLA");
-            }
-            
-        }
-
-        if ( rotatescene.time >= (rotatescene.timeChange * 2) && rotatescene.time <= (rotatescene.timeChange * 2) + 0.5f)
-        {
-            SceneManager.LoadScene(sceneToChangeTo_loose);
-        }
+        if ( rotatescene.time >= (rotatescene.timeChange * 2 +60))
+          SceneManager.LoadScene(sceneToChangeTo_loose);
+        
     }
 }

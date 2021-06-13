@@ -75,8 +75,8 @@ public class Customer : MonoBehaviour
                                     }
                                     if (m > 4)
                                     {
-                                        Destroy(spawn.clients[j].IngredientList[2]);
-                                        spawn.clients[j].IngredientList.Remove(spawn.clients[j].IngredientList[2]); //borrar prefab y de la lista que coincide con lo entregado}
+                                        Destroy(spawn.clients[j].IngredientList[spawn.clients[j].IngredientList.Count - 1]);
+                                        spawn.clients[j].IngredientList.Remove(spawn.clients[j].IngredientList[spawn.clients[j].IngredientList.Count-1]); //borrar prefab y de la lista que coincide con lo entregado}
                                     }
                                 }
                                 passOne = false; 
