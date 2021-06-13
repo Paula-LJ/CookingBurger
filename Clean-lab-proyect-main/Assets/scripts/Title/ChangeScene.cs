@@ -23,7 +23,6 @@ public class ChangeScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(customer.OneRandom);
 
         if (customer.OneRandom == true) //No funciona
         {
