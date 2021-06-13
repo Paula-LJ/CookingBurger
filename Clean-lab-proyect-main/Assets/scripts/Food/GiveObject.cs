@@ -22,7 +22,7 @@ public class GiveObject : MonoBehaviour
 	private int cont = 0;
 	public float velocity = 0;
 
-    void Update()
+	void Update()
 	{
 		if (giveObj == true) //si tiene obj el player
 		{
@@ -351,7 +351,7 @@ public class GiveObject : MonoBehaviour
                 if (pickedObject.name == "Potato uncooked") //Si tenemos la patata 
                 {
                     patricles[4].Play();
-                    Destroy(pickedObject);
+					Destroy(pickedObject);
                     pickedObject = null;
                     giveObj = true;
 

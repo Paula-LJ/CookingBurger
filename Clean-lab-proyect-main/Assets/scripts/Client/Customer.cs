@@ -5,6 +5,7 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     public AudioClip moneySound;
+    public AudioClip failSound;
     public GiveObject giveObject;
     public GameObject dish_dirty;
     private GameObject aux; 
@@ -19,6 +20,7 @@ public class Customer : MonoBehaviour
     public rotateScene rotateS;
     private bool passOne = true; 
     private bool passFunction = false;
+    public int customerOut;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,12 +30,13 @@ public class Customer : MonoBehaviour
     void Update()
     {
         if (OneRandom == true) { //borrar cliente y desaparecer speak/ entre una sola vez
+            
             Destroy(spawn.clients[numClient].prefabClient);
+            customerOut += 1; // Para contar los clientes servidos
             spawn.clients[numClient].prefabSpeak.SetActive(false);
             OneRandom = false;
-
+            
         }
-        
     }
 
 
@@ -44,7 +47,7 @@ public class Customer : MonoBehaviour
         {
             //childother = other.transform.GetChild(0).gameObject;
 
-            //FALTARIA COMPARA SI ÉS O NO L'HAMBURGUESA DEMANADA 
+            //FALTARIA COMPARA SI ï¿½S O NO L'HAMBURGUESA DEMANADA 
             for (int j = 0; j < 3; j++)
             {
                 passOne = true; 
@@ -96,7 +99,6 @@ public class Customer : MonoBehaviour
                         OneRandom = true;
                         numClient = j; // id de cliente que se entrega
                         sound.PlayOneShot(moneySound, 0.2f);
-
                     }
 
                     }
