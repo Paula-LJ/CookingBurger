@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bin : MonoBehaviour
 {
-    public AudioClip moneySound;
+    public AudioClip binSound;
     public GiveObject giveObject;
     public Spawn spawn; 
     public GameObject dish_dirty;
@@ -24,11 +24,11 @@ public class Bin : MonoBehaviour
     {
         if (other.CompareTag("Object"))
         {
-            sound.PlayOneShot(moneySound, 0.2f); //So paperera
+            sound.PlayOneShot(binSound, 0.2f); //So paperera
             //Destrueix l'objecte
             giveObject.giveObj = false;
             Destroy(other.gameObject, timeDestroy);
-			giveObject.pickedObject = null;
+            giveObject.pickedObject = null;
             giveObject.giveObj = false;
             if (other.gameObject.name.Contains("clean_dish") || !other.gameObject.name.Contains("Plate dirty"))
             {
