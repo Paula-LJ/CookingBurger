@@ -24,7 +24,7 @@ public class ChangeScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // cambie de escena al final de la partida más 2
+        // cambie de escena al final de la partida mï¿½s 2
         if (spawn.clients[0].IngredientList.Count ==0 && spawn.clients[1].IngredientList.Count == 0 && spawn.clients[2].IngredientList.Count == 0) //al clients no tenen comandes
             SceneManager.LoadScene(sceneToChangeTo_win);
 

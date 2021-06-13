@@ -332,6 +332,7 @@ MonoBehaviour:
   timeStop: 0
   isDestroy: 0
   giveObj: 0
+  changeIngredients: 0
   giveObjSpace: 1
   createNewPrefab: {fileID: 154261120}
   prefabs:
@@ -16679,6 +16680,7 @@ MonoBehaviour:
   timeStop: 0
   isDestroy: 0
   giveObj: 0
+  changeIngredients: 0
   giveObjSpace: 1
   createNewPrefab: {fileID: 959009348}
   prefabs:
@@ -26692,7 +26694,7 @@ MonoBehaviour:
   dish_dirty: {fileID: 402122237929195545, guid: 46647c331c6f2824588c967acc4a8527,
     type: 3}
   rotateS: {fileID: 966854333}
-  timeDestroy: 0.5
+  timeDestroy: 0.2
 --- !u!82 &1142967375
 AudioSource:
   m_ObjectHideFlags: 0
