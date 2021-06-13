@@ -332,6 +332,7 @@ MonoBehaviour:
   timeStop: 0
   isDestroy: 0
   giveObj: 0
+  changeIngredients: 0
   giveObjSpace: 1
   createNewPrefab: {fileID: 154261120}
   prefabs:
@@ -6301,9 +6302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8257193fa9f1bff40aa540a2f58d35f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToChangeTo_win: 
-  sceneToChangeTo_loose: 
-  customer: {fileID: 3972904526144832173}
+  scene_win: Win
+  scene_loose: Loose
   spawn: {fileID: 1313397247}
   rotatescene: {fileID: 966854333}
 --- !u!1 &455493177
@@ -16164,7 +16164,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 318997000}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &742973305
+--- !u!65 &742973305
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742973300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1938199, y: 18.59425, z: 1.1932145}
+  m_Center: {x: 0.0000009296884, y: -5.7475605, z: 0.45390278}
+--- !u!114 &742973306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16177,7 +16190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panSound: {fileID: 8300000, guid: b05090dfcef73cb49a388c0de255008e, type: 3}
---- !u!82 &742973306
+--- !u!82 &742973307
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16188,8 +16201,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_PlayOnAwake: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16679,6 +16692,7 @@ MonoBehaviour:
   timeStop: 0
   isDestroy: 0
   giveObj: 0
+  changeIngredients: 0
   giveObjSpace: 1
   createNewPrefab: {fileID: 959009348}
   prefabs:
@@ -26692,7 +26706,7 @@ MonoBehaviour:
   dish_dirty: {fileID: 402122237929195545, guid: 46647c331c6f2824588c967acc4a8527,
     type: 3}
   rotateS: {fileID: 966854333}
-  timeDestroy: 0.5
+  timeDestroy: 0.2
 --- !u!82 &1142967375
 AudioSource:
   m_ObjectHideFlags: 0
@@ -44379,6 +44393,7 @@ GameObject:
   - component: {fileID: 7464727965635068683}
   - component: {fileID: 1084283792973406381}
   - component: {fileID: 1084283792973406380}
+  - component: {fileID: 1084283792973406382}
   m_Layer: 0
   m_Name: plug_03
   m_TagString: Untagged
@@ -44495,6 +44510,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1084283792973406382
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084283792973406379}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.066344514, y: 0.114744216, z: 6.159017}
+  m_Center: {x: 0.0030391132, y: -0.037851132, z: -1.0962634}
 --- !u!23 &1111995850752206080
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45702,18 +45730,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 280957919}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3972904526144832173 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3972904525883806072, guid: 750e5272cafea1447a555dfa680a93fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 280957919}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3972904526144832170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d16979a05187b14aa87e9b6f82a3214, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &4082118359254411240
 MeshRenderer:
   m_ObjectHideFlags: 0

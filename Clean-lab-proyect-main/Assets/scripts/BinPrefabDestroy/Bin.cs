@@ -30,8 +30,8 @@ public class Bin : MonoBehaviour
             Destroy(other.gameObject, timeDestroy);
             giveObject.pickedObject = null;
             giveObject.giveObj = false;
-            if (other.gameObject.name.Contains("clean_dish") || !other.gameObject.name.Contains("Plate dirty"))
-            {
+            if (other.gameObject.name.Contains("clean_dish") || other.gameObject.name.Contains("Plate dirty"))
+            {   
                 if (rotateS.time < rotateS.timeChange)
                     aux = Instantiate(dish_dirty, new Vector3(95, 10, 83), Quaternion.identity);
                 else
