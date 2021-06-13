@@ -6,7 +6,6 @@ public class Sarten : MonoBehaviour
 {
     public AudioClip panSound;
 
-    private AudioSource sound;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +19,7 @@ public class Sarten : MonoBehaviour
         {
             if (other.name == "Burger UnCooked")
             {
-                //sound.PlayOneShot(panSound, 0.2f); //Sonido sartén
-                sound.Play();
+                sound.PlayOneShot(panSound, 0.2f); //Sonido sartén
             }
         }
     }

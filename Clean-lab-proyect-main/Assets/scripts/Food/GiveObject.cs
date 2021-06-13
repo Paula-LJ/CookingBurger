@@ -23,6 +23,7 @@ public class GiveObject : MonoBehaviour
 	private int cont = 0;
 	public float velocity = 0;
 
+	
 	void Update()
 	{
 		if (giveObj == true) //si tiene obj el player
@@ -437,7 +438,7 @@ public class GiveObject : MonoBehaviour
 			{
 				if (pickedObject.name == "Burger UnCooked") //Si tenemos la hamburgesa cruda
 				{
-
+				
 					patricles[5].Play();
 					changeIngredients = true;
 					if (timeStop >= secondsGiveObject && timeStop <= secondsGiveObject + 0.5f && changeIngredients == true)
