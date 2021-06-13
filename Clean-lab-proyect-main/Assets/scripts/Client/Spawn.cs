@@ -73,7 +73,7 @@ public class Spawn : MonoBehaviour
         }
         
 
-        if (i == 4 && (rotateS.time < rotateS.timeChange *2)) // se creen los nuevos clientes que se ha servido correctamente la comida / este en el tiempo de juego 
+        if (i == 4 && (rotateS.time < (rotateS.timeChange *2 -60))) // se creen los nuevos clientes que se ha servido correctamente la comida / este en el tiempo de juego menos un minuto
         {
             for (int j = 0; j < 3; j++)
             {

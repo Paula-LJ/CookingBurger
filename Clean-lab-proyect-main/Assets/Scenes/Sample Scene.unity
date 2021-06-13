@@ -6305,6 +6305,7 @@ MonoBehaviour:
   sceneToChangeTo_win: 
   sceneToChangeTo_loose: 
   customer: {fileID: 3972904526144832173}
+  spawn: {fileID: 1313397247}
   rotatescene: {fileID: 966854333}
 --- !u!1 &455493177
 GameObject:
