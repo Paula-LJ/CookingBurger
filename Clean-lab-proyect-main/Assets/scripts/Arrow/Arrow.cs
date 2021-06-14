@@ -18,6 +18,7 @@ public class Arrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(cameraRotate.time); 
         if (rotateS.timeChange - timeAppeareArrow <= rotateS.time && rotateS.timeChange >= rotateS.time) 
         { 
             arrowObject.SetActive(true);

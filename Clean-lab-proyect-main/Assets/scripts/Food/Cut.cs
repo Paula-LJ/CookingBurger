@@ -5,6 +5,8 @@ using UnityEngine;
 public class Cut : MonoBehaviour
 {
     public AudioClip cutSound;
+    public GiveObject giveObject;
+
     private AudioSource sound;
 
     // Start is called before the first frame update

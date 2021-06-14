@@ -6,11 +6,17 @@ public class rotateScene : MonoBehaviour
 {
     public GameObject scene;
 
+    //public GiveObject giveobject;
     public float timeChange;
     public float time;
     private float timeCangePrivate = 120.0f; //2 min
     private bool one = true;
- 
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -21,6 +27,8 @@ public class rotateScene : MonoBehaviour
         {
             one = false;
             scene.transform.Rotate(new Vector3(0, 180, 0), Space.World);
+      
+
         }
     }
 }

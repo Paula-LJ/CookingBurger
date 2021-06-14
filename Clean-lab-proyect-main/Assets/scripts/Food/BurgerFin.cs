@@ -5,7 +5,9 @@ using UnityEngine;
 public class BurgerFin : MonoBehaviour
 {
     public static BurgerFin Instance;
+
     public GameObject burger;
+
     private bool aux;
 
     void Awake()
@@ -18,8 +20,9 @@ public class BurgerFin : MonoBehaviour
     {
         burger = transform.GetChild(0).gameObject;
         if (burger.CompareTag("Burger"))
+        {
             aux = true;
-        
+        }
         return aux;
     }
 

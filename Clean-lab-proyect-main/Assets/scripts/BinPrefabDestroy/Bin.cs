@@ -10,7 +10,9 @@ public class Bin : MonoBehaviour
     public GameObject dish_dirty;
     private GameObject aux; 
     public rotateScene rotateS;
+
     public float timeDestroy;
+
     private AudioSource sound;
 
     void Start()
@@ -29,7 +31,7 @@ public class Bin : MonoBehaviour
             giveObject.pickedObject = null;
             giveObject.giveObj = false;
             if (other.gameObject.name.Contains("clean_dish") || other.gameObject.name.Contains("Plate dirty"))
-            {   
+            {
                 if (rotateS.time < rotateS.timeChange)
                     aux = Instantiate(dish_dirty, new Vector3(95, 10, 83), Quaternion.identity);
                 else

@@ -8,8 +8,8 @@ public class Spawn : MonoBehaviour
     public GameObject prefab;
     public GameObject speakPrefab;
     public GameObject FolderClient;
-    public Customer customer; 
     
+    //public GiveObject giveObject; 
 
     private Vector3 prefabPosition;
     private Vector3 SepakPosition;
@@ -17,33 +17,39 @@ public class Spawn : MonoBehaviour
     public float cantidadClientes = 3.0f;
     private float valueSum = 0.0025f; 
     public int i = 1;
-    
+    //
     public rotateScene rotateS;
-    
+    //
     private bool OneRandom = true;
     private float randomNum = 0.0f; 
-    public float time = 0.0f;
-
+    private float time = 0.0f;
     //Order Burger
     public GameObject[] IngredientUncooked;
     public GameObject[] IngredientAlways;
+    public Customer customer; 
     private int ranPrefab;
     [System.Serializable]
     public class Client
     {
         public GameObject prefabClient;
+        //public GameObject[] ingredients;
         public GameObject prefabSpeak;
         public List<GameObject> IngredientList; 
         public int numIngredients = 4; 
     }
     public Client[] clients; 
 
+    // Start is called before the first frame update
+    void Start()
+    {
+    }
+
     // Crea los tres primeros clientes
     void Update()
     {
         if(i !=4) //1 a 4 
             cont += valueSum;
-        //Crea clients cada x tiempo
+        //Crea clients cada x temps
         if (cont > 1*i && cont < (1*i + valueSum) && cont < (cantidadClientes+1)) //Si esta entre este rango, se cree cada cliente (los tres primeros)
         {
             if (rotateS.time > rotateS.timeChange) //rotando escenario
@@ -68,7 +74,7 @@ public class Spawn : MonoBehaviour
         }
         
 
-        if (i == 4 && (rotateS.time < (rotateS.timeChange *2 -60))) // se crean los nuevos clientes que se ha servido correctamente la comida / este en el tiempo de juego menos un minuto
+        if (i == 4 && (rotateS.time < (rotateS.timeChange *2 -60))) // se creen los nuevos clientes que se ha servido correctamente la comida / este en el tiempo de juego menos un minuto
         {
             for (int j = 0; j < 3; j++)
             {
@@ -80,6 +86,7 @@ public class Spawn : MonoBehaviour
                         OneRandom = false; 
                     }
                     time += Time.deltaTime;
+                    //Debug.Log("RNADOM"+randomNum); 
 
 					if (time > randomNum && time < (randomNum+0.5))
 					{
@@ -99,9 +106,8 @@ public class Spawn : MonoBehaviour
                         clients[j].prefabSpeak.SetActive(true);
 
                         OneRandom = true;
-                        time = 0.0f;
                         customer.SoundOne = true; 
-
+                        time = 0.0f; 
                         //Generar la nueva lista de alimentos 
                         OrderBurger(j+1);
                     }

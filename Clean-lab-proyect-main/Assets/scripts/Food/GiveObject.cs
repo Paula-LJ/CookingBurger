@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class GiveObject : MonoBehaviour
 {
 	public GameObject handPoint; //punto del player donde hacemos el trigger
@@ -14,19 +13,18 @@ public class GiveObject : MonoBehaviour
 	public bool giveObj = false; //si tiene un objeto el player
 	public bool changeIngredients = false; //si tiene un objeto el player
 	public bool giveObjSpace = true;
-	public CreateNewPrefab createNewPrefab; 
+	public CreateNewPrefab createNewPrefab;
 	public GameObject[] prefabs;
 	public ParticleSystem[] patricles;
-	public GameObject SpaceRotate; 
+	public GameObject SpaceRotate;
 	//If is stop in area
-	private List <Vector3> positions = new List<Vector3>();
+	private List<Vector3> positions = new List<Vector3>();
 	private int cont = 0;
 	public float velocity = 0;
 
-	
+
 	void Update()
 	{
-		
 		if (giveObj == true) //si tiene obj el player
 		{
 			cont += 1;
@@ -42,7 +40,7 @@ public class GiveObject : MonoBehaviour
 					timeStop = 0.0f;
 
 			}
-			if (cont == 2) //resetear lista
+			if (cont == 2) //reste list
 			{
 				positions = new List<Vector3>();
 				cont = 0;
@@ -57,7 +55,7 @@ public class GiveObject : MonoBehaviour
 		// dejar un objeto
 		if (pickedObject != null && isDestroy == false && timeStop > secondsGiveObject && giveObj == true && giveObjSpace == true && changeIngredients == false)
 		{
-			// si el tiempo de sin movimiento es mayor a 2 y menor a 2.5 y es mayor el tiempo real del tiempo de estar parado para cogerlo y si no hay movimiento 
+			// si el tiempo de sin movimiento es mayor a 5 y menor a 5.5 y es mayor el tiempo real del tiempo de estar parado para cogerlo y si no hay movimiento 
 			pickedObject.GetComponent<Rigidbody>().useGravity = false;
 			pickedObject.GetComponent<Rigidbody>().isKinematic = false;
 			pickedObject.transform.parent = SpaceRotate.transform;
@@ -65,9 +63,9 @@ public class GiveObject : MonoBehaviour
 			//pickedObject.gameObject.transform.SetParent(null);
 			giveObj = false;
 			pickedObject = null;
-			
+
 		}
-		if (pickedObject==null) // si no tiene nungun obj cogido que pueda coger un nuevo
+		if (pickedObject == null) // si no tiene nungun obj cogido que pueda coger un nuevo
 			giveObj = false;
 
 
@@ -242,7 +240,7 @@ public class GiveObject : MonoBehaviour
 					if (timeStop >= secondsGiveObject && timeStop <= secondsGiveObject + 0.5f && changeIngredients == true)
 					{
 						auxiliar = Instantiate(pickedObject, handPoint.transform.position, Quaternion.identity);
-						auxiliar.name = pickedObject.name; 
+						auxiliar.name = pickedObject.name;
 						Destroy(pickedObject);// lo borramos
 						pickedObject.gameObject.transform.SetParent(null);
 						giveObj = false;
@@ -279,6 +277,7 @@ public class GiveObject : MonoBehaviour
 						auxiliar.gameObject.transform.position = other.gameObject.transform.position; //cambiamos la posicion a la del plato 
 						Vector3 aux = auxiliar.gameObject.transform.position;
 						aux.y += 6.0f; //mover sobre el eje y
+									   //aux.z -= 2.0f; //mover sobre el eje y
 						auxiliar.gameObject.transform.position = aux;
 						auxiliar.GetComponent<BoxCollider>().enabled = false;
 						auxiliar.GetComponent<BoxCollider>().isTrigger = false;
@@ -287,9 +286,9 @@ public class GiveObject : MonoBehaviour
 					}
 				}
 			}
-		
+
 		}
-		
+
 		//cambio de assets
 		if (other.gameObject.CompareTag("Bubbles"))
 		{ //si colisionamos con la pica i con el plato sucio creamos la animacion de burbujas y destruimos el plato
@@ -305,7 +304,7 @@ public class GiveObject : MonoBehaviour
 						pickedObject = null;
 						giveObj = true;
 
-						pickedObject = Instantiate(prefabs[0], handPoint.transform.position, Quaternion.identity); // y creamos plato limpio
+						pickedObject = Instantiate(prefabs[0], handPoint.transform.position, Quaternion.identity);
 						pickedObject.name = prefabs[0].name;
 						pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 						changeIngredients = false;
@@ -361,7 +360,7 @@ public class GiveObject : MonoBehaviour
 					changeIngredients = true;
 					if (timeStop >= secondsGiveObject && timeStop <= secondsGiveObject + 0.5f && changeIngredients == true)
 					{
-						
+
 						Destroy(pickedObject);
 						pickedObject = null;
 						giveObj = true;
@@ -410,8 +409,8 @@ public class GiveObject : MonoBehaviour
 					}
 
 				}
-                if (pickedObject.name == "Potato uncooked") //Si tenemos la patata 
-                {
+				if (pickedObject.name == "Potato uncooked") //Si tenemos la patata 
+				{
 
 					patricles[4].Play();
 					changeIngredients = true;
@@ -430,7 +429,7 @@ public class GiveObject : MonoBehaviour
 						timeStop = 0.0f;
 					}
 				}
-            }
+			}
 		}
 		if (other.gameObject.name == "PW_stove")
 		{
@@ -438,7 +437,7 @@ public class GiveObject : MonoBehaviour
 			{
 				if (pickedObject.name == "Burger UnCooked") //Si tenemos la hamburgesa cruda
 				{
-				
+
 					patricles[5].Play();
 					changeIngredients = true;
 					if (timeStop >= secondsGiveObject && timeStop <= secondsGiveObject + 0.5f && changeIngredients == true)
@@ -458,9 +457,9 @@ public class GiveObject : MonoBehaviour
 					}
 				}
 			}
-        }
-        if (other.gameObject.name == "frites Machine")
-        {
+		}
+		if (other.gameObject.name == "frites Machine")
+		{
 			if (pickedObject != null)
 			{
 				if (pickedObject.name == "Fries Cut") //Si tenemos las patatas cortadas
@@ -483,7 +482,7 @@ public class GiveObject : MonoBehaviour
 
 				}
 			}
-        }
+		}
 		if (other.gameObject.CompareTag("Object"))
 		{
 			if (other.gameObject.name == "clean_dish" && pickedObject != null)
@@ -491,7 +490,7 @@ public class GiveObject : MonoBehaviour
 			else
 				times += Time.deltaTime;
 
-			if (times >= secondsGiveObject && times <= secondsGiveObject + 0.5f && pickedObject == null && giveObj == false && changeIngredients == false) //coger objeto 
+			if (times >= secondsGiveObject && times <= secondsGiveObject + 0.5f && pickedObject == null && giveObj == false && changeIngredients == false) //pillar objeto 
 			{
 				other.GetComponent<Rigidbody>().useGravity = false;
 				other.GetComponent<Rigidbody>().isKinematic = true;
@@ -512,7 +511,9 @@ public class GiveObject : MonoBehaviour
 		times = 0.0f;
 		isDestroy = false;
 		if (other.gameObject.CompareTag("SpaceInstanceFood"))
+		{
 			giveObjSpace = true;
 
+		}
 	}
 }
