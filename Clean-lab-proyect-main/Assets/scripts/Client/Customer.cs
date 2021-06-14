@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
-    public AudioClip moneySound;
-    public AudioClip failSound;
+    public GameObject moneySound;
     public GiveObject giveObject;
     public GameObject dish_dirty;
     private GameObject aux; 
-
-    private AudioSource sound;
-    //private GameObject childother;
 
     public Spawn spawn;
     public bool OneRandom = false;
@@ -22,17 +18,12 @@ public class Customer : MonoBehaviour
     private bool passFunction = false;
     public int customerOut;
     public bool SoundOne = true; 
-    // Start is called before the first frame update
-    void Start()
-    {
-        sound = GetComponent<AudioSource>();
-    }
 
     void Update()
     {
         if (spawn.clients[numClient].IngredientList.Count == 0 && rotateS.time >60 && SoundOne==true) 
         {
-            sound.PlayOneShot(moneySound, 0.2f);
+            Instantiate(moneySound);
             SoundOne = false; 
         }
         if (OneRandom == true) { //borrar cliente y desaparecer speak/ entre una sola vez
@@ -51,9 +42,6 @@ public class Customer : MonoBehaviour
         passFunction = false; 
         if (other.CompareTag("Object"))
         {
-            //childother = other.transform.GetChild(0).gameObject;
-
-            //FALTARIA COMPARA SI �S O NO L'HAMBURGUESA DEMANADA 
             for (int j = 0; j < 3; j++)
             {
                 passOne = true; 
@@ -70,11 +58,11 @@ public class Customer : MonoBehaviour
                                 if (spawn.clients[j].IngredientList[i].name == other.gameObject.transform.GetChild(k).name)
                                     contIngredients += 1;
                             }
-                            if(contIngredients== 4)
+                            if (contIngredients == 4)
                             {
                                 for (int m = 0; m < 6; m++)
                                 {
-                                    if (m <3)
+                                    if (m < 3)
                                     {
                                         Destroy(spawn.clients[j].IngredientList[0]);
                                         spawn.clients[j].IngredientList.Remove(spawn.clients[j].IngredientList[0]); //borrar prefab y de la lista que coincide con lo entregado}
@@ -82,11 +70,11 @@ public class Customer : MonoBehaviour
                                     if (m > 4)
                                     {
                                         Destroy(spawn.clients[j].IngredientList[spawn.clients[j].IngredientList.Count - 1]);
-                                        spawn.clients[j].IngredientList.Remove(spawn.clients[j].IngredientList[spawn.clients[j].IngredientList.Count-1]); //borrar prefab y de la lista que coincide con lo entregado}
+                                        spawn.clients[j].IngredientList.Remove(spawn.clients[j].IngredientList[spawn.clients[j].IngredientList.Count - 1]); //borrar prefab y de la lista que coincide con lo entregado}
                                     }
                                 }
-                                passOne = false; 
-                               
+                                passOne = false;
+
                             }
 
                         }
@@ -104,7 +92,7 @@ public class Customer : MonoBehaviour
                     {
                         OneRandom = true;
                         numClient = j; // id de cliente que se entrega
-                        sound.PlayOneShot(moneySound, 0.2f);
+                        
                     }
 
                     }

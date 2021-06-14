@@ -9,7 +9,6 @@ public class Spawn : MonoBehaviour
     public GameObject speakPrefab;
     public GameObject FolderClient;
     
-    //public GiveObject giveObject; 
 
     private Vector3 prefabPosition;
     private Vector3 SepakPosition;
@@ -17,12 +16,13 @@ public class Spawn : MonoBehaviour
     public float cantidadClientes = 3.0f;
     private float valueSum = 0.0025f; 
     public int i = 1;
-    //
+    
     public rotateScene rotateS;
-    //
+    
     private bool OneRandom = true;
     private float randomNum = 0.0f; 
     private float time = 0.0f;
+
     //Order Burger
     public GameObject[] IngredientUncooked;
     public GameObject[] IngredientAlways;
@@ -32,7 +32,6 @@ public class Spawn : MonoBehaviour
     public class Client
     {
         public GameObject prefabClient;
-        //public GameObject[] ingredients;
         public GameObject prefabSpeak;
         public List<GameObject> IngredientList; 
         public int numIngredients = 4; 
@@ -86,7 +85,6 @@ public class Spawn : MonoBehaviour
                         OneRandom = false; 
                     }
                     time += Time.deltaTime;
-                    //Debug.Log("RNADOM"+randomNum); 
 
 					if (time > randomNum && time < (randomNum+0.5))
 					{

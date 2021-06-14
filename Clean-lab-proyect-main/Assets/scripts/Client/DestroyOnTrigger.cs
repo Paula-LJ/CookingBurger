@@ -16,7 +16,6 @@ public class DestroyOnTrigger : MonoBehaviour
 
         if (isCollidedWithObj1 && isCollidedWithObj2)
             Destroy(gameObject);
-
     }
 
 }

@@ -355,6 +355,11 @@ MonoBehaviour:
   - {fileID: 513900757}
   SpaceRotate: {fileID: 966854332}
   velocity: 0
+  bubbles: {fileID: 5907035091581204658, guid: b582215781252c8499ad8d1ddc0a399d, type: 3}
+  cortar: {fileID: 1186874799722787298, guid: f79a2e774338ea84ea49ecc3c63e82a5, type: 3}
+  sarten: {fileID: 7944230075798665872, guid: ec0c3aa2c16a36f499166a53bfe3da71, type: 3}
+  freidora: {fileID: 6318841202487497639, guid: ba8073e75cfdd4a4a8636a1e5143e35b,
+    type: 3}
 --- !u!114 &154261120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5474,7 +5479,6 @@ GameObject:
   m_Component:
   - component: {fileID: 250734854}
   - component: {fileID: 250734853}
-  - component: {fileID: 250734855}
   m_Layer: 0
   m_Name: Musica Ambient
   m_TagString: Untagged
@@ -5592,19 +5596,6 @@ Transform:
   m_Father: {fileID: 596655527}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &250734855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 250734852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30be68c67341e5b468cf6b6ebeaf41e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyClip: {fileID: 8300000, guid: ecded37a311c62340ab2343bb372d5bf, type: 3}
 --- !u!1 &255388547
 GameObject:
   m_ObjectHideFlags: 0
@@ -5788,7 +5779,8 @@ PrefabInstance:
         type: 3}
       propertyPath: failSound
       value: 
-      objectReference: {fileID: 8300000, guid: d3c038d7e684dd0428a9018103574049, type: 3}
+      objectReference: {fileID: 596644909310825850, guid: c23fc0ee8e7e89949ba278279a8eed04,
+        type: 3}
     - target: {fileID: 3972904525883806072, guid: 750e5272cafea1447a555dfa680a93fa,
         type: 3}
       propertyPath: dish_dirty
@@ -5800,6 +5792,12 @@ PrefabInstance:
       propertyPath: giveObject
       value: 
       objectReference: {fileID: 154261119}
+    - target: {fileID: 3972904525883806072, guid: 750e5272cafea1447a555dfa680a93fa,
+        type: 3}
+      propertyPath: moneySound
+      value: 
+      objectReference: {fileID: 6806376515458845025, guid: bcbf52ccae27378488d0ef2b23d76242,
+        type: 3}
     - target: {fileID: 3972904525883806073, guid: 750e5272cafea1447a555dfa680a93fa,
         type: 3}
       propertyPath: m_Size.x
@@ -5830,7 +5828,8 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.9096161
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3972904525883806071, guid: 750e5272cafea1447a555dfa680a93fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 750e5272cafea1447a555dfa680a93fa, type: 3}
 --- !u!1001 &318997000
 PrefabInstance:
@@ -16590,6 +16589,11 @@ MonoBehaviour:
   - {fileID: 513900757}
   SpaceRotate: {fileID: 966854332}
   velocity: 0
+  bubbles: {fileID: 5907035091581204658, guid: b582215781252c8499ad8d1ddc0a399d, type: 3}
+  cortar: {fileID: 1186874799722787298, guid: f79a2e774338ea84ea49ecc3c63e82a5, type: 3}
+  sarten: {fileID: 7944230075798665872, guid: ec0c3aa2c16a36f499166a53bfe3da71, type: 3}
+  freidora: {fileID: 6318841202487497639, guid: ba8073e75cfdd4a4a8636a1e5143e35b,
+    type: 3}
 --- !u!114 &959009348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44145,6 +44149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterSound: {fileID: 8300000, guid: 2a6b4c9c56f2d3a4f8219d8507f3c4d1, type: 3}
+  sound: {fileID: 0}
 --- !u!82 &1084283792973406381
 AudioSource:
   m_ObjectHideFlags: 0
@@ -46099,6 +46104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frieSound: {fileID: 8300000, guid: 0a72c6d8660696546a1bc93032e202fc, type: 3}
+  sound: {fileID: 0}
 --- !u!82 &5156981903544980545
 AudioSource:
   m_ObjectHideFlags: 0
@@ -46777,6 +46783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutSound: {fileID: 8300000, guid: 7b711f4b4a7b8eb4c8a31dc44bf64774, type: 3}
   giveObject: {fileID: 0}
+  sound: {fileID: 0}
 --- !u!1 &6305702221905265950
 GameObject:
   m_ObjectHideFlags: 0

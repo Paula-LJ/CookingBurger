@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+
 public class GiveObject : MonoBehaviour
 {
 	public GameObject handPoint; //punto del player donde hacemos el trigger
@@ -22,6 +24,12 @@ public class GiveObject : MonoBehaviour
 	private int cont = 0;
 	public float velocity = 0;
 
+	//Sound
+	public GameObject bubbles;
+	public GameObject cortar;
+	public GameObject sarten;
+	public GameObject freidora;
+
 
 	void Update()
 	{
@@ -30,7 +38,7 @@ public class GiveObject : MonoBehaviour
 			cont += 1;
 			positions.Add(createNewPrefab.transform.position);
 
-			if (cont != 1) // calulate velocity
+			if (cont != 1) // calcular velocidad
 			{
 				Vector3 vector1 = positions[cont - 1] - positions[cont - 2];
 				velocity = vector1.magnitude;
@@ -40,7 +48,7 @@ public class GiveObject : MonoBehaviour
 					timeStop = 0.0f;
 
 			}
-			if (cont == 2) //reste list
+			if (cont == 2) //restear lista
 			{
 				positions = new List<Vector3>();
 				cont = 0;
@@ -55,12 +63,11 @@ public class GiveObject : MonoBehaviour
 		// dejar un objeto
 		if (pickedObject != null && isDestroy == false && timeStop > secondsGiveObject && giveObj == true && giveObjSpace == true && changeIngredients == false)
 		{
-			// si el tiempo de sin movimiento es mayor a 5 y menor a 5.5 y es mayor el tiempo real del tiempo de estar parado para cogerlo y si no hay movimiento 
+			// si el tiempo de sin movimiento es mayor a 2 y menor a 2.5 y es mayor el tiempo real del tiempo de estar parado para cogerlo y si no hay movimiento 
 			pickedObject.GetComponent<Rigidbody>().useGravity = false;
 			pickedObject.GetComponent<Rigidbody>().isKinematic = false;
 			pickedObject.transform.parent = SpaceRotate.transform;
 
-			//pickedObject.gameObject.transform.SetParent(null);
 			giveObj = false;
 			pickedObject = null;
 
@@ -300,6 +307,8 @@ public class GiveObject : MonoBehaviour
 					changeIngredients = true;
 					if (timeStop >= secondsGiveObject && timeStop <= secondsGiveObject + 0.5f && changeIngredients == true)
 					{
+
+						Instantiate(bubbles);
 						Destroy(pickedObject);
 						pickedObject = null;
 						giveObj = true;
@@ -323,6 +332,7 @@ public class GiveObject : MonoBehaviour
 					changeIngredients = true;
 					if (timeStop >= secondsGiveObject && timeStop <= secondsGiveObject + 0.5f && changeIngredients == true)
 					{
+						Instantiate(cortar);
 						Destroy(pickedObject);
 						pickedObject = null;
 						giveObj = true;
@@ -341,6 +351,7 @@ public class GiveObject : MonoBehaviour
 					changeIngredients = true;
 					if (timeStop >= secondsGiveObject && timeStop <= secondsGiveObject + 0.5f && changeIngredients == true)
 					{
+						Instantiate(cortar);
 						Destroy(pickedObject);
 						pickedObject = null;
 						giveObj = true;
@@ -360,6 +371,7 @@ public class GiveObject : MonoBehaviour
 					changeIngredients = true;
 					if (timeStop >= secondsGiveObject && timeStop <= secondsGiveObject + 0.5f && changeIngredients == true)
 					{
+						Instantiate(cortar);
 
 						Destroy(pickedObject);
 						pickedObject = null;
@@ -379,6 +391,8 @@ public class GiveObject : MonoBehaviour
 					changeIngredients = true;
 					if (timeStop >= secondsGiveObject && timeStop <= secondsGiveObject + 0.5f && changeIngredients == true)
 					{
+						Instantiate(cortar);
+
 						Destroy(pickedObject);
 						pickedObject = null;
 						giveObj = true;
@@ -397,6 +411,8 @@ public class GiveObject : MonoBehaviour
 					changeIngredients = true;
 					if (timeStop >= secondsGiveObject && timeStop <= secondsGiveObject + 0.5f && changeIngredients == true)
 					{
+						Instantiate(cortar);
+
 						Destroy(pickedObject);
 						pickedObject = null;
 						giveObj = true;
@@ -416,6 +432,7 @@ public class GiveObject : MonoBehaviour
 					changeIngredients = true;
 					if (timeStop >= secondsGiveObject && timeStop <= secondsGiveObject + 0.5f && changeIngredients == true)
 					{
+						Instantiate(cortar);
 
 						Destroy(pickedObject);
 						pickedObject = null;
@@ -437,11 +454,11 @@ public class GiveObject : MonoBehaviour
 			{
 				if (pickedObject.name == "Burger UnCooked") //Si tenemos la hamburgesa cruda
 				{
-
 					patricles[5].Play();
 					changeIngredients = true;
 					if (timeStop >= secondsGiveObject && timeStop <= secondsGiveObject + 0.5f && changeIngredients == true)
 					{
+						Instantiate(sarten);
 						Destroy(pickedObject);
 						pickedObject = null;
 						giveObj = true;
@@ -469,6 +486,8 @@ public class GiveObject : MonoBehaviour
 					changeIngredients = true;
 					if (timeStop >= secondsGiveObject && timeStop <= secondsGiveObject + 0.5f && changeIngredients == true)
 					{
+						Instantiate(freidora);
+
 						Destroy(pickedObject);
 						pickedObject = null;
 						giveObj = true;
@@ -490,7 +509,7 @@ public class GiveObject : MonoBehaviour
 			else
 				times += Time.deltaTime;
 
-			if (times >= secondsGiveObject && times <= secondsGiveObject + 0.5f && pickedObject == null && giveObj == false && changeIngredients == false) //pillar objeto 
+			if (times >= secondsGiveObject && times <= secondsGiveObject + 0.5f && pickedObject == null && giveObj == false && changeIngredients == false) //coger objeto 
 			{
 				other.GetComponent<Rigidbody>().useGravity = false;
 				other.GetComponent<Rigidbody>().isKinematic = true;
@@ -510,10 +529,11 @@ public class GiveObject : MonoBehaviour
 	{
 		times = 0.0f;
 		isDestroy = false;
+		changeIngredients = false;
 		if (other.gameObject.CompareTag("SpaceInstanceFood"))
 		{
 			giveObjSpace = true;
-
 		}
 	}
+
 }
