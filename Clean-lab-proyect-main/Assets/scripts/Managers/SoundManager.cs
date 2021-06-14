@@ -6,12 +6,7 @@ public class SoundManager : MonoBehaviour
 {
 
     public static SoundManager Instance;
-
     public AudioClip moneyClip;
-
-    //Per quan vulguem afegir més efectes de so.
-    //public AudioClip sheepHitClip; 
-    //public AudioClip sheepDroppedClip;
 
     private Vector3 cameraPosition;
 
@@ -20,7 +15,6 @@ public class SoundManager : MonoBehaviour
     {
         Instance = this;
         cameraPosition = Camera.main.transform.position;
-
     }
 
     private void PlaySound(AudioClip clip)
@@ -32,17 +26,5 @@ public class SoundManager : MonoBehaviour
     {
         PlaySound(moneyClip);
     }
-
-
-    //Pels diferents efectes de so
-    //public void PlaySheepHitClip()
-    //{
-    //    PlaySound(sheepHitClip);
-    //}
-
-    //public void PlaySheepDroppedClip()
-    //{
-    //    PlaySound(sheepDroppedClip);
-    //}
 
 }

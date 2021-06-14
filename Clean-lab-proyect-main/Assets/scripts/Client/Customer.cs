@@ -11,7 +11,6 @@ public class Customer : MonoBehaviour
     private GameObject aux; 
 
     private AudioSource sound;
-    //private GameObject childother;
 
     public Spawn spawn;
     public bool OneRandom = false;
@@ -21,6 +20,7 @@ public class Customer : MonoBehaviour
     private bool passOne = true; 
     private bool passFunction = false;
     public int customerOut;
+    public bool SoundOne = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +29,12 @@ public class Customer : MonoBehaviour
 
     void Update()
     {
+        if (spawn.clients[numClient].IngredientList.Count == 0 && rotateS.time > 10 && SoundOne == true)  // cuando se ha entregado todas las prefabs que se pedia en la lista de ingredientes
+        {
+            sound.PlayOneShot(moneySound, 0.2f);
+            SoundOne = false;
+           
+        }
         if (OneRandom == true) { //borrar cliente y desaparecer speak/ entre una sola vez
             
             Destroy(spawn.clients[numClient].prefabClient);
@@ -45,9 +51,6 @@ public class Customer : MonoBehaviour
         passFunction = false; 
         if (other.CompareTag("Object"))
         {
-            //childother = other.transform.GetChild(0).gameObject;
-
-            //FALTARIA COMPARA SI �S O NO L'HAMBURGUESA DEMANADA 
             for (int j = 0; j < 3; j++)
             {
                 passOne = true; 
@@ -71,7 +74,7 @@ public class Customer : MonoBehaviour
                                     if (m <3)
                                     {
                                         Destroy(spawn.clients[j].IngredientList[0]);
-                                        spawn.clients[j].IngredientList.Remove(spawn.clients[j].IngredientList[0]); //borrar prefab y de la lista que coincide con lo entregado}
+                                        spawn.clients[j].IngredientList.Remove(spawn.clients[j].IngredientList[0]); //borrar prefab y de la lista que coincide con lo entregado
                                     }
                                     if (m > 4)
                                     {
@@ -98,7 +101,6 @@ public class Customer : MonoBehaviour
                     {
                         OneRandom = true;
                         numClient = j; // id de cliente que se entrega
-                        sound.PlayOneShot(moneySound, 0.2f);
                     }
 
                     }
@@ -119,7 +121,7 @@ public class Customer : MonoBehaviour
 
                 }
             }
-            //Destrueix l'objecte entregat (sigui o no el que ha demanat)
+            //Destruye el objeto entregado sea o no el correcto
             if (other.gameObject && other.gameObject.transform.childCount != 0)
             {
                 Destroy(other.gameObject);

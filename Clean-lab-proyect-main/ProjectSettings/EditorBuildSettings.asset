@@ -20,19 +20,19 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Title.unity
     guid: 486d4b146e4cffc478d4774fb09dde77
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Controls.unity
     guid: 166c07d4fd3bafc4594b0bdece4b9114
   - enabled: 1
     path: Assets/Scenes/Sample Scene.unity
     guid: 5261bc85e83d8a143b7bd71f8490828d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: e14ced49ab52c134bac4e1b657716f18
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Loose.unity
     guid: b78c3fa523bdfd14d84475164d16f518
   - enabled: 0

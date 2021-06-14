@@ -26,6 +26,7 @@ public class GiveObject : MonoBehaviour
 	
 	void Update()
 	{
+		
 		if (giveObj == true) //si tiene obj el player
 		{
 			cont += 1;
@@ -41,7 +42,7 @@ public class GiveObject : MonoBehaviour
 					timeStop = 0.0f;
 
 			}
-			if (cont == 2) //reste list
+			if (cont == 2) //resetear lista
 			{
 				positions = new List<Vector3>();
 				cont = 0;
@@ -56,7 +57,7 @@ public class GiveObject : MonoBehaviour
 		// dejar un objeto
 		if (pickedObject != null && isDestroy == false && timeStop > secondsGiveObject && giveObj == true && giveObjSpace == true && changeIngredients == false)
 		{
-			// si el tiempo de sin movimiento es mayor a 5 y menor a 5.5 y es mayor el tiempo real del tiempo de estar parado para cogerlo y si no hay movimiento 
+			// si el tiempo de sin movimiento es mayor a 2 y menor a 2.5 y es mayor el tiempo real del tiempo de estar parado para cogerlo y si no hay movimiento 
 			pickedObject.GetComponent<Rigidbody>().useGravity = false;
 			pickedObject.GetComponent<Rigidbody>().isKinematic = false;
 			pickedObject.transform.parent = SpaceRotate.transform;
@@ -278,7 +279,6 @@ public class GiveObject : MonoBehaviour
 						auxiliar.gameObject.transform.position = other.gameObject.transform.position; //cambiamos la posicion a la del plato 
 						Vector3 aux = auxiliar.gameObject.transform.position;
 						aux.y += 6.0f; //mover sobre el eje y
-						//aux.z -= 2.0f; //mover sobre el eje y
 						auxiliar.gameObject.transform.position = aux;
 						auxiliar.GetComponent<BoxCollider>().enabled = false;
 						auxiliar.GetComponent<BoxCollider>().isTrigger = false;
@@ -305,7 +305,7 @@ public class GiveObject : MonoBehaviour
 						pickedObject = null;
 						giveObj = true;
 
-						pickedObject = Instantiate(prefabs[0], handPoint.transform.position, Quaternion.identity);
+						pickedObject = Instantiate(prefabs[0], handPoint.transform.position, Quaternion.identity); // y creamos plato limpio
 						pickedObject.name = prefabs[0].name;
 						pickedObject.gameObject.transform.SetParent(handPoint.gameObject.transform);
 						changeIngredients = false;
@@ -491,7 +491,7 @@ public class GiveObject : MonoBehaviour
 			else
 				times += Time.deltaTime;
 
-			if (times >= secondsGiveObject && times <= secondsGiveObject + 0.5f && pickedObject == null && giveObj == false && changeIngredients == false) //pillar objeto 
+			if (times >= secondsGiveObject && times <= secondsGiveObject + 0.5f && pickedObject == null && giveObj == false && changeIngredients == false) //coger objeto 
 			{
 				other.GetComponent<Rigidbody>().useGravity = false;
 				other.GetComponent<Rigidbody>().isKinematic = true;
@@ -512,9 +512,7 @@ public class GiveObject : MonoBehaviour
 		times = 0.0f;
 		isDestroy = false;
 		if (other.gameObject.CompareTag("SpaceInstanceFood"))
-		{
 			giveObjSpace = true;
 
-		}
 	}
 }

@@ -43,8 +43,7 @@ public class CreateNewPrefab : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("SpaceInstanceFood"))
-        {
             spaceInstance = false;
-        }
+       
     }
 }

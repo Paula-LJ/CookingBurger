@@ -5,6 +5,7 @@ using UnityEngine;
 public class Sarten : MonoBehaviour
 {
     public AudioClip panSound;
+    public AudioSource sound;
 
 
     // Start is called before the first frame update

@@ -8,7 +8,6 @@ public class CountArrow : MonoBehaviour
     [Tooltip("Tiempo inicial en segundos")]
     public int TimeInitial;
     private Text myText;
-    //public CameraRotate cameraRotate;
     public rotateScene rotateS; 
     public Arrow arrow;
     private float ContShow;  
@@ -22,7 +21,6 @@ public class CountArrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(ContShow); 
         ContShow -= Time.deltaTime;
 
         if (rotateS.timeChange - arrow.timeAppeareArrow <= rotateS.time && rotateS.timeChange >= rotateS.time)

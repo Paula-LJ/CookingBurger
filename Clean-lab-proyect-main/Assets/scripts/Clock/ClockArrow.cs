@@ -5,15 +5,9 @@ using UnityEngine;
 public class ClockArrow : MonoBehaviour
 {
     public GameObject arrowClock;
-    //public GameObject Clock;
     private float Speed=17.0f;
-    //public CameraRotate cameraRotate;
     public rotateScene rotateS; 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
+  
     // Update is called once per frame
     void Update()
     {

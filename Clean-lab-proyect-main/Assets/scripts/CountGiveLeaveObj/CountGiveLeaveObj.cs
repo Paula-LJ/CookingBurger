@@ -10,9 +10,9 @@ public class CountGiveLeaveObj : MonoBehaviour
     private Text mytext;
     public GiveObject giveObject;
     public GameObject gameobjet;
-    // public CameraRotate cameraRotate; 
     public rotateScene rotateS; 
     private float timeText=0.0f; 
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -24,11 +24,8 @@ public class CountGiveLeaveObj : MonoBehaviour
     void Update()
     {
         updateCountPlot(timePlotGiveLeaveObj);
-
         timeText += Time.deltaTime;
-        //Debug.Log(mytext.transform.position);
-
-		//Rotar tambien contador del jugador rojo en su puesto
+       //Rotar tambien contador del jugador rojo en su puesto
 		if (gameobjet.CompareTag("Player1") && rotateS.timeChange != 0.0)
 		{
 			if (timeText >= rotateS.timeChange && timeText <= rotateS.timeChange + 0.5f)
@@ -40,13 +37,8 @@ public class CountGiveLeaveObj : MonoBehaviour
 		//Rotar tambien contador del jugador azul en su puesto
 		if (gameobjet.CompareTag("Player2") && rotateS.timeChange != 0.0)
 		{
-
-			//Debug.Log(gameObject.transform.position);
-			if (timeText >= rotateS.timeChange && timeText <= rotateS.timeChange + 0.5f)
-			{
+            if (timeText >= rotateS.timeChange && timeText <= rotateS.timeChange + 0.5f)
 				mytext.transform.position = new Vector3(92.6f, -3, 12);
-			}
-
 		}
 
 	}

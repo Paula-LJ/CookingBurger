@@ -154,6 +154,7 @@ MonoBehaviour:
   timeStop: 0
   isDestroy: 0
   giveObj: 0
+  changeIngredients: 0
   giveObjSpace: 1
   createNewPrefab: {fileID: 0}
   prefabs: []
@@ -652,6 +653,7 @@ MonoBehaviour:
   timeStop: 0
   isDestroy: 0
   giveObj: 0
+  changeIngredients: 0
   giveObjSpace: 1
   createNewPrefab: {fileID: 0}
   prefabs: []
@@ -708,8 +710,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 90, y: 80, z: 20}
-  m_Center: {x: -59.39, y: 7.7, z: 0}
+  m_Size: {x: 90, y: 80.00001, z: 2663.7656}
+  m_Center: {x: -59.39, y: 7.6999993, z: 1301.8993}
 --- !u!114 &975758804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,7 +732,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Menu
+  m_text: Replay
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -757,8 +759,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

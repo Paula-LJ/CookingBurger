@@ -10,9 +10,7 @@ public class Bin : MonoBehaviour
     public GameObject dish_dirty;
     private GameObject aux; 
     public rotateScene rotateS;
-
     public float timeDestroy;
-
     private AudioSource sound;
 
     void Start()

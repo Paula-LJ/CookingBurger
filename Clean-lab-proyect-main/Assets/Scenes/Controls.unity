@@ -154,6 +154,7 @@ MonoBehaviour:
   timeStop: 0
   isDestroy: 0
   giveObj: 0
+  changeIngredients: 0
   giveObjSpace: 1
   createNewPrefab: {fileID: 0}
   prefabs: []
@@ -652,6 +653,7 @@ MonoBehaviour:
   timeStop: 0
   isDestroy: 0
   giveObj: 0
+  changeIngredients: 0
   giveObjSpace: 1
   createNewPrefab: {fileID: 0}
   prefabs: []
@@ -708,8 +710,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 90, y: 80, z: 20}
-  m_Center: {x: -59.39, y: 7.7, z: 0}
+  m_Size: {x: 90, y: 80.00001, z: 180.03099}
+  m_Center: {x: -59.39, y: 7.6999993, z: 50.64822}
 --- !u!114 &975758804
 MonoBehaviour:
   m_ObjectHideFlags: 0
